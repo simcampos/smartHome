@@ -1,0 +1,40 @@
+@startuml
+!pragma layout smetana
+
+package log {
+    class Log <<Entity>> <<Root>> {
+
+    }
+    class LogID <<ValueObject>> <<ID>> {
+        - _logID : LogID
+    }
+    class DeviceID <<ValueObject>> <<ID>> {
+        - _deviceID : DeviceID
+    }
+    class SensorID <<ValueObject>> <<ID>> {
+        - _sensorID : SensorID
+    }
+    class LocalDateTime <<ValueObject>>{
+        - _localDateTime : LocalDateTime
+    }
+    class ReadingValue <<ValueObject>>{
+        - _reading : ReadingValue
+    }
+    class SensorTypeID <<ValueObject>> <<ID>>{
+        - _description : SensorTypeID
+    }
+    class UnitID <<ValueObject>> <<ID>>{
+        - _unit : UnitID
+    }
+}
+
+Log -- "1" LogID : has
+Log -- "1" DeviceID : has
+Log -- "1" SensorID : has
+Log -- "1" ReadingValue : has
+Log -- "1" SensorTypeID : has
+Log -- "1" UnitID : has
+Log -- "1" LocalDateTime : has
+
+
+@enduml

@@ -1,0 +1,48 @@
+@startuml
+
+package "Server" {
+
+    package Infrastructure {
+        package Routes {
+        }
+        package Persistence {
+        }
+    }
+
+    package "Interface Adapters" {
+        package Controllers {
+        }
+        package Repositories {
+        }
+    }
+
+    package "Services Layer" {
+        package "Services" {
+        }
+        package "IServices" {
+        }
+
+    }
+
+    package "Entities/Core/Domain" {
+        package Aggregates {
+        }
+        package "Value Objects" {
+        }
+        package "IRepositories"{
+                }
+
+    }
+
+    ' Dependencies
+    Infrastructure.Routes ..> "Interface Adapters.Controllers" : .
+    Infrastructure.Persistence <.. "Interface Adapters.Repositories" : .
+    "Interface Adapters.Controllers" ..> "IServices" : .
+    "IServices" ..> Aggregates : .
+    "IServices" ..> "Value Objects" : .
+    "Interface Adapters.Repositories" ..> Services
+    "Repositories" ..|> "IRepositories" : .
+    "Services" ..right|> "IServices" : .
+}
+
+@enduml

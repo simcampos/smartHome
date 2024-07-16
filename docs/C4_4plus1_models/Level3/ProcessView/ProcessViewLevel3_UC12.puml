@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Backend" <<Container (C4)>>"
+    participant "Server" as SE<<container (C4)>>
+    participant "Database" as DB<<container (C4)>>
+end box
+
+
+HTTP o-> SE : GET /devices by device type
+activate SE
+
+SE -> DB : find devices by Room ID
+activate DB
+
+DB --> SE : deviceDataModelList
+deactivate DB
+
+SE -> SE : filter devices by device type
+
+
+SE -->o HTTP : JSON 200
+deactivate SE
+
+deactivate HTTP
+
+
+@enduml

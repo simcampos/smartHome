@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Server"
+    participant "Controller" as CTRL<<component>>
+    participant "Service" as SV<<component>>
+    participant "Repository" as REPO<<component>>
+end box
+
+participant " " as BD
+
+
+HTTP o-> CTRL : POST /sensor-types
+activate CTRL
+CTRL -> SV : createSensorType(SensorTypeEntryDTO)
+
+activate SV
+
+SV -> REPO : createSensorType(typeDescription, unitID)
+activate REPO
+REPO ->o BD : save
+
+REPO --> SV : sensorType
+deactivate REPO
+
+SV --> CTRL : sensorType
+deactivate SV
+
+
+CTRL -->o HTTP : sensorTypeDTO
+deactivate CTRL
+
+
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+actor "Power User / Admin" as PU
+
+participant "System" as System
+
+autonumber
+
+activate PU
+PU -> System: I want to get a list of all devices in the house grouped by functionality
+activate System
+System --> PU: List of devices in the house grouped by functionality
+deactivate System
+deactivate PU
+
+@enduml

@@ -1,0 +1,148 @@
+@startuml
+!pragma layout smetana
+
+
+participant  " " as User
+
+participant ":AddDeviceToRoomController" as Controller
+participant "roomService:RoomService" as RoomService
+participant ":RoomRepository" as RoomRepo
+
+participant "roomAssembler:RoomAssembler" as RoomAssembler
+participant "roomDTO:RoomDTO" as RoomDTO
+participant "roomID:RoomID" as RoomID
+participant "deviceName:DeviceName" as DeviceName
+participant "deviceStatus:DeviceStatus" as DeviceStatus
+participant "deviceTypeID:DeviceTypeID" as DeviceTypeID
+participant "deviceAssembler:DeviceAssembler" as DeviceAssembler
+participant "deviceDTO:DeviceDTO" as DeviceDTO
+participant "device:Device" as Device
+participant "deviceService:DeviceService" as DeviceService
+participant "deviceFactory:DeviceFactory" as Factory
+participant "device :Device" as Device
+participant ":DeviceRepository" as Repository
+participant ":DeviceAssembler" as DeviceAssembler
+participant "deviceDTO :DeviceDTO" as DeviceDTO
+autonumber
+
+User o-> Controller: getRooms()
+
+activate Controller
+
+Controller -> RoomService: getRooms()
+
+activate RoomService
+
+RoomService -> RoomRepo: findAll()
+
+activate RoomRepo
+
+RoomRepo --> RoomService: listOfRooms
+
+deactivate RoomRepo
+
+RoomService --> Controller: listOfRooms
+deactivate RoomService
+
+Controller -> RoomAssembler : domainToDTO(listOfRooms)
+
+activate RoomAssembler
+
+loop for each room
+
+    create RoomDTO
+
+    RoomAssembler -> RoomDTO: roomDTO (room)
+
+     activate RoomDTO
+
+     RoomDTO --> RoomAssembler: roomDTO
+
+      deactivate RoomDTO
+
+     RoomAssembler -> RoomAssembler: addRoomDTOToList(roomDTO)
+
+end
+RoomAssembler --> Controller: roomDTOList
+
+deactivate RoomAssembler
+
+Controller --> User : roomDTOList
+deactivate Controller
+
+
+User o-> Controller : addDeviceToRoom(deviceDataDTO)
+activate Controller
+
+
+
+create RoomID
+Controller -> RoomID : roomID(strRoomID)
+activate RoomID
+
+RoomID --> Controller : roomID
+deactivate RoomID
+
+create DeviceName
+Controller -> DeviceName : deviceName(strDeviceName)
+activate DeviceName
+
+DeviceName --> Controller : deviceName
+deactivate DeviceName
+
+create DeviceStatus
+Controller -> DeviceStatus : deviceStatus(boolean)
+activate DeviceStatus
+
+DeviceStatus --> Controller : deviceStatus
+deactivate DeviceStatus
+
+create DeviceTypeID
+Controller -> DeviceTypeID : deviceTypeID(strDeviceTypeID)
+activate DeviceTypeID
+
+DeviceTypeID --> Controller : deviceTypeID
+deactivate DeviceTypeID
+
+Controller -> DeviceService : addDevice(roomID,deviceName,deviceStatus,deviceTypeID)
+activate DeviceService
+
+DeviceService -> Factory : createDevice(roomID,deviceName,deviceStatus,deviceTypeID)
+activate Factory
+
+create Device
+Factory -> Device : device(roomID,deviceName,deviceStatus,deviceTypeID)
+
+activate Device
+Device --> Factory : device
+
+deactivate Device
+Factory --> DeviceService : device
+
+deactivate Factory
+DeviceService -> Repository : save(device)
+
+activate Repository
+
+Repository --> DeviceService: device
+deactivate Repository
+
+DeviceService --> Controller : device
+deactivate DeviceService
+
+Controller -> DeviceAssembler : domain2DTO(device)
+create DeviceDTO
+
+activate DeviceAssembler
+DeviceAssembler -> DeviceDTO : deviceDTO(device)
+
+activate DeviceDTO
+DeviceDTO --> DeviceAssembler : deviceDTO
+deactivate DeviceDTO
+
+DeviceAssembler --> Controller : deviceDTO
+deactivate DeviceAssembler
+
+Controller --> User : deviceDTO
+deactivate Controller
+@enduml

@@ -1,0 +1,123 @@
+@startuml
+!pragma layout smetana
+
+class Device {
+  - _deviceId: DeviceID
+  - _deviceName: DeviceName
+  - _roomID: RoomID
+  - _deviceStatus: DeviceStatus
+  - _deviceTypeID: DeviceTypeID
+
+  + Device(roomID: RoomID,deviceName: DeviceName, deviceStatus: DeviceStatus, deviceTypeID: DeviceTypeID)
+  + getId(): String
+  + getDeviceName(): String
+  + getRoomID(): RoomID
+  + getDeviceStatus(): DeviceStatus
+  + getDeviceTypeID(): DeviceTypeID
+  }
+
+class DeviceFactory {
+  + createDevice( roomID: RoomID, deviceName: DeviceName, deviceStatus DeviceStatus, deviceTypeID: DeviceTypeID): Device
+  }
+
+class DeviceRepository {
+  - _map<DeviceID, Device> device
+  + save(device: Device): Device
+  }
+class DeviceService {
+  - _deviceRepository: DeviceRepository
+  - _deviceFactory: DeviceFactory
+  - _roomRepository: RoomRepository
+    + DeviceService(roomRepository: RoomRepository, deviceRepository: DeviceRepository, deviceFactory: DeviceFactory)
+  + addDevice(roomID: RoomID, deviceName: DeviceName, deviceStatus: DeviceStatus, deviceTypeID: DeviceTypeID): Device
+  }
+
+ class RoomService{
+  - _roomRepository: RoomRepository
+  - _roomFactory: RoomFactory
+  - _houseRepository: HouseRepository
+  - _roomAssembler: RoomAssembler
+  + RoomService(houseRepository: HouseRepository, roomRepository: RoomRepository, roomFactory: RoomFactory, roomAssembler: RoomAssembler)
+  + getRooms() : List<Room>
+  }
+
+class RoomRepository {
+  - _data: Map<RoomID, Room>
+  + findAll(): List<Room>
+  }
+
+class RoomAssembler {
+    +RoomAssembler()
+    +domainToDTO(rooms: List<Room>): List<RoomDTO>
+    }
+
+
+class RoomID {
+  - _id: String
+  + RoomID(roomID: String)
+  }
+
+class DeviceName {
+  - _name: String
+  + DeviceName(deviceName: String)
+  }
+
+class DeviceStatus {
+  - _status: boolean
+  + DeviceStatus(deviceStatus: boolean)
+  }
+class DeviceTypeID {
+  - _id: String
+  + DeviceTypeID(deviceTypeID: String)
+  }
+
+class RoomDTO {
+    + roomId: String
+    + roomName: String
+    + floor: String
+    + dimension: String
+    + RoomDTO(roomId: String, roomName: String, floor: String, dimension: String)
+}
+
+class AddDeviceToRoomController {
+  - _deviceService: DeviceService
+  - _roomAssembler: RoomAssembler
+  - _roomService: RoomService
+  - _deviceAssembler: DeviceAssembler
+  + AddDeviceToRoomController(roomService: RoomService, deviceService: DeviceService,
+   roomAssembler: RoomAssembler, deviceAssembler: DeviceAssembler)
+
+  + addDeviceToRoom(deviceTypeID: String, deviceName: String, roomID: String, deviceStatus: String): DeviceDTO
+  + getAllRooms(): List<RoomDTO>
+  }
+class DeviceDTO {
++ deviceID: String
++ deviceName: String
++ roomID: String
++ deviceStatus : String
++ DeviceDTO(deviceID: String, deviceTypeID: String, deviceName: String, roomID: String, deviceStatus: String)
+}
+class DeviceAssembler{
+  + domainToDTO(domainEntity: Device): DeviceDTO
+  }
+
+
+DeviceRepository "1" -down-> "1" Device: has
+DeviceService "1".down.>"1  " DeviceFactory: uses
+AddDeviceToRoomController "1".left.>"1" DeviceAssembler: uses
+DeviceService "1".down.>"1" DeviceRepository: uses
+RoomService "1".right.>"1" RoomRepository: uses
+DeviceFactory "1".down.>"1  " Device: creates
+AddDeviceToRoomController "1".down.>"1" DeviceService: uses
+AddDeviceToRoomController "1".right.>"1" RoomService: uses
+DeviceAssembler "1".up.> "*" DeviceDTO: creates
+AddDeviceToRoomController "1".down.>"1" RoomAssembler: uses
+RoomAssembler "1".down.>"*" RoomDTO: creates
+AddDeviceToRoomController "1".up.>"1" RoomID: creates
+AddDeviceToRoomController "1".up.>"1" DeviceName: creates
+AddDeviceToRoomController "1".up.>"1" DeviceStatus: creates
+AddDeviceToRoomController "1".up.>"1" DeviceTypeID: creates
+
+
+
+@enduml

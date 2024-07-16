@@ -1,0 +1,97 @@
+//Add rooms to the house
+POST http://localhost:8080/devices
+Content-Type: application/json
+
+{
+  "deviceTypeDescription": "PowerMeter",
+  "deviceName": "EDP PowerMeter",
+  "roomID": "{{roomGardenId}}"
+}
+
+> {%
+    client.global.set("powerMeterDeviceId", response.body.deviceID);
+%}
+
+###
+POST http://localhost:8080/devices
+Content-Type: application/json
+
+{
+  "deviceTypeDescription": "PowerSource",
+  "deviceName": "Solar Panel",
+  "roomID": "{{roomGardenId}}"
+}
+> {%
+    client.global.set("powerSourceDeviceId", response.body.deviceID);
+%}
+
+
+###
+POST http://localhost:8080/devices
+Content-Type: application/json
+
+{
+  "deviceTypeDescription": "Temperature",
+  "deviceName": "Temperature Sensor",
+  "roomID": "{{roomGardenId}}"
+}
+> {%
+    client.global.set("temperatureGardenDeviceId", response.body.deviceID);
+%}
+
+
+###
+POST http://localhost:8080/devices
+Content-Type: application/json
+
+{
+  "deviceTypeDescription": "Temperature",
+  "deviceName": "Temperature Sensor",
+  "roomID": "{{roomId}}"
+}
+> {%
+    client.global.set("temperatureIndoorDeviceId", response.body.deviceID);
+%}
+
+###
+POST http://localhost:8080/devices
+Content-Type: application/json
+
+{
+  "deviceTypeDescription": "Automatic Blinds",
+  "deviceName": "Bedroom Blinds",
+  "roomID": "{{roomId}}"
+}
+
+> {%
+    client.global.set("blindsDeviceId", response.body.deviceID);
+%}
+
+###
+POST http://localhost:8080/devices
+Content-Type: application/json
+
+{
+  "deviceTypeDescription": "Light Sensor",
+  "deviceName": "Light Intensity",
+  "roomID": "{{roomId}}"
+}
+
+> {%
+    client.global.set("deviceId", response.body.deviceID);
+%}
+
+###
+POST http://localhost:8080/devices
+Content-Type: application/json
+
+{
+  "deviceTypeDescription": "General Device",
+  "deviceName": "House Device",
+  "roomID": "{{roomId}}"
+}
+
+> {%
+    client.global.set("houseDeviceID", response.body.deviceID);
+%}
+

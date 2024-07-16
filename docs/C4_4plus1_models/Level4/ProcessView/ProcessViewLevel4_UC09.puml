@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as User
+
+box "SmartHome"
+    participant "Controller" as CTRL<<component>>
+    participant "Service" as SV<<component>>
+    participant "Repository" as REPO<<component>>
+end box
+participant " " as BD
+
+
+User o-> CTRL : GET /devices grouped by functionality
+activate CTRL
+
+
+CTRL -> SV: getAllDeviceTypes()
+activate SV
+
+SV -> REPO : findAll()
+activate REPO
+
+REPO ->o BD : find
+BD o--> REPO : deviceTypeDataModelList
+
+REPO --> SV : deviceTypeList
+deactivate REPO
+
+SV --> CTRL : deviceTypeList
+deactivate SV
+
+CTRL -> SV : getDevicesByDeviceTypeID(deviceTypeID)
+activate SV
+
+SV -> REPO : findByDeviceTypeID(deviceTypeID)
+activate REPO
+
+REPO ->o BD : find
+BD o--> REPO : deviceDataModelList
+
+REPO --> SV : deviceList
+deactivate REPO
+
+SV --> CTRL : deviceList
+deactivate SV
+
+CTRL -->o User : deviceDTOListGroupedByFuncionallity
+deactivate CTRL
+
+
+@enduml

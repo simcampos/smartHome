@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+package house {
+
+    class House <<entity>> <<Root>> {
+    }
+
+    class GPS <<valueObject>> {
+    - _latitude : double
+    - _longitude : double
+    }
+
+    class Address <<valueObject>> {
+    - _street : String
+    - _doorNumber : int
+    - _countryCode: String
+    }
+
+    class PostalCodeImpl <<valueObject>> {
+    - _postalCode : String
+    }
+
+
+    class HouseID <<valueObject>> {
+    - _houseID : String
+    }
+}
+
+House  -- "1" HouseID : has
+House  -- "1" GPS : has
+House  -- "1" Address : has
+Address  -- "1" PostalCodeImpl : has
+
+@enduml

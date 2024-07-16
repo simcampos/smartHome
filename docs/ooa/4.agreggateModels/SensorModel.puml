@@ -1,0 +1,20 @@
+@startuml
+!pragma layout smetana
+
+package sensor_model{
+
+    class SensorModel <<Entity>> <<Root>>{
+    }
+
+     class ModelPath <<ValueObject>><<ID>>{
+        - _path : String
+     }
+     class SensorModelName <<ValueObject>>{
+        - _sensorModelName : String
+     }
+}
+
+SensorModel  -- "1" ModelPath : has
+SensorModel  -- "1" SensorModelName : has
+
+@enduml

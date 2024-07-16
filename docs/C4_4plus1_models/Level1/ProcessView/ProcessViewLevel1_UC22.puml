@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "Web Client" as User
+
+participant "SmartHome" as SH<<System (C4)>>
+
+User -> SH : I want to get a list of all devices in a room
+activate User
+activate SH
+
+
+SH --> User : Device list in a room
+deactivate User
+deactivate SH
+
+
+@enduml

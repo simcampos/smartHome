@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="1202px" preserveAspectRatio="none" style="width:2665px;height:1202px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 2665 1202" width="2665px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <rect fill="#FFFFFF" height="371.5313" style="stroke:#181818;stroke-width:1.0;" width="10" x="314.5"
+              y="116.9121"/>
+        <rect fill="#FFFFFF" height="581.2676" style="stroke:#181818;stroke-width:1.0;" width="10" x="314.5"
+              y="519.7344"/>
+        <rect fill="#FFFFFF" height="93.873" style="stroke:#181818;stroke-width:1.0;" width="10" x="499.5"
+              y="148.2031"/>
+        <rect fill="#FFFFFF" height="31.291" style="stroke:#181818;stroke-width:1.0;" width="10" x="695.5"
+              y="179.4941"/>
+        <rect fill="#FFFFFF" height="183.7852" style="stroke:#181818;stroke-width:1.0;" width="10" x="797.5"
+              y="273.3672"/>
+        <rect fill="#FFFFFF" height="70.9121" style="stroke:#181818;stroke-width:1.0;" width="10" x="1230.5"
+              y="340.9492"/>
+        <rect fill="#FFFFFF" height="33.6211" style="stroke:#181818;stroke-width:1.0;" width="10" x="1351"
+              y="561.0254"/>
+        <rect fill="#FFFFFF" height="33.6211" style="stroke:#181818;stroke-width:1.0;" width="10" x="1433"
+              y="635.9375"/>
+        <rect fill="#FFFFFF" height="231.3672" style="stroke:#181818;stroke-width:1.0;" width="10" x="1558.5"
+              y="700.8496"/>
+        <rect fill="#FFFFFF" height="106.2031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1720"
+              y="963.5078"/>
+        <rect fill="#FFFFFF" height="106.2031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1882"
+              y="732.1406"/>
+        <rect fill="#FFFFFF" height="33.6211" style="stroke:#181818;stroke-width:1.0;" width="10" x="2261"
+              y="773.4316"/>
+        <rect fill="#FFFFFF" height="31.291" style="stroke:#181818;stroke-width:1.0;" width="10" x="2437.5"
+              y="869.6348"/>
+        <rect fill="#FFFFFF" height="33.6211" style="stroke:#181818;stroke-width:1.0;" width="10" x="2591.5"
+              y="1004.7988"/>
+        <rect fill="none" height="138.4941" style="stroke:#000000;stroke-width:1.5;" width="590" x="738.5"
+              y="288.3672"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="18" x2="18" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="319.5" x2="319.5" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="504" x2="504" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="700.5" x2="700.5" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="802.5" x2="802.5" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1235.5" x2="1235.5" y1="339.4688"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1355.5" x2="1355.5" y1="559.5449"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1437.5" x2="1437.5" y1="634.457"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1563.5" x2="1563.5" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1724.5" x2="1724.5" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1886.5" x2="1886.5" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="2266" x2="2266" y1="771.9512"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="2442" x2="2442" y1="83.6211"
+              y2="1119.002"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="2596" x2="2596" y1="1003.3184"
+              y2="1119.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="11.5"
+              y="80.1074">&#160;&#160;
+        </text>
+        <ellipse cx="18.5" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+        <path d="M18.5,21.5 L18.5,48.5 M5.5,29.5 L31.5,29.5 M18.5,48.5 L5.5,63.5 M18.5,48.5 L31.5,63.5 " fill="none"
+              style="stroke:#181818;stroke-width:0.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="11.5"
+              y="1133.1094">&#160;&#160;
+        </text>
+        <ellipse cx="18.5" cy="1145.123" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+        <path d="M18.5,1153.123 L18.5,1180.123 M5.5,1161.123 L31.5,1161.123 M18.5,1180.123 L5.5,1195.123 M18.5,1180.123 L31.5,1195.123 "
+              fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="182"
+              x="228.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="235.5"
+              y="72.1074">:AddSensorTypeController
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="182"
+              x="228.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="235.5"
+              y="1140.1094">:AddSensorTypeController
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89"
+              x="460" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="467"
+              y="72.1074">:UnitService
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89"
+              x="460" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="467"
+              y="1140.1094">:UnitService
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76"
+              x="662.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="669.5"
+              y="72.1074">:UnitRepo
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76"
+              x="662.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="669.5"
+              y="1140.1094">:UnitRepo
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108"
+              x="748.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="755.5"
+              y="72.1074">:UnitAssembler
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108"
+              x="748.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="755.5"
+              y="1140.1094">:UnitAssembler
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="166"
+              x="1152.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="1159.5"
+              y="1140.1094">:unitTypeDTO
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="55"
+              x="1328.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="1335.5"
+              y="1140.1094">:UnitID
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89"
+              x="1393.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="1400.5"
+              y="1140.1094">:Description
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="142"
+              x="1492.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="1499.5"
+              y="72.1074">:SensorTypeService
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="142"
+              x="1492.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="1499.5"
+              y="1140.1094">:SensorTypeService
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161"
+              x="1644.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="1651.5"
+              y="72.1074">:SensorTypeAssembler
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161"
+              x="1644.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="1651.5"
+              y="1140.1094">:SensorTypeAssembler
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143"
+              x="1815.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="1822.5"
+              y="72.1074">:SensorTypeFactory
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143"
+              x="1815.5" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="1822.5"
+              y="1140.1094">:SensorTypeFactory
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="170"
+              x="2181" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="2188"
+              y="1140.1094">sensorType:SensorType
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="163"
+              x="2361" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="2368"
+              y="72.1074">:SensorTypeRepository
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="163"
+              x="2361" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="2368"
+              y="1140.1094">:SensorTypeRepository
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125"
+              x="2534" y="1118.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="2541"
+              y="1140.1094">:SensorTypeDTO
+        </text>
+        <rect fill="#FFFFFF" height="371.5313" style="stroke:#181818;stroke-width:1.0;" width="10" x="314.5"
+              y="116.9121"/>
+        <rect fill="#FFFFFF" height="581.2676" style="stroke:#181818;stroke-width:1.0;" width="10" x="314.5"
+              y="519.7344"/>
+        <rect fill="#FFFFFF" height="93.873" style="stroke:#181818;stroke-width:1.0;" width="10" x="499.5"
+              y="148.2031"/>
+        <rect fill="#FFFFFF" height="31.291" style="stroke:#181818;stroke-width:1.0;" width="10" x="695.5"
+              y="179.4941"/>
+        <rect fill="#FFFFFF" height="183.7852" style="stroke:#181818;stroke-width:1.0;" width="10" x="797.5"
+              y="273.3672"/>
+        <rect fill="#FFFFFF" height="70.9121" style="stroke:#181818;stroke-width:1.0;" width="10" x="1230.5"
+              y="340.9492"/>
+        <rect fill="#FFFFFF" height="33.6211" style="stroke:#181818;stroke-width:1.0;" width="10" x="1351"
+              y="561.0254"/>
+        <rect fill="#FFFFFF" height="33.6211" style="stroke:#181818;stroke-width:1.0;" width="10" x="1433"
+              y="635.9375"/>
+        <rect fill="#FFFFFF" height="231.3672" style="stroke:#181818;stroke-width:1.0;" width="10" x="1558.5"
+              y="700.8496"/>
+        <rect fill="#FFFFFF" height="106.2031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1720"
+              y="963.5078"/>
+        <rect fill="#FFFFFF" height="106.2031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1882"
+              y="732.1406"/>
+        <rect fill="#FFFFFF" height="33.6211" style="stroke:#181818;stroke-width:1.0;" width="10" x="2261"
+              y="773.4316"/>
+        <rect fill="#FFFFFF" height="31.291" style="stroke:#181818;stroke-width:1.0;" width="10" x="2437.5"
+              y="869.6348"/>
+        <rect fill="#FFFFFF" height="33.6211" style="stroke:#181818;stroke-width:1.0;" width="10" x="2591.5"
+              y="1004.7988"/>
+        <ellipse cx="18" cy="116.1621" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.5;"/>
+        <polygon fill="#181818" points="302.5,112.9121,312.5,116.9121,302.5,120.9121,306.5,116.9121"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="22.5" x2="308.5" y1="116.9121" y2="116.9121"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="214" x="25.5"
+              y="111.6494">1: getSupportedunitTypes()
+        </text>
+        <polygon fill="#181818" points="487.5,144.2031,497.5,148.2031,487.5,152.2031,491.5,148.2031"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="324.5" x2="493.5" y1="148.2031" y2="148.2031"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="331.5"
+              y="142.9404">1.1: getAllSupportedUnits()
+        </text>
+        <polygon fill="#181818" points="683.5,175.4941,693.5,179.4941,683.5,183.4941,687.5,179.4941"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="509.5" x2="689.5" y1="179.4941" y2="179.4941"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="167" x="516.5"
+              y="174.2314">1.1.1: getAllSupportedUnits()
+        </text>
+        <polygon fill="#181818" points="520.5,206.7852,510.5,210.7852,520.5,214.7852,516.5,210.7852"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="514.5" x2="699.5" y1="210.7852"
+              y2="210.7852"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="526.5"
+              y="205.5225">listUnits
+        </text>
+        <polygon fill="#181818" points="335.5,238.0762,325.5,242.0762,335.5,246.0762,331.5,242.0762"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="329.5" x2="503.5" y1="242.0762"
+              y2="242.0762"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="341.5"
+              y="236.8135">listUnits
+        </text>
+        <polygon fill="#181818" points="785.5,269.3672,795.5,273.3672,785.5,277.3672,789.5,273.3672"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="324.5" x2="791.5" y1="273.3672" y2="273.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="163" x="331.5"
+              y="268.1045">1.2: domainToDTO(listUnits)
+        </text>
+        <path d="M738.5,288.3672 L811.5,288.3672 L811.5,297.6582 L801.5,307.6582 L738.5,307.6582 L738.5,288.3672 "
+              fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
+        <rect fill="none" height="138.4941" style="stroke:#000000;stroke-width:1.5;" width="590" x="738.5"
+              y="288.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="28" x="753.5" y="303.3955">loop
+        </text>
+        <polygon fill="#181818" points="1140.5,326.9492,1150.5,330.9492,1140.5,334.9492,1144.5,330.9492"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="807.5" x2="1146.5" y1="330.9492" y2="330.9492"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="321" x="814.5"
+              y="325.6865">1.2.1: createunitTypeDTO(unitType)
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="166"
+              x="1152.5" y="307.6582"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="1159.5"
+              y="329.7656">:unitTypeDTO
+        </text>
+        <polygon fill="#181818" points="818.5,370.5703,808.5,374.5703,818.5,378.5703,814.5,374.5703"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="812.5" x2="1229.5" y1="374.5703"
+              y2="374.5703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133" x="824.5"
+              y="369.3076">unitTypeDTO
+        </text>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="807.5" x2="849.5" y1="410.8613" y2="410.8613"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="849.5" x2="849.5" y1="410.8613" y2="423.8613"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="802.5" x2="849.5" y1="423.8613" y2="423.8613"/>
+        <polygon fill="#181818" points="812.5,419.8613,802.5,423.8613,812.5,427.8613,808.5,423.8613"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="332" x="814.5"
+              y="405.5986">1.2.2: addunitTypeDTO(unitTypeDTO)
+        </text>
+        <polygon fill="#181818" points="335.5,453.1523,325.5,457.1523,335.5,461.1523,331.5,457.1523"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="329.5" x2="801.5" y1="457.1523"
+              y2="457.1523"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="341.5"
+              y="451.8896">listUnitsDTO
+        </text>
+        <polygon fill="#181818" points="29.5,484.4434,19.5,488.4434,29.5,492.4434,25.5,488.4434"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="23.5" x2="318.5" y1="488.4434"
+              y2="488.4434"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="35.5"
+              y="483.1807">listUnitsDTO
+        </text>
+        <ellipse cx="18" cy="518.9844" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.5;"/>
+        <polygon fill="#181818" points="302.5,515.7344,312.5,519.7344,302.5,523.7344,306.5,519.7344"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="22.5" x2="308.5" y1="519.7344" y2="519.7344"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="277" x="25.5"
+              y="514.4717">2: createSensorType(dataSensorTypeDTO data)
+        </text>
+        <polygon fill="#181818" points="1316.5,547.0254,1326.5,551.0254,1316.5,555.0254,1320.5,551.0254"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="324.5" x2="1322.5" y1="551.0254" y2="551.0254"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="239" x="331.5"
+              y="545.7627">2.1: createunitTypeID(srtUnitID)
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="55"
+              x="1328.5" y="527.7344"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="1335.5"
+              y="549.8418">:UnitID
+        </text>
+        <polygon fill="#181818" points="335.5,590.6465,325.5,594.6465,335.5,598.6465,331.5,594.6465"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="329.5" x2="1355" y1="594.6465"
+              y2="594.6465"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="33" x="341.5"
+              y="589.3838">unitID
+        </text>
+        <polygon fill="#181818" points="1381.5,621.9375,1391.5,625.9375,1381.5,629.9375,1385.5,625.9375"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="324.5" x2="1387.5" y1="625.9375" y2="625.9375"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="215" x="331.5"
+              y="620.6748">2.2: createDescription(strDescription)
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89"
+              x="1393.5" y="602.6465"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="1400.5"
+              y="624.7539">:Description
+        </text>
+        <polygon fill="#181818" points="335.5,665.5586,325.5,669.5586,335.5,673.5586,331.5,669.5586"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="329.5" x2="1437" y1="669.5586"
+              y2="669.5586"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="341.5"
+              y="664.2959">description
+        </text>
+        <polygon fill="#181818" points="1546.5,696.8496,1556.5,700.8496,1546.5,704.8496,1550.5,700.8496"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="324.5" x2="1552.5" y1="700.8496" y2="700.8496"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="243" x="331.5"
+              y="695.5869">2.3: createSensorType(description, unitID)
+        </text>
+        <polygon fill="#181818" points="1870,728.1406,1880,732.1406,1870,736.1406,1874,732.1406"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="1568.5" x2="1876" y1="732.1406" y2="732.1406"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="239" x="1575.5"
+              y="726.8779">2.3.1: addSensorType(description, unitID)
+        </text>
+        <polygon fill="#181818" points="2169,759.4316,2179,763.4316,2169,767.4316,2173,763.4316"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="1892" x2="2175" y1="763.4316" y2="763.4316"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="265" x="1899"
+              y="758.1689">2.3.1.1: createSensorType(description, unitID)
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="170"
+              x="2181" y="740.1406"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="2188"
+              y="762.248">sensorType:SensorType
+        </text>
+        <polygon fill="#181818" points="1903,803.0527,1893,807.0527,1903,811.0527,1899,807.0527"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1897" x2="2265" y1="807.0527"
+              y2="807.0527"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="1909"
+              y="801.79">sensorType
+        </text>
+        <polygon fill="#181818" points="1579.5,834.3438,1569.5,838.3438,1579.5,842.3438,1575.5,838.3438"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1573.5" x2="1886" y1="838.3438"
+              y2="838.3438"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="1585.5"
+              y="833.0811">sensorType
+        </text>
+        <polygon fill="#181818" points="2425.5,865.6348,2435.5,869.6348,2425.5,873.6348,2429.5,869.6348"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="1568.5" x2="2431.5" y1="869.6348" y2="869.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138" x="1575.5"
+              y="864.3721">2.3.2: save(sensorType)
+        </text>
+        <polygon fill="#181818" points="1579.5,896.9258,1569.5,900.9258,1579.5,904.9258,1575.5,900.9258"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1573.5" x2="2441.5" y1="900.9258"
+              y2="900.9258"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="1585.5"
+              y="895.6631">sensorType
+        </text>
+        <polygon fill="#181818" points="335.5,928.2168,325.5,932.2168,335.5,936.2168,331.5,932.2168"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="329.5" x2="1562.5" y1="932.2168"
+              y2="932.2168"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="341.5"
+              y="926.9541">sensorType
+        </text>
+        <polygon fill="#181818" points="1708,959.5078,1718,963.5078,1708,967.5078,1712,963.5078"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="324.5" x2="1714" y1="963.5078"
+              y2="963.5078"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="183" x="331.5"
+              y="958.2451">2.4: domainToDTO(sensorType)
+        </text>
+        <polygon fill="#181818" points="2522,990.7988,2532,994.7988,2522,998.7988,2526,994.7988"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="1730" x2="2528" y1="994.7988" y2="994.7988"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="243" x="1737"
+              y="989.5361">2.4.1: createSensorTypeDTO(sensorType)
+        </text>
+        <rect fill="#E2E2F0" height="32.6211" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125"
+              x="2534" y="971.5078"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="2541"
+              y="993.6152">:SensorTypeDTO
+        </text>
+        <polygon fill="#181818" points="1741,1034.4199,1731,1038.4199,1741,1042.4199,1737,1038.4199"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1735" x2="2595.5" y1="1038.4199"
+              y2="1038.4199"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="1747"
+              y="1033.1572">sensorTypeDTO
+        </text>
+        <polygon fill="#181818" points="335.5,1065.7109,325.5,1069.7109,335.5,1073.7109,331.5,1069.7109"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="329.5" x2="1724" y1="1069.7109"
+              y2="1069.7109"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="341.5"
+              y="1064.4482">sensorTypeDTO
+        </text>
+        <polygon fill="#181818" points="29.5,1097.002,19.5,1101.002,29.5,1105.002,25.5,1101.002"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="23.5" x2="318.5" y1="1101.002"
+              y2="1101.002"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="35.5"
+              y="1095.7393">sensorTypeDTO
+        </text><!--SRC=[fLR1Yjim4BtxAzIzh0FDGjEUSYY4ca8EIw79Ve1gYqLWMqPI0ldxbMHR6aaZrj2mPENnp9kdDoDDlaoIlW-KzFGXRfgeWMawqggYhHQIF17pHnLvKqnM4vMQjtoYeoPFnrFNNTYeXBm-9lPBZ5gAlcVIkOV79EXjvFh2v9stRCODpuZdNpO9xuQyFod5XdzhqiXI9UwlZAgRP0CRjUNRNF-ucDnS8NdEZKzmRfBt3LEjv9FcOdHEu3dn36f11TRT5vtZJIBsOkHlLyE7YrlMiQ_ohY3AkTj54TUMHN4F7HwB4QlSaQMgR5SHiVy9-kL8lXt9EzENspG9gLcNL4ZLEzkQ_4urWsqMbiJWWROoW2ypvAdlFQfrYA1W8uBr2kPGjk8u0B9FUVHSQUTVTIptzmaJEOfHAzjyvxupBEl3aNHYe7oy2gDvxU4Ipg6RUY6cgfNCla6E1udTRSxSooMsSiqukKCznAQTmVLyqAovqIiCzZji8foBP6MYNVSvKMEoN44j4BPix8YJCSbSAkrCCwalkCgY6bl-AWi7mU1Ku2ViiDOb7CUwevf6fvDOoyxaVjx_z-SPFR9BZostQjx6vyPGBJRHkQcLrBDVqii6RVwNANwRtoPA6yl21LxUCI7mnhBo4W9xhRG4Zu0KX0NhZ5u7_0371ZTZeo1XxU-UmyjthEW1-EkY3M2zNZ3WAbocYCEpbQ7mDy0dSEi4MgHs4sQnMMWtXMRSKFFDu0xDVZbDFSqmuA1mSMee4-w_CWT2X9atSpRzeEYTrG40a0C3CYot90Q1fV601_eV5Sd5WRICvVyZdX7e9h1kMqePJtN4aKIftNmmIR4oRqWVvrZd0Bep5GMXHwV8kAXp4IheWbxNHGHm9Nu0]-->
+    </g>
+</svg>

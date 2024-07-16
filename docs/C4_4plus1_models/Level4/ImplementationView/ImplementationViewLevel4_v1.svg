@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="675px" preserveAspectRatio="none" style="width:496px;height:675px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 496 675" width="496px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--cluster Server-->
+        <g id="cluster_Server">
+            <path d="M8.5,6.0137 L57.5,6.0137 A3.75,3.75 0 0 1 60,8.5137 L67,30.6348 L486.5,30.6348 A2.5,2.5 0 0 1 489,33.1348 L489,665.5137 A2.5,2.5 0 0 1 486.5,668.0137 L8.5,668.0137 A2.5,2.5 0 0 1 6,665.5137 L6,8.5137 A2.5,2.5 0 0 1 8.5,6.0137 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="67" y1="30.6348" y2="30.6348"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="48" x="10" y="23.1211">Server
+            </text>
+        </g><!--cluster Infrastructure-->
+        <g id="cluster_Infrastructure">
+            <path d="M120.5,51.0137 L218.5,51.0137 A3.75,3.75 0 0 1 221,53.5137 L228,75.6348 L356.5,75.6348 A2.5,2.5 0 0 1 359,78.1348 L359,158.5137 A2.5,2.5 0 0 1 356.5,161.0137 L120.5,161.0137 A2.5,2.5 0 0 1 118,158.5137 L118,53.5137 A2.5,2.5 0 0 1 120.5,51.0137 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="118" x2="228" y1="75.6348" y2="75.6348"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="97" x="122" y="68.1211">Infrastructure
+            </text>
+        </g><!--cluster Interface Adapters-->
+        <g id="cluster_Interface Adapters">
+            <path d="M92.5,212.0137 L223.5,212.0137 A3.75,3.75 0 0 1 226,214.5137 L233,236.6348 L364.5,236.6348 A2.5,2.5 0 0 1 367,239.1348 L367,319.5137 A2.5,2.5 0 0 1 364.5,322.0137 L92.5,322.0137 A2.5,2.5 0 0 1 90,319.5137 L90,214.5137 A2.5,2.5 0 0 1 92.5,212.0137 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="90" x2="233" y1="236.6348" y2="236.6348"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="130" x="94" y="229.1211">Interface Adapters
+            </text>
+        </g><!--cluster Services Layer-->
+        <g id="cluster_Services Layer">
+            <path d="M99.5,373.0137 L204.5,373.0137 A3.75,3.75 0 0 1 207,375.5137 L214,397.6348 L335.5,397.6348 A2.5,2.5 0 0 1 338,400.1348 L338,480.5137 A2.5,2.5 0 0 1 335.5,483.0137 L99.5,483.0137 A2.5,2.5 0 0 1 97,480.5137 L97,375.5137 A2.5,2.5 0 0 1 99.5,373.0137 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="97" x2="214" y1="397.6348" y2="397.6348"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="104" x="101" y="390.1211">Services Layer
+            </text>
+        </g><!--cluster Entities/Core/Domain-->
+        <g id="cluster_Entities/Core/Domain">
+            <path d="M32.5,534.0137 L180.5,534.0137 A3.75,3.75 0 0 1 183,536.5137 L190,558.6348 L462.5,558.6348 A2.5,2.5 0 0 1 465,561.1348 L465,641.5137 A2.5,2.5 0 0 1 462.5,644.0137 L32.5,644.0137 A2.5,2.5 0 0 1 30,641.5137 L30,536.5137 A2.5,2.5 0 0 1 32.5,534.0137 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="190" y1="558.6348" y2="558.6348"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="147" x="34" y="551.1211">Entities/Core/Domain
+            </text>
+        </g>
+        <path d="M136.5,88.0137 L187.5,88.0137 A3.75,3.75 0 0 1 190,90.5137 L197,112.6348 L201.5,112.6348 A2.5,2.5 0 0 1 204,115.1348 L204,142.7559 A2.5,2.5 0 0 1 201.5,145.2559 L136.5,145.2559 A2.5,2.5 0 0 1 134,142.7559 L134,90.5137 A2.5,2.5 0 0 1 136.5,88.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="134" x2="197" y1="112.6348" y2="112.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="50" x="138" y="105.1211">Routes
+        </text>
+        <path d="M241.5,88.0137 L326.5,88.0137 A3.75,3.75 0 0 1 329,90.5137 L336,112.6348 L340.5,112.6348 A2.5,2.5 0 0 1 343,115.1348 L343,142.7559 A2.5,2.5 0 0 1 340.5,145.2559 L241.5,145.2559 A2.5,2.5 0 0 1 239,142.7559 L239,90.5137 A2.5,2.5 0 0 1 241.5,88.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="239" x2="336" y1="112.6348" y2="112.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="84" x="243" y="105.1211">Persistence
+        </text>
+        <path d="M109,249.0137 L189,249.0137 A3.75,3.75 0 0 1 191.5,251.5137 L198.5,273.6348 L203,273.6348 A2.5,2.5 0 0 1 205.5,276.1348 L205.5,303.7559 A2.5,2.5 0 0 1 203,306.2559 L109,306.2559 A2.5,2.5 0 0 1 106.5,303.7559 L106.5,251.5137 A2.5,2.5 0 0 1 109,249.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="106.5" x2="198.5" y1="273.6348" y2="273.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="79" x="110.5" y="266.1211">Controllers
+        </text>
+        <path d="M243.5,249.0137 L334.5,249.0137 A3.75,3.75 0 0 1 337,251.5137 L344,273.6348 L348.5,273.6348 A2.5,2.5 0 0 1 351,276.1348 L351,303.7559 A2.5,2.5 0 0 1 348.5,306.2559 L243.5,306.2559 A2.5,2.5 0 0 1 241,303.7559 L241,251.5137 A2.5,2.5 0 0 1 243.5,249.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="241" x2="344" y1="273.6348" y2="273.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="90" x="245" y="266.1211">Repositories
+        </text>
+        <path d="M242.5,410.0137 L305.5,410.0137 A3.75,3.75 0 0 1 308,412.5137 L315,434.6348 L319.5,434.6348 A2.5,2.5 0 0 1 322,437.1348 L322,464.7559 A2.5,2.5 0 0 1 319.5,467.2559 L242.5,467.2559 A2.5,2.5 0 0 1 240,464.7559 L240,412.5137 A2.5,2.5 0 0 1 242.5,410.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="240" x2="315" y1="434.6348" y2="434.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="62" x="244" y="427.1211">Services
+        </text>
+        <path d="M115.5,410.0137 L182.5,410.0137 A3.75,3.75 0 0 1 185,412.5137 L192,434.6348 L196.5,434.6348 A2.5,2.5 0 0 1 199,437.1348 L199,464.7559 A2.5,2.5 0 0 1 196.5,467.2559 L115.5,467.2559 A2.5,2.5 0 0 1 113,464.7559 L113,412.5137 A2.5,2.5 0 0 1 115.5,410.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="113" x2="192" y1="434.6348" y2="434.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="66" x="117" y="427.1211">IServices
+        </text>
+        <path d="M201,571.0137 L283,571.0137 A3.75,3.75 0 0 1 285.5,573.5137 L292.5,595.6348 L297,595.6348 A2.5,2.5 0 0 1 299.5,598.1348 L299.5,625.7559 A2.5,2.5 0 0 1 297,628.2559 L201,628.2559 A2.5,2.5 0 0 1 198.5,625.7559 L198.5,573.5137 A2.5,2.5 0 0 1 201,571.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="198.5" x2="292.5" y1="595.6348" y2="595.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="81" x="202.5" y="588.1211">Aggregates
+        </text>
+        <path d="M49,571.0137 L147,571.0137 A3.75,3.75 0 0 1 149.5,573.5137 L156.5,595.6348 L161,595.6348 A2.5,2.5 0 0 1 163.5,598.1348 L163.5,625.7559 A2.5,2.5 0 0 1 161,628.2559 L49,628.2559 A2.5,2.5 0 0 1 46.5,625.7559 L46.5,573.5137 A2.5,2.5 0 0 1 49,571.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="46.5" x2="156.5" y1="595.6348" y2="595.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="97" x="50.5" y="588.1211">Value Objects
+        </text>
+        <path d="M337.5,571.0137 L432.5,571.0137 A3.75,3.75 0 0 1 435,573.5137 L442,595.6348 L446.5,595.6348 A2.5,2.5 0 0 1 449,598.1348 L449,625.7559 A2.5,2.5 0 0 1 446.5,628.2559 L337.5,628.2559 A2.5,2.5 0 0 1 335,625.7559 L335,573.5137 A2.5,2.5 0 0 1 337.5,571.0137 "
+              fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="335" x2="442" y1="595.6348" y2="595.6348"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="94" x="339" y="588.1211">IRepositories
+        </text><!--link Routes to Controllers-->
+        <g id="link_Routes_Controllers">
+            <path codeLine="37" d="M166.74,145.2137 C164.36,174.3037 161.1294,213.8137 158.7494,242.8937 " fill="none"
+                  id="Routes-to-Controllers" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="158.26,248.8737,162.9808,240.2299,158.6679,243.8903,155.0075,239.5774,158.26,248.8737"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="165"
+                  y="192.042">.
+            </text>
+        </g><!--reverse link Persistence to Repositories-->
+        <g id="link_Persistence_Repositories">
+            <path codeLine="38" d="M292.0597,151.2107 C292.9797,180.3007 294.22,219.7937 295.13,248.8737 " fill="none"
+                  id="Persistence-backto-Repositories"
+                  style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="291.87,145.2137,288.1565,154.3356,292.0281,150.2112,296.1525,154.0827,291.87,145.2137"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="294"
+                  y="192.042">.
+            </text>
+        </g><!--link Controllers to IServices-->
+        <g id="link_Controllers_IServices">
+            <path codeLine="39" d="M156,306.2137 C156,335.3037 156,374.7937 156,403.8737 " fill="none"
+                  id="Controllers-to-IServices" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818" points="156,409.8737,160,400.8737,156,404.8737,152,400.8737,156,409.8737"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="157"
+                  y="353.042">.
+            </text>
+        </g><!--link IServices to Aggregates-->
+        <g id="link_IServices_Aggregates">
+            <path codeLine="40" d="M172.2,467.2137 C189.22,496.3037 212.7906,536.6146 229.8006,565.6946 " fill="none"
+                  id="IServices-to-Aggregates" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="232.83,570.8737,231.7386,561.0855,230.3055,566.5578,224.8332,565.1247,232.83,570.8737"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="200"
+                  y="514.042">.
+            </text>
+        </g><!--link IServices to Value Objects-->
+        <g id="link_IServices_Value Objects">
+            <path codeLine="41" d="M147.12,467.2137 C137.78,496.3037 125.0212,536.0799 115.7012,565.1599 " fill="none"
+                  id="IServices-to-Value Objects" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="113.87,570.8737,120.426,563.5239,115.396,566.1122,112.8077,561.0823,113.87,570.8737"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="137"
+                  y="514.042">.
+            </text>
+        </g><!--link Repositories to Services-->
+        <g id="link_Repositories_Services">
+            <path codeLine="42" d="M293.39,306.2137 C290.64,335.3037 286.9128,374.8201 284.1728,403.9001 " fill="none"
+                  id="Repositories-to-Services" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="283.61,409.8737,288.4366,401.2886,284.079,404.8957,280.4719,400.5381,283.61,409.8737"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--link Repositories to IRepositories-->
+        <g id="link_Repositories_IRepositories">
+            <path codeLine="43"
+                  d="M311.46,306.2637 C320.22,322.9037 330.83,344.7037 338,365.0137 C363.58,437.3937 377.3734,508.9681 384.7434,553.2281 "
+                  fill="none" id="Repositories-to-IRepositories"
+                  style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="none" points="387.7,570.9837,390.6619,552.2426,378.8249,554.2137,387.7,570.9837"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="373"
+                  y="444.042">.
+            </text>
+        </g><!--link Services to IServices-->
+        <g id="link_Services_IServices">
+            <path codeLine="44" d="M239.59,438.5137 C226.56,438.5137 230.15,438.5137 217.02,438.5137 " fill="none"
+                  id="Services-to-IServices" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="none" points="199.02,438.5137,217.02,444.5137,217.02,432.5137,199.02,438.5137"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="217.5"
+                  y="431.542">.
+            </text>
+        </g><!--SRC=[XLB1QiCm3BtdAumllRdtCGgbtI4ms6XXTyzLFM-P7MHbCDRy-vmbRPp4ItmAqjDxBqygfVgG6XW_0du1SlQJPIoyigldzepI4rQAAeJGPTsx0Wwk8l1Hevv0dW6zyGHMmGHN3-LuRWdmB0DoUv9b-FOy8Rfpbj0LHMZFAX-WTDwGGvEmE9Pk4Z0g01_bTvl4cEu6uREgF4_ZageFbWm5U-kTGrZltQSqDgMzrHf1owMi-OiiAc1Fh- -WQD5dd0_leMdBAxQ74kmfx370_qh3wn3TBGYnIIrIH5lZx8w954LyA_T297a6hcz4YugjhNur_M1VQp1Hqlz1nYdFUHYwRQQlNEt8k7_PZ1VJqySkqEWtkan_gSv-0G00]-->
+    </g>
+</svg>

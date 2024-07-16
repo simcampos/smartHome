@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/component-diagram
+component Backend <<component>><<C4 Container>> {
+
+    port p1
+
+    component Server <<component>> {
+        port p2
+
+    }
+
+    component DataBase <<component>> {
+        port p3
+        }
+}
+
+p1 -up- RESTAPI
+p2 -- p1
+p2 -(0- p3 : DataBase API
+
+
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+component SmartHome <<system (C4)>> <<component>> {
+port p1
+port p2
+}
+
+UI -down- p1
+SunTimeAPI )-down- p2
+
+@enduml

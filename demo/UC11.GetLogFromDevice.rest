@@ -1,0 +1,2 @@
+GET http://localhost:8080/logs?deviceID={{deviceId}}&timeStart=2024-02-12T00:00:00&timeEnd=2024-02-12T23:59:59
+

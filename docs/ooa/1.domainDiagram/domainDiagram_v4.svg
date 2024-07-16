@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="1015px" preserveAspectRatio="none" style="width:1037px;height:1015px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 1037 1015" width="1037px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--class House-->
+        <g id="elem_House">
+            <rect codeLine="7" fill="#F1F1F1" height="97.4648" id="House" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="144" x="420" y="20.5"/>
+            <ellipse cx="466.25" cy="36.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M469.2231,42.1431 Q468.6421,42.4419 468.0029,42.5913 Q467.3638,42.7407 466.6582,42.7407 Q464.1514,42.7407 462.8315,41.0889 Q461.5117,39.437 461.5117,36.3159 Q461.5117,33.1865 462.8315,31.5347 Q464.1514,29.8828 466.6582,29.8828 Q467.3638,29.8828 468.0112,30.0322 Q468.6587,30.1816 469.2231,30.4805 L469.2231,33.2031 Q468.5923,32.6221 467.9988,32.3523 Q467.4053,32.0825 466.7744,32.0825 Q465.4297,32.0825 464.7449,33.1492 Q464.0601,34.2158 464.0601,36.3159 Q464.0601,38.4077 464.7449,39.4744 Q465.4297,40.541 466.7744,40.541 Q467.4053,40.541 467.9988,40.2712 Q468.5923,40.0015 469.2231,39.4204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43"
+                  x="486.75" y="41.791">House
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="421" x2="563" y1="52.5" y2="52.5"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="428" y="63.2441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="440"
+                  y="70.0352">id: HouseID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="428" y="79.7324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="440"
+                  y="86.5234">address: Address
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="428" y="96.2207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="440"
+                  y="103.0117">gps: GPS
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="421" x2="563" y1="109.9648" y2="109.9648"/>
+        </g><!--class Address-->
+        <g id="elem_Address">
+            <rect codeLine="12" fill="#F1F1F1" height="113.9531" id="Address" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="193" x="185.5" y="12"/>
+            <ellipse cx="249.75" cy="28" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M252.7231,33.6431 Q252.1421,33.9419 251.5029,34.0913 Q250.8638,34.2407 250.1582,34.2407 Q247.6514,34.2407 246.3315,32.5889 Q245.0117,30.937 245.0117,27.8159 Q245.0117,24.6865 246.3315,23.0347 Q247.6514,21.3828 250.1582,21.3828 Q250.8638,21.3828 251.5112,21.5322 Q252.1587,21.6816 252.7231,21.9805 L252.7231,24.7031 Q252.0923,24.1221 251.4988,23.8523 Q250.9053,23.5825 250.2744,23.5825 Q248.9297,23.5825 248.2449,24.6492 Q247.5601,25.7158 247.5601,27.8159 Q247.5601,29.9077 248.2449,30.9744 Q248.9297,32.041 250.2744,32.041 Q250.9053,32.041 251.4988,31.7712 Q252.0923,31.5015 252.7231,30.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56"
+                  x="270.25" y="33.291">Address
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="186.5" x2="377.5" y1="44" y2="44"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="193.5" y="54.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88"
+                  x="205.5" y="61.5352">street: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="193.5" y="71.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137"
+                  x="205.5" y="78.0234">doorNumber: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="193.5" y="87.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137"
+                  x="205.5" y="94.5117">countryCode: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="193.5" y="104.209"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167"
+                  x="205.5" y="111">postalCode: IPostalCode
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="186.5" x2="377.5" y1="117.9531" y2="117.9531"/>
+        </g><!--class GPS-->
+        <g id="elem_GPS">
+            <rect codeLine="18" fill="#F1F1F1" height="80.9766" id="GPS" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="148" x="606" y="28.5"/>
+            <ellipse cx="662.75" cy="44.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M665.7231,50.1431 Q665.1421,50.4419 664.5029,50.5913 Q663.8638,50.7407 663.1582,50.7407 Q660.6514,50.7407 659.3315,49.0889 Q658.0117,47.437 658.0117,44.3159 Q658.0117,41.1865 659.3315,39.5347 Q660.6514,37.8828 663.1582,37.8828 Q663.8638,37.8828 664.5112,38.0322 Q665.1587,38.1816 665.7231,38.4805 L665.7231,41.2031 Q665.0923,40.6221 664.4988,40.3523 Q663.9053,40.0825 663.2744,40.0825 Q661.9297,40.0825 661.2449,41.1492 Q660.5601,42.2158 660.5601,44.3159 Q660.5601,46.4077 661.2449,47.4744 Q661.9297,48.541 663.2744,48.541 Q663.9053,48.541 664.4988,48.2712 Q665.0923,48.0015 665.7231,47.4204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26"
+                  x="683.25" y="49.791">GPS
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="607" x2="753" y1="60.5" y2="60.5"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="614" y="71.2441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="626"
+                  y="78.0352">latitude: double
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="614" y="87.7324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="626"
+                  y="94.5234">longitude: double
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="607" x2="753" y1="101.4766" y2="101.4766"/>
+        </g><!--class Room-->
+        <g id="elem_Room">
+            <rect codeLine="23" fill="#F1F1F1" height="130.4414" id="Room" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="179" x="402.5" y="179"/>
+            <ellipse cx="467.75" cy="195" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M470.7231,200.6431 Q470.1421,200.9419 469.5029,201.0913 Q468.8638,201.2407 468.1582,201.2407 Q465.6514,201.2407 464.3315,199.5889 Q463.0117,197.937 463.0117,194.8159 Q463.0117,191.6865 464.3315,190.0347 Q465.6514,188.3828 468.1582,188.3828 Q468.8638,188.3828 469.5112,188.5322 Q470.1587,188.6816 470.7231,188.9805 L470.7231,191.7031 Q470.0923,191.1221 469.4988,190.8523 Q468.9053,190.5825 468.2744,190.5825 Q466.9297,190.5825 466.2449,191.6492 Q465.5601,192.7158 465.5601,194.8159 Q465.5601,196.9077 466.2449,197.9744 Q466.9297,199.041 468.2744,199.041 Q468.9053,199.041 469.4988,198.7712 Q470.0923,198.5015 470.7231,197.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40"
+                  x="488.25" y="200.291">Room
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="403.5" x2="580.5" y1="211" y2="211"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="410.5" y="221.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121"
+                  x="422.5" y="228.5352">houseID: HouseID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="410.5" y="238.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117"
+                  x="422.5" y="245.0234">floor: RoomFloor
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="410.5" y="254.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125"
+                  x="422.5" y="261.5117">name: RoomName
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="410.5" y="271.209"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153"
+                  x="422.5" y="278">dimension: Dimension
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="410.5" y="287.6973"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75"
+                  x="422.5" y="294.4883">id: RoomID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="403.5" x2="580.5" y1="301.4414" y2="301.4414"/>
+        </g><!--class Dimensions-->
+        <g id="elem_Dimensions">
+            <rect codeLine="31" fill="#F1F1F1" height="97.4648" id="Dimensions" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="112" x="623" y="195.5"/>
+            <ellipse cx="638" cy="211.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M640.9731,217.1431 Q640.3921,217.4419 639.7529,217.5913 Q639.1138,217.7407 638.4082,217.7407 Q635.9014,217.7407 634.5815,216.0889 Q633.2617,214.437 633.2617,211.3159 Q633.2617,208.1865 634.5815,206.5347 Q635.9014,204.8828 638.4082,204.8828 Q639.1138,204.8828 639.7612,205.0322 Q640.4087,205.1816 640.9731,205.4805 L640.9731,208.2031 Q640.3423,207.6221 639.7488,207.3523 Q639.1553,207.0825 638.5244,207.0825 Q637.1797,207.0825 636.4949,208.1492 Q635.8101,209.2158 635.8101,211.3159 Q635.8101,213.4077 636.4949,214.4744 Q637.1797,215.541 638.5244,215.541 Q639.1553,215.541 639.7488,215.2712 Q640.3423,215.0015 640.9731,214.4204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="652"
+                  y="216.791">Dimensions
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="624" x2="734" y1="227.5" y2="227.5"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="631" y="238.2441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="643"
+                  y="245.0352">width: int
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="631" y="254.7324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="643"
+                  y="261.5234">length: int
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="631" y="271.2207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="643"
+                  y="278.0117">height: int
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="624" x2="734" y1="284.9648" y2="284.9648"/>
+        </g><!--class Device-->
+        <g id="elem_Device">
+            <rect codeLine="37" fill="#F1F1F1" height="130.4414" id="Device" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="215" x="384.5" y="362"/>
+            <ellipse cx="465.75" cy="378" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M468.7231,383.6431 Q468.1421,383.9419 467.5029,384.0913 Q466.8638,384.2407 466.1582,384.2407 Q463.6514,384.2407 462.3315,382.5889 Q461.0117,380.937 461.0117,377.8159 Q461.0117,374.6865 462.3315,373.0347 Q463.6514,371.3828 466.1582,371.3828 Q466.8638,371.3828 467.5112,371.5322 Q468.1587,371.6816 468.7231,371.9805 L468.7231,374.7031 Q468.0923,374.1221 467.4988,373.8523 Q466.9053,373.5825 466.2744,373.5825 Q464.9297,373.5825 464.2449,374.6492 Q463.5601,375.7158 463.5601,377.8159 Q463.5601,379.9077 464.2449,380.9744 Q464.9297,382.041 466.2744,382.041 Q466.9053,382.041 467.4988,381.7712 Q468.0923,381.5015 468.7231,380.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44"
+                  x="486.25" y="383.291">Device
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="385.5" x2="598.5" y1="394" y2="394"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="392.5" y="404.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113"
+                  x="404.5" y="411.5352">roomID: RoomID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="392.5" y="421.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129"
+                  x="404.5" y="428.0234">name: DeviceName
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="392.5" y="437.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="189"
+                  x="404.5" y="444.5117">deviceTypeID: DeviceTypeID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="392.5" y="454.209"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79"
+                  x="404.5" y="461">id: DeviceID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="392.5" y="470.6973"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135"
+                  x="404.5" y="477.4883">status: DeviceStatus
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="385.5" x2="598.5" y1="484.4414" y2="484.4414"/>
+        </g><!--class DeviceType-->
+        <g id="elem_DeviceType">
+            <rect codeLine="45" fill="#F1F1F1" height="80.9766" id="DeviceType" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="222" x="6" y="586"/>
+            <ellipse cx="74.25" cy="602" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M77.2231,607.6431 Q76.6421,607.9419 76.0029,608.0913 Q75.3638,608.2407 74.6582,608.2407 Q72.1514,608.2407 70.8315,606.5889 Q69.5117,604.937 69.5117,601.8159 Q69.5117,598.6865 70.8315,597.0347 Q72.1514,595.3828 74.6582,595.3828 Q75.3638,595.3828 76.0112,595.5322 Q76.6587,595.6816 77.2231,595.9805 L77.2231,598.7031 Q76.5923,598.1221 75.9988,597.8523 Q75.4053,597.5825 74.7744,597.5825 Q73.4297,597.5825 72.7449,598.6492 Q72.0601,599.7158 72.0601,601.8159 Q72.0601,603.9077 72.7449,604.9744 Q73.4297,606.041 74.7744,606.041 Q75.4053,606.041 75.9988,605.7712 Q76.5923,605.5015 77.2231,604.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77"
+                  x="94.75" y="607.291">DeviceType
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="7" x2="227" y1="618" y2="618"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="14" y="628.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="196" x="26"
+                  y="635.5352">description: TypeDescription
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="14" y="645.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="26"
+                  y="652.0234">id: DeviceTypeID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="7" x2="227" y1="658.9766" y2="658.9766"/>
+        </g><!--class Sensor-->
+        <g id="elem_Sensor">
+            <rect codeLine="50" fill="#F1F1F1" height="130.4414" id="Sensor" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="221" x="246.5" y="561.5"/>
+            <ellipse cx="329.25" cy="577.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M332.2231,583.1431 Q331.6421,583.4419 331.0029,583.5913 Q330.3638,583.7407 329.6582,583.7407 Q327.1514,583.7407 325.8315,582.0889 Q324.5117,580.437 324.5117,577.3159 Q324.5117,574.1865 325.8315,572.5347 Q327.1514,570.8828 329.6582,570.8828 Q330.3638,570.8828 331.0112,571.0322 Q331.6587,571.1816 332.2231,571.4805 L332.2231,574.2031 Q331.5923,573.6221 330.9988,573.3523 Q330.4053,573.0825 329.7744,573.0825 Q328.4297,573.0825 327.7449,574.1492 Q327.0601,575.2158 327.0601,577.3159 Q327.0601,579.4077 327.7449,580.4744 Q328.4297,581.541 329.7744,581.541 Q330.4053,581.541 330.9988,581.2712 Q331.5923,581.0015 332.2231,580.4204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47"
+                  x="349.75" y="582.791">Sensor
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="247.5" x2="466.5" y1="593.5" y2="593.5"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="254.5" y="604.2441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82"
+                  x="266.5" y="611.0352">id: SensorID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="254.5" y="620.7324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132"
+                  x="266.5" y="627.5234">name: SensorName
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="254.5" y="637.2207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111"
+                  x="266.5" y="644.0117">path: ModelPath
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="254.5" y="653.709"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195"
+                  x="266.5" y="660.5">sensorTypeID: SensorTypeID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="254.5" y="670.1973"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123"
+                  x="266.5" y="676.9883">deviceID: DeviceID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="247.5" x2="466.5" y1="683.9414" y2="683.9414"/>
+        </g><!--class SensorType-->
+        <g id="elem_SensorType">
+            <rect codeLine="58" fill="#F1F1F1" height="97.4648" id="SensorType" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="183" x="422.5" y="761"/>
+            <ellipse cx="469.75" cy="777" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M472.7231,782.6431 Q472.1421,782.9419 471.5029,783.0913 Q470.8638,783.2407 470.1582,783.2407 Q467.6514,783.2407 466.3315,781.5889 Q465.0117,779.937 465.0117,776.8159 Q465.0117,773.6865 466.3315,772.0347 Q467.6514,770.3828 470.1582,770.3828 Q470.8638,770.3828 471.5112,770.5322 Q472.1587,770.6816 472.7231,770.9805 L472.7231,773.7031 Q472.0923,773.1221 471.4988,772.8523 Q470.9053,772.5825 470.2744,772.5825 Q468.9297,772.5825 468.2449,773.6492 Q467.5601,774.7158 467.5601,776.8159 Q467.5601,778.9077 468.2449,779.9744 Q468.9297,781.041 470.2744,781.041 Q470.9053,781.041 471.4988,780.7712 Q472.0923,780.5015 472.7231,779.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80"
+                  x="490.25" y="782.291">SensorType
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="423.5" x2="604.5" y1="793" y2="793"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="430.5" y="803.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157"
+                  x="442.5" y="810.5352">name: TypeDescription
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="430.5" y="820.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77"
+                  x="442.5" y="827.0234">unit: UnitID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="430.5" y="836.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115"
+                  x="442.5" y="843.5117">id: SensorTypeID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="423.5" x2="604.5" y1="850.4648" y2="850.4648"/>
+        </g><!--class SensorModel-->
+        <g id="elem_SensorModel">
+            <rect codeLine="64" fill="#F1F1F1" height="97.4648" id="SensorModel" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="221" x="272.5" y="911"/>
+            <ellipse cx="334.25" cy="927" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M337.2231,932.6431 Q336.6421,932.9419 336.0029,933.0913 Q335.3638,933.2407 334.6582,933.2407 Q332.1514,933.2407 330.8315,931.5889 Q329.5117,929.937 329.5117,926.8159 Q329.5117,923.6865 330.8315,922.0347 Q332.1514,920.3828 334.6582,920.3828 Q335.3638,920.3828 336.0112,920.5322 Q336.6587,920.6816 337.2231,920.9805 L337.2231,923.7031 Q336.5923,923.1221 335.9988,922.8523 Q335.4053,922.5825 334.7744,922.5825 Q333.4297,922.5825 332.7449,923.6492 Q332.0601,924.7158 332.0601,926.8159 Q332.0601,928.9077 332.7449,929.9744 Q333.4297,931.041 334.7744,931.041 Q335.4053,931.041 335.9988,930.7712 Q336.5923,930.5015 337.2231,929.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89"
+                  x="354.75" y="932.291">SensorModel
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="273.5" x2="492.5" y1="943" y2="943"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="280.5" y="953.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174"
+                  x="292.5" y="960.5352">name: SensorModelName
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="280.5" y="970.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153"
+                  x="292.5" y="977.0234">modelPath: ModelPath
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="280.5" y="986.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195"
+                  x="292.5" y="993.5117">sensorTypeID: SensorTypeID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="273.5" x2="492.5" y1="1000.4648" y2="1000.4648"/>
+        </g><!--class Actuator-->
+        <g id="elem_Actuator">
+            <rect codeLine="70" fill="#F1F1F1" height="130.4414" id="Actuator" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="244" x="778" y="561.5"/>
+            <ellipse cx="866.25" cy="577.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M869.2231,583.1431 Q868.6421,583.4419 868.0029,583.5913 Q867.3638,583.7407 866.6582,583.7407 Q864.1514,583.7407 862.8315,582.0889 Q861.5117,580.437 861.5117,577.3159 Q861.5117,574.1865 862.8315,572.5347 Q864.1514,570.8828 866.6582,570.8828 Q867.3638,570.8828 868.0112,571.0322 Q868.6587,571.1816 869.2231,571.4805 L869.2231,574.2031 Q868.5923,573.6221 867.9988,573.3523 Q867.4053,573.0825 866.7744,573.0825 Q865.4297,573.0825 864.7449,574.1492 Q864.0601,575.2158 864.0601,577.3159 Q864.0601,579.4077 864.7449,580.4744 Q865.4297,581.541 866.7744,581.541 Q867.4053,581.541 867.9988,581.2712 Q868.5923,581.0015 869.2231,580.4204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59"
+                  x="886.75" y="582.791">Actuator
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="779" x2="1021" y1="593.5" y2="593.5"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="786" y="604.2441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="798"
+                  y="611.0352">id: SensorID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="786" y="620.7324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="798"
+                  y="627.5234">name: ActuatorName
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="786" y="637.2207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="798"
+                  y="644.0117">path: ModelPath
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="786" y="653.709"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="218" x="798"
+                  y="660.5">actuatorTypeID: ActuatorTypeID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="786" y="670.1973"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="798"
+                  y="676.9883">deviceID: DeviceID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="779" x2="1021" y1="683.9414" y2="683.9414"/>
+        </g><!--class ActuatorType-->
+        <g id="elem_ActuatorType">
+            <rect codeLine="78" fill="#F1F1F1" height="97.4648" id="ActuatorType" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="183" x="704.5" y="761"/>
+            <ellipse cx="746.05" cy="777" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M749.0231,782.6431 Q748.4421,782.9419 747.8029,783.0913 Q747.1638,783.2407 746.4582,783.2407 Q743.9514,783.2407 742.6315,781.5889 Q741.3117,779.937 741.3117,776.8159 Q741.3117,773.6865 742.6315,772.0347 Q743.9514,770.3828 746.4582,770.3828 Q747.1638,770.3828 747.8112,770.5322 Q748.4587,770.6816 749.0231,770.9805 L749.0231,773.7031 Q748.3923,773.1221 747.7988,772.8523 Q747.2053,772.5825 746.5744,772.5825 Q745.2297,772.5825 744.5449,773.6492 Q743.8601,774.7158 743.8601,776.8159 Q743.8601,778.9077 744.5449,779.9744 Q745.2297,781.041 746.5744,781.041 Q747.2053,781.041 747.7988,780.7712 Q748.3923,780.5015 749.0231,779.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92"
+                  x="765.95" y="782.291">ActuatorType
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="705.5" x2="886.5" y1="793" y2="793"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="712.5" y="803.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157"
+                  x="724.5" y="810.5352">name: TypeDescription
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="712.5" y="820.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77"
+                  x="724.5" y="827.0234">unit: UnitID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="712.5" y="836.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127"
+                  x="724.5" y="843.5117">id: ActuatorTypeID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="705.5" x2="886.5" y1="850.4648" y2="850.4648"/>
+        </g><!--class ActuatorModel-->
+        <g id="elem_ActuatorModel">
+            <rect codeLine="84" fill="#F1F1F1" height="97.4648" id="ActuatorModel" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="244" x="786" y="911"/>
+            <ellipse cx="853.25" cy="927" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M856.2231,932.6431 Q855.6421,932.9419 855.0029,933.0913 Q854.3638,933.2407 853.6582,933.2407 Q851.1514,933.2407 849.8315,931.5889 Q848.5117,929.937 848.5117,926.8159 Q848.5117,923.6865 849.8315,922.0347 Q851.1514,920.3828 853.6582,920.3828 Q854.3638,920.3828 855.0112,920.5322 Q855.6587,920.6816 856.2231,920.9805 L856.2231,923.7031 Q855.5923,923.1221 854.9988,922.8523 Q854.4053,922.5825 853.7744,922.5825 Q852.4297,922.5825 851.7449,923.6492 Q851.0601,924.7158 851.0601,926.8159 Q851.0601,928.9077 851.7449,929.9744 Q852.4297,931.041 853.7744,931.041 Q854.4053,931.041 854.9988,930.7712 Q855.5923,930.5015 856.2231,929.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101"
+                  x="873.75" y="932.291">ActuatorModel
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="787" x2="1029" y1="943" y2="943"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="794" y="953.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="806"
+                  y="960.5352">name: ActuatorModelName
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="794" y="970.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="806"
+                  y="977.0234">modelPath: ModelPath
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="794" y="986.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="218" x="806"
+                  y="993.5117">actuatorTypeID: ActuatorTypeID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="787" x2="1029" y1="1000.4648" y2="1000.4648"/>
+        </g><!--class Unit-->
+        <g id="elem_Unit">
+            <rect codeLine="90" fill="#F1F1F1" height="97.4648" id="Unit" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="217" x="534.5" y="911"/>
+            <ellipse cx="624.75" cy="927" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M627.7231,932.6431 Q627.1421,932.9419 626.5029,933.0913 Q625.8638,933.2407 625.1582,933.2407 Q622.6514,933.2407 621.3315,931.5889 Q620.0117,929.937 620.0117,926.8159 Q620.0117,923.6865 621.3315,922.0347 Q622.6514,920.3828 625.1582,920.3828 Q625.8638,920.3828 626.5112,920.5322 Q627.1587,920.6816 627.7231,920.9805 L627.7231,923.7031 Q627.0923,923.1221 626.4988,922.8523 Q625.9053,922.5825 625.2744,922.5825 Q623.9297,922.5825 623.2449,923.6492 Q622.5601,924.7158 622.5601,926.8159 Q622.5601,928.9077 623.2449,929.9744 Q623.9297,931.041 625.2744,931.041 Q625.9053,931.041 626.4988,930.7712 Q627.0923,930.5015 627.7231,929.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28"
+                  x="645.25" y="932.291">Unit
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="535.5" x2="750.5" y1="943" y2="943"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="542.5" y="953.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135"
+                  x="554.5" y="960.5352">symbol: UnitSymbol
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="542.5" y="970.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191"
+                  x="554.5" y="977.0234">description: UnitDescription
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="542.5" y="986.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63"
+                  x="554.5" y="993.5117">id: UnitID
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="535.5" x2="750.5" y1="1000.4648" y2="1000.4648"/>
+        </g><!--class Log-->
+        <g id="elem_Log">
+            <rect codeLine="96" fill="#F1F1F1" height="163.418" id="Log" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="231" x="528.5" y="545"/>
+            <ellipse cx="627.25" cy="561" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M630.2231,566.6431 Q629.6421,566.9419 629.0029,567.0913 Q628.3638,567.2407 627.6582,567.2407 Q625.1514,567.2407 623.8315,565.5889 Q622.5117,563.937 622.5117,560.8159 Q622.5117,557.6865 623.8315,556.0347 Q625.1514,554.3828 627.6582,554.3828 Q628.3638,554.3828 629.0112,554.5322 Q629.6587,554.6816 630.2231,554.9805 L630.2231,557.7031 Q629.5923,557.1221 628.9988,556.8523 Q628.4053,556.5825 627.7744,556.5825 Q626.4297,556.5825 625.7449,557.6492 Q625.0601,558.7158 625.0601,560.8159 Q625.0601,562.9077 625.7449,563.9744 Q626.4297,565.041 627.7744,565.041 Q628.4053,565.041 628.9988,564.7712 Q629.5923,564.5015 630.2231,563.9204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25"
+                  x="647.75" y="566.291">Log
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="529.5" x2="758.5" y1="577" y2="577"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="536.5" y="587.7441"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60"
+                  x="548.5" y="594.5352">id: LogID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="536.5" y="604.2324"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123"
+                  x="548.5" y="611.0234">deviceID: DeviceID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="536.5" y="620.7207"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129"
+                  x="548.5" y="627.5117">sensorID: SensorID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="536.5" y="637.209"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179"
+                  x="548.5" y="644">description: SensorTypeID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="536.5" y="653.6973"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91"
+                  x="548.5" y="660.4883">unitID: UnitID
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="536.5" y="670.1855"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155"
+                  x="548.5" y="676.9766">reading: ReadingValue
+            </text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="536.5" y="686.6738"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="205"
+                  x="548.5" y="693.4648">localDateTime: LocalDateTime
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="529.5" x2="758.5" y1="700.418" y2="700.418"/>
+        </g>
+        <polygon fill="#181818" points="378.702,69,387.702,73,383.702,69,387.702,65,378.702,69"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M384.702,69 C398.5884,69 406.6695,69 419.9658,69 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="388.25"
+              y="62.5684">has
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="379.702"
+              y="82.5684">1
+        </text>
+        <polygon fill="#181818" points="605.8661,69,596.8661,65,600.8661,69,596.8661,73,605.8661,69"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M564.148,69 C577.8165,69 586.1375,69 599.8661,69 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="574"
+              y="62.5684">has
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="596.8661"
+              y="82.5684">1
+        </text>
+        <polygon fill="#181818" points="492,117.731,488,126.731,492,122.731,496,126.731,492,117.731"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M492,123.731 C492,142.6335 492,158.6505 492,178.9067 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="493"
+              y="157.5684">belongs to
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="469"
+              y="175.4751">1..*
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="483"
+              y="131.2993">1
+        </text>
+        <polygon fill="#181818" points="492,309.0685,488,318.0685,492,314.0685,496,318.0685,492,309.0685"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M492,315.0685 C492,332.1534 492,344.6158 492,361.7124 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="493"
+              y="340.5684">belongs to
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="483"
+              y="322.6369">1
+        </text>
+        <polygon fill="#181818" points="622.9196,244,613.9196,240,617.9196,244,613.9196,248,622.9196,244"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M581.666,244 C595.7263,244 603.9023,244 616.9196,244 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="591.25"
+              y="237.5684">has
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="613.9196"
+              y="257.5684">1
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6" x="582.666"
+              y="240.5684">*
+        </text>
+        <polygon fill="#181818"
+                 points="448.1694,492.1226,439.7883,497.2954,445.3478,496.2504,446.3928,501.8099,448.1694,492.1226"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M444.7835,497.076 C429.6164,519.2649 416.0096,539.1712 400.8416,561.3614 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="433"
+              y="523.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="439.1694"
+              y="505.6909">1
+        </text>
+        <polygon fill="#181818"
+                 points="599.6128,469.0329,606.4674,476.1049,604.2509,470.9004,609.4554,468.6839,599.6128,469.0329"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M605.1785,471.2739 C657.1974,492.219 714.4603,516.9287 769,545 C778.8499,550.0697 788.9489,555.6112 798.9573,561.3383 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="733"
+              y="523.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="600.6128"
+              y="465.6012">1
+        </text>
+        <polygon fill="#181818"
+                 points="172.4951,585.9594,182.1896,584.223,176.6345,583.1549,177.7025,577.5998,172.4951,585.9594"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M384.1963,473.2096 C338.3226,493.5799 284.7323,518.8995 238,545 C215.9717,557.303 197.6572,568.9123 177.4624,582.5941 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="300"
+              y="523.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="375.1963"
+              y="469.7779">1
+        </text>
+        <polygon fill="#181818"
+                 points="472.5833,760.752,469.7077,751.3323,469.307,756.975,463.6644,756.5743,472.5833,760.752"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M412.5733,691.5685 C432.3325,714.3483 450.2847,735.0447 468.6518,756.2196 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="455"
+              y="739.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="463.5833"
+              y="757.3204">1
+        </text>
+        <polygon fill="#181818"
+                 points="823.4353,760.752,831.3873,754.9413,825.9263,756.4167,824.4509,750.9557,823.4353,760.752"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M863.1871,691.5685 C850.0982,714.3483 838.5913,734.3748 826.4245,755.5497 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="842"
+              y="739.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="814.4353"
+              y="757.3204">1
+        </text>
+        <polygon fill="#181818"
+                 points="471.8297,858.1428,462.8693,862.2309,468.5157,861.8868,468.8598,867.5332,471.8297,858.1428"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M467.8529,862.6356 C452.8938,879.536 440.0439,894.0535 425.0913,910.9465 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="453"
+              y="889.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="462.8297"
+              y="871.7111">1
+        </text>
+        <polygon fill="#181818"
+                 points="601.5513,910.9465,598.6531,901.5337,598.266,907.1773,592.6224,906.7902,601.5513,910.9465"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M555.5265,858.1428 C570.2573,875.0432 582.8847,889.5305 597.609,906.4235 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="583"
+              y="889.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="592.5513"
+              y="907.5148">1
+        </text>
+        <polygon fill="#181818"
+                 points="832.054,858.1428,834.2954,867.7332,835.0712,862.1298,840.6746,862.9057,832.054,858.1428"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M835.6747,862.9272 C848.4642,879.8277 859.2297,894.0535 872.0135,910.9465 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="856"
+              y="889.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="823.054"
+              y="871.7111">1
+        </text>
+        <polygon fill="#181818"
+                 points="692.1601,910.9465,701.4099,907.5641,695.7538,907.4702,695.8478,901.8141,692.1601,910.9465"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M746.7477,858.1428 C729.2763,875.0432 713.9363,889.8819 696.4726,906.7749 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="725"
+              y="889.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="683.1601"
+              y="907.5148">1
+        </text>
+        <polygon fill="#181818"
+                 points="376.7241,910.7611,379.6021,901.3421,376.1172,905.7981,371.6612,902.3132,376.7241,910.7611"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M359.8948,691.6621 C362.2273,737.9479 365.9513,801.8987 371,858 C372.5514,875.2386 373.9571,888.1344 375.9958,904.8055 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="372"
+              y="814.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="367.7241"
+              y="907.3295">1
+        </text>
+        <polygon fill="#181818"
+                 points="906.8473,910.8077,910.6287,901.7137,906.7265,905.8091,902.631,901.907,906.8473,910.8077"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M901.552,691.7126 C903.1037,755.915 905.3091,847.1622 906.7023,904.8094 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="906"
+              y="814.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="897.8473"
+              y="907.376">1
+        </text>
+        <polygon fill="#181818"
+                 points="541.35,492.1226,543.6693,501.6945,544.3996,496.085,550.0091,496.8152,541.35,492.1226"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M545.0095,496.8774 C557.9256,513.6599 568.3582,527.2154 581.8478,544.743 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="569"
+              y="523.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="532.35"
+              y="505.6909">1
+        </text>
+        <polygon fill="#181818" points="467.5512,626.5,476.5512,630.5,472.5512,626.5,476.5512,622.5,467.5512,626.5"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M473.5512,626.5 C493.4476,626.5 508.2374,626.5 528.2758,626.5 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="477.5"
+              y="620.0684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="468.5512"
+              y="640.0684">1
+        </text>
+        <polygon fill="#181818"
+                 points="548.1895,760.8977,556.6886,755.9212,551.1063,756.8366,550.1909,751.2543,548.1895,760.8977"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M586.0336,708.207 C573.1014,726.2127 563.2934,739.8684 551.6896,756.0244 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="572"
+              y="739.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="539.1895"
+              y="757.4661">1
+        </text>
+        <polygon fill="#181818"
+                 points="643.1436,910.9575,647.1708,901.9696,643.1587,905.9575,639.1708,901.9454,643.1436,910.9575"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M643.7567,708.0484 C643.5647,771.5803 643.3217,852.027 643.1618,904.9575 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="644"
+              y="814.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="634.1436"
+              y="907.5258">1
+        </text><!--SRC=[dLLDRzGm4BtdLvWz8gKIrmWXhLW1bKgr8YrtR-8cLXCxiYTKAzJ_plWpTZQmG0zR-ytBl9aNU_9cKhGRAHdeMSv0zCY02beK82S2afmaW1n9onLhW4jHw6Sk9gheI0Ok69mdHgI2NXP5qGnKQ_95pfgHdmN1lvAtbGDk3mwWRQkOrXNPkuL3kmcHpyUwUFL9VDHdqQ0OWuhKeBZe7DPAgUxdySHKZZTo5g3E7sNByi0aDT31uRV7k8cIAE_b1WeSPiDhvNmQc4Ubw7BuDRJyJQ95_k7UTRjg-sd0SYjB_6IM3XLqP0wynvNlYuzCQ7Iw8eUmNBmqNCmPbID51_qNta9V4Ix0byr4bm4zurqF3bZoi1-yYMzDMPMebjJgU4crTl-0fy3m3ybkgTcX0K7VOTO1hUrkNOV946ffcMuKdy0wOWA71LXhUEMOhKPlf4hFeaFodXosz3HHuzTNF1l34PU-R4iAZTR9BZLYCU6oZBGf9xpPpImulfn7_4qzp0HNYMsbUUOaiFGrXex-fRcejMzWfd3TpS2xuYVrj22wp_RNFKtv_-tgIlGY-OQpMUXllBtIQDGqjGKfVHvFSd3rrdQzSHTCSFCk-2vZvZlPfIyDjtymE3aForbO-8d-vHsOhN1kisAqnH6CiyGjljDXZWEreSE10dlWnjcxT6kgTnyI761FK7uWktUxy5KW5Ucf3d5bnfadu0pFWWPxNvRu_-RcxSxDwOgSc9db6ZzlXKK2om_13G8-c-aaOzV9-KT39ZzuAl8ivCj5D5wbZNY92iaG30oViFJwoKG9Z29c3QJiYkI9B9GNQu_j1YjaUxGto8MppEkkiaGPSolLPcFktgrpN3IMqmfppijv2gyel4mNjS7aAAtUa0t_tjmqR2zg2Fm2]-->
+    </g>
+</svg>

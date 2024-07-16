@@ -1,0 +1,21 @@
+@startuml
+participant " " as Client
+participant ":Controller" as Controller
+participant ":Assembler" as Assembler
+participant "valueObject:ValueObject" as ValueObject
+
+
+Client -> Controller : 1: request(dtodata)
+activate Controller
+Controller -> Assembler : 1.1: assemble(dtoData)
+activate Assembler
+Create ValueObject
+Assembler -> ValueObject : 1.1.1: create(dtoData.value1)
+activate ValueObject
+ValueObject --> Assembler : valueObject
+deactivate ValueObject
+Assembler --> Controller : valueObject
+deactivate Assembler
+deactivate Controller
+
+@enduml

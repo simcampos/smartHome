@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/component-diagram
+component SmartHome <<system (C4)>><<component>> {
+
+    port p1
+    port p8
+
+    component Frontend <<container (C4)>><<component>> {
+        port p2
+        port p3
+        port p4
+        port p7
+    }
+
+    component Backend <<container (C4)>><<component>>  {
+            port p5
+        }
+
+    component WeatherService <<container (C4)>><<component>>  {
+
+            port p6
+        }
+}
+
+p1 -up- UI
+p1 - p2
+p3 -(0- p5 : REST API
+p4 -(0- p6 : WS API
+p7 -down- p8
+p8 -up-( SunTimeAPI
+
+
+@enduml

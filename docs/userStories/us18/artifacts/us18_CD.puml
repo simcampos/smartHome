@@ -1,0 +1,121 @@
+@startuml
+!pragma layout smetana
+
+package domain.Sensor {
+    interface FactorySensor {
+        + create(Object... parameters): Sensor
+    }
+
+    class ImplFactorySensor {
+        + create(Object... parameters): Sensor
+    }
+
+    interface Sensor {
+            + getID(): SensorID
+            + getName(): SensorName
+            + getModelPath(): ModelPath
+            + getSensorTypeID(): SensorTypeID
+            + getDeviceID(): DeviceID
+            + getValue(): ValueObject
+            + toString(): String
+    }
+ }
+
+package domain.Sensor.PercentegePositionSensor {
+
+    class domain.Sensor.PercentegePositionSensor.PercentegePositionSensor <<entity>><<Root>>{
+        - _sensorID: SensorID
+        - _sensorName: SensorName
+        - _sensorTypeID: SensorTypeID
+        - _modelPath: ModelPath
+        - _deviceID: DeviceID
+        - _percentege: PercentegePositionSensorValue
+        + PercentegePositionSensor(sensorTypeID: SensorTypeID, modelPath: ModelPath, deviceID: DeviceID, sensorName: SensorName)
+        + getSensorTypeString(): String
+        + getID(): SensorID
+        + getName(): SensorName
+        + getModelPath(): ModelPath
+        + getSensorTypeID(): SensorTypeID
+        + getDeviceID(): DeviceID
+        + getValue(): PercentegePositionSensorValue
+    }
+
+    class SensorName <<ValueObject>>{
+            - _name: String
+            + SensorName(String name)
+            + getName() : String
+    }
+
+    class SensorID <<DomainID>>{
+            - _id: String
+            + SensorID(String id)
+            + getID() : String
+    }
+
+    class PercentegePositionSensorValue <<ValueObject>>{
+            - _percentege : int
+            + PercentegePositionSensorValue(int value)
+            + toString() : String
+    }
+
+     class SensorTypeID <<DomainID>>{
+                    - _description: String
+                    + SensorTypeID(String strDescription)
+                    + getTypeID() : String
+        }
+
+        class ModelPath <<DomainID>>{
+                    - _path: String
+                    + ModelPath(String path)
+                    + getPath() : String
+        }
+
+        class DeviceID <<DomainID>>{
+                    - _id: String
+                    + DeviceID(String id)
+                    + getID() : String
+        }
+}
+
+
+package domain.ddd {
+
+  interface DomainEntity {
+  }
+
+  interface DomainID {
+  }
+
+  interface AggregateRoot {
+  }
+
+  interface ValueObject {
+  }
+}
+
+ImplFactorySensor ..|> FactorySensor
+ImplFactorySensor "1" ..> "1" domain.Sensor.PercentegePositionSensor.PercentegePositionSensor : creates
+
+domain.Sensor.PercentegePositionSensor.PercentegePositionSensor ..|> domain.Sensor.Sensor
+domain.Sensor.PercentegePositionSensor.PercentegePositionSensor "1" --> "1" domain.Sensor.PercentegePositionSensor.PercentegePositionSensorValue : has
+domain.Sensor.PercentegePositionSensor.PercentegePositionSensor "1" -->  "1" SensorTypeID : has
+domain.Sensor.PercentegePositionSensor.PercentegePositionSensor "1" -->  "1" ModelPath : has
+domain.Sensor.PercentegePositionSensor.PercentegePositionSensor "1" -->  "1" SensorName : has
+domain.Sensor.PercentegePositionSensor.PercentegePositionSensor "1" -->  "1" SensorID : has
+domain.Sensor.PercentegePositionSensor.PercentegePositionSensor "1" -->  "1" DeviceID : has
+
+domain.Sensor.PercentegePositionSensor.PercentegePositionSensorValue ..|> domain.ddd.ValueObject
+domain.Sensor.PercentegePositionSensor.SensorName ..|> domain.ddd.ValueObject
+
+DomainEntity --|> DomainID
+AggregateRoot --|> DomainEntity
+DomainID --|> ValueObject
+
+domain.Sensor.Sensor --|> domain.ddd.AggregateRoot
+
+SensorTypeID ..|> domain.ddd.DomainID
+SensorID ..|> domain.ddd.DomainID
+ModelPath ..|> domain.ddd.DomainID
+DeviceID ..|> domain.ddd.DomainID
+
+@enduml

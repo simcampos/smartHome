@@ -1,0 +1,18 @@
+@startuml
+
+!pragma layout smetana
+
+autonumber
+
+actor "User" as User
+participant "SmartHome" as SH<<System (C4)>>
+
+User -> SH : I want to get all actuators from a Device
+activate SH
+activate User
+
+SH --> User : List of actuators in a Device
+deactivate SH
+activate User
+
+@enduml

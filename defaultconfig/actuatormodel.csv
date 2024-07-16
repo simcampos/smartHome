@@ -1,0 +1,5 @@
+modelPath, modelName, actuatorTypeID
+smarthome.domain.actuator.blind_roller_actuator.BlindRollerActuator,BlindRollerActuator,BlindRoller
+smarthome.domain.actuator.set_integer_actuator.SetIntegerActuator,SetIntegerActuator,SetInteger
+smarthome.domain.actuator.switch_actuator.SwitchActuator,SwitchActuator,Switch
+smarthome.domain.actuator.set_decimal_actuator.SetDecimalActuator,SetDecimalActuator,SetDecimal

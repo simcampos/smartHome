@@ -1,0 +1,106 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class GetListOfDevicesFromRoomController{
+'Attributes'
+- _roomService: RoomService
+- _deviceService : DeviceService
+- _roomAssembler : RoomAssembler
+- _deviceAssembler : DeviceAssembler
+'Methods'
++GetListOfDevicesFromRoomController (serviceRoom : RoomService, serviceDevice : DeviceService, roomAssembler : RoomAssembler ,deviceAssembler : DeviceAssembler)
++getRooms(): List<RoomDTO>
++getDevices(roomDTO: RoomDTO): List<DeviceDTO>
+}
+
+class RoomService{
+'Attributes'
+- _roomRepository: Repository<RoomID, Room>
+-_roomFactory : RoomFactory
+- _roomAssembler : RoomAssembler
+- _houseRepository : HouseRepository
+'Methods'
++RoomService(roomRepository: RoomRepository, roomFactory: RoomFactory, roomAssembler : RoomAssembler, houseRepo : HouseRepository)
++getRooms(): List<Room>
++getRoomById (roomID : RoomID): Optional<Room>
+}
+
+
+class RoomRepository{
+'Attributes'
+- DATA: Map <RoomID, Room>
+'Methods'
++findAll(): List<Room>
++ofIdentity (id : RoomID): Optional <Room>
+}
+
+class RoomAssembler{
+'Methods'
++domainToDTO(rooms: List<Room>): List<RoomDTO>
+}
+
+class RoomDTO{
+'Attributes'
++roomID: String
++roomName: String
++dimensions : String
++floor : String
+'Methods'
++RoomDTO(roomName : String, roomDimension : String, floor : String, roomID : String)
+}
+
+class RoomID{
+'Attributes'
+- _roomID: String
+
+'Methods'
++RoomID(roomID: String)
+}
+
+class DeviceService{
+'Attributes'
+- _deviceRepository: DeviceRepo
+- _deviceFactory : DeviceFactory
+- _roomRepository : Repository<RoomID, Room>
+
+'Methods'
++DeviceService (deviceRepository : DeviceRepo, deviceFactory : DeviceFactory, roomRepository : Repository<RoomID, Room>)
++getDevicesByRoomId(roomID : RoomID): List<Device>
+}
+
+class DeviceRepo{
+'Attributes'
+- -deviceData: Map <DeviceId, Device>
+'Methods'
++getDevicesByRoomId(roomId : RoomID): List<Devices>
+}
+
+class DeviceAssembler {
+'Methods'
++domainToDTO(devices: List<Device>): List<DeviceDTO>
+}
+
+class DeviceDTO{
+'Attributes'
++deviceID : String
++roomID : String
++deviceName: String
++deviceStatus : String
+'Methods'
++DeviceDTO(deviceID : String, deviceName : String, roomID : String, deviceStatus : String)
+}
+
+
+
+GetListOfDevicesFromRoomController "1" ..> "1" RoomService: uses
+RoomService "1" ..> "1" RoomRepository: uses
+GetListOfDevicesFromRoomController "1" ..> "1" RoomAssembler: uses
+RoomAssembler "1" ..> "*" RoomDTO: creates
+
+GetListOfDevicesFromRoomController "1" ..> "1" DeviceService: uses
+DeviceService "1" ..> "1" DeviceRepo: uses
+GetListOfDevicesFromRoomController "1" ..> "1" DeviceAssembler: uses
+DeviceAssembler "1" ..> "*" DeviceDTO: creates
+
+GetListOfDevicesFromRoomController "1" ..> "1" RoomID: creates
+@enduml

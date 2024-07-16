@@ -1,0 +1,24 @@
+@startuml
+!pragma layout smetana
+
+package sensor_type {
+
+  class SensorType<<Entity>><<Root>> {
+  }
+
+  class SensorTypeDescription<<Value Object>> {
+    - _description: String
+  }
+  class UnitID<<Value Object>> {
+      - _unit: String
+    }
+   class SensorTypeID<<Value Object>><<ID>> {
+      - _sensorTypeID: String
+    }
+}
+
+SensorType  -- "1" UnitID
+SensorType  -- "1" SensorTypeDescription
+SensorType  -- "1" SensorTypeID
+
+@enduml

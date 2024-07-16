@@ -1,0 +1,22 @@
+@startuml
+'As an Administrator, I want to have a list of existing rooms, so that I can choose
+'one to edit it.'
+
+!pragma layout smetana
+autonumber
+
+actor Admin
+participant System
+
+activate Admin
+Admin -> System: I want to add a new sensor type
+activate System
+System -> Admin: Sure , these are the available units
+deactivate System
+Admin -> System: Great, this unit, and this description
+activate System
+System -> Admin: Done, saved
+deactivate System
+deactivate Admin
+
+@enduml

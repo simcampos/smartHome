@@ -1,0 +1,23 @@
+/* BlindRollerPosition.css */
+.digital-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #282c34;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 16px;
+}
+
+.digital-label {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.digital-number {
+    color: #61dafb;
+    font-size: 2rem;
+    font-weight: bold;
+}

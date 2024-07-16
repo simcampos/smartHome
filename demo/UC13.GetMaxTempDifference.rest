@@ -1,0 +1,4 @@
+GET http://localhost:8080/logs/temperature-difference?outsideDeviceIDStr={{temperatureGardenDeviceId}}&
+    insideDeviceIDStr={{temperatureIndoorDeviceId}}&
+    initialTime=2024-02-12T00:00:00&finalTime=2024-02-12T23:59:59&timeDelta=5
+

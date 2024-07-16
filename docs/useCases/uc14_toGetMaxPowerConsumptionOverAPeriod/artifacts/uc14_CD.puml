@@ -1,0 +1,41 @@
+@startuml
+    class LogController {
+        - logService : ILogService
+        - deviceService : IDeviceService
+
+        + getDeviceReadingsByTimePeriod(deviceID : String, timeStart : String, timeEnd : String) : ResponseEntity<List<LogDTO>>
+        + getMaxInstTempDiffBetweenDeviceAndOutside(outsideDeviceIDStr : String, insideDeviceIDStr : String, initialTime : LocalDateTime, finalTime : LocalDateTime, timeDelta : int) : ResponseEntity<Integer>
+        + getMaxPowerConsumption(initialTime : LocalDateTime, finalTime : LocalDateTime) : ResponseEntity<Integer>
+    }
+
+    class LogServiceImpl {
+        - logRepository : ILogRepository
+        + getDeviceReadingsBySensorTypeAndTimePeriod(deviceID : DeviceID, sensorTypeID : SensorTypeID, period : DatePeriod) : List<Log>
+        + getPeakPowerConsumption(readings : List<Log>, readings2 : List<Log>, timeDelta : TimeDelta) : int
+    }
+
+    class DeviceServiceImpl {
+        - deviceRepository : IDeviceRepository
+        - deviceFactory : IDeviceFactory
+        - roomRepository : IRepository<RoomID, Room>
+
+        + getDevicesByDeviceTypeID(deviceTypeID : DeviceTypeID) : List<Device>
+        }
+
+    class DeviceSpringDataRepository {
+        - repository : IDeviceSpringDataRepository
+        - assembler : IDataModelAssembler<DeviceDataModel, Device>
+        + findByDeviceTypeID(deviceTypeID : DeviceTypeID) : List<Device>
+    }
+
+    class LogSpringDataRepository {
+            - repository : ILogSpringDataRepository
+            - assembler : IDataModelAssembler<LogDataModel, Log>
+            + findByDeviceIDAndSensorTypeAndDatePeriodBetween(deviceID : DeviceID, sensorTypeID : SensorTypeID, period : DatePeriod) : List<Log>
+        }
+    LogController ..> DeviceServiceImpl : uses
+    LogController ..> LogServiceImpl : uses
+    DeviceServiceImpl ..> DeviceSpringDataRepository : uses
+    LogServiceImpl ..> LogSpringDataRepository : uses
+
+@enduml

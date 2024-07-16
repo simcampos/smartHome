@@ -1,0 +1,13 @@
+@startuml
+!pragma layout smetana
+actor "RO, PU or Admin" as User
+participant System
+
+activate User
+activate System
+User -> System: I want to get a list of all actuators in a given device!
+System --> User: In what device?
+User -> System: This device right here!
+System --> User: list of actuators in that device!
+
+@enduml

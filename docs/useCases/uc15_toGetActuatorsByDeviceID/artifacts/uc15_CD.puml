@@ -1,0 +1,52 @@
+@startuml
+class ActuatorController {
+- IActuatorService actuatorService
+- IAssembler<IActuator, ActuatorDTO> actuatorAssembler
+- ILogService logService
+
++ getActuatorByDeviceID (deviceID: String): ResponseEntity<List<EntityModel<ActuatorDTO>>>
+}
+
+class DeviceID {
+- String deviceID
+
++ DeviceID (deviceID: String)
+}
+
+class ActuatorService {
+- IActuatorRepository actuatorRepository
+- IActuatorFactory actuatorFactory
+- IDeviceRepository deviceRepository
+- IActuatorTypeRepository actuatorTypeRepository
+
++ getActuatorsByDeviceID (deviceID : DeviceID) : List<Actuator>
+}
+
+class ActuatorSpringDataRepository {
+- IActuatorSpringDataRepository actuatorSpringDataRepository
+- IDataModelAssembler <ActuatorDataModel, IActuator> actuatorDataModelAssembler
+- IActuatorVisitorForDataModel actuatorVisitorForDataModel
+
++ ofDeviceID (deviceID : DeviceID) : List<IActuator>
+}
+
+class ActuatorAssembler {
+
++ domainToDTO (actuators : List<IActuator>) : List<ActuatorDTO>
+}
+
+class ActuatorDTO {
++ String deviceID
++ String actuatorTypeID
++ String actuatorName
++ String modelPath
++ String actuatorID
+}
+
+ActuatorController ..> DeviceID : uses
+ActuatorController ..> ActuatorService : uses
+ActuatorService ..> ActuatorSpringDataRepository : uses
+
+ActuatorController ..> ActuatorAssembler : uses
+ActuatorAssembler ..> ActuatorDTO : uses
+@enduml

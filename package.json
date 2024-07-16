@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "cd frontend && vite"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@mui/x-charts": "^7.6.2",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "vite": "^5.2.12"
+  }
+}

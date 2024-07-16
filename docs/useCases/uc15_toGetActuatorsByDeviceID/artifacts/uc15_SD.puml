@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+autonumber
+
+    participant " " as User
+    participant ":ActuatorController" as ActuatorController
+    participant "actuatorService:ActuatorService" as ActuatorService
+    participant "actuatorRepo:ActuatorRepo" as ActuatorRepo
+    participant "actuatorAssembler:ActuatorAssembler" as ActuatorAssembler
+    participant "deviceID:DeviceID" as DeviceID
+
+
+
+' Request all devices by room and functionality
+    ref over User, ActuatorController: getRooms
+    ref over User, ActuatorController: getDevicesByRoomID(roomID)
+' Request to close the blind roller
+
+User o-> ActuatorController: getActuatorsByDeviceID(strDeviceID)
+activate ActuatorController
+
+create DeviceID
+ActuatorController -> DeviceID : DeviceID(strDeviceID)
+activate DeviceID
+
+DeviceID -> ActuatorController : getDeviceID
+deactivate DeviceID
+
+ActuatorController -> ActuatorService : getActuatorsByDeviceID(deviceID)
+activate ActuatorService
+
+ActuatorService -> ActuatorRepo: ofDeviceID(deviceID)
+activate ActuatorRepo
+
+ActuatorRepo --> ActuatorService: listActuators
+deactivate ActuatorRepo
+
+ActuatorService --> ActuatorController: listActuators
+deactivate ActuatorService
+
+ActuatorController -> ActuatorAssembler: domainToDTO(listActuators)
+activate ActuatorAssembler
+
+ActuatorAssembler --> ActuatorController: actuatorListDTO
+deactivate ActuatorAssembler
+
+ActuatorController -->o User: actuatorListDTO
+deactivate ActuatorController
+
+
+
+@enduml

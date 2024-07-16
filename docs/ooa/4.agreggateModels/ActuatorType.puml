@@ -1,0 +1,23 @@
+@startuml
+!pragma layout smetana
+
+package actuator_type {
+class ActuatorType<<entity>><<Root>> {
+}
+
+class ActuatorDescription<<Value Object>> {
+    - _description : String
+}
+class ActuatorTypeID<<Value Object>> {
+    - _actuatorTypeID : String
+}
+class UnitID<<Value Object>> {
+    - _id : String
+}
+
+ActuatorType  -- "1" ActuatorDescription : has
+ActuatorType  -- "1" ActuatorTypeID : has
+ActuatorType  -- "1" UnitID : has
+}
+
+@enduml

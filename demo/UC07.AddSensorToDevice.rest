@@ -1,0 +1,322 @@
+GET http://localhost:8080/sensor-models?sensorTypeID=InstantPowerConsumption
+Content-Type: application/json
+
+> {%
+    client.global.set("instantPowerSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=Temperature
+Content-Type: application/json
+
+> {%
+    client.global.set("temperatureSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=AveragePowerConsumption
+Content-Type: application/json
+
+> {%
+    client.global.set("averagePowerConsumptionSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=DewPoint
+Content-Type: application/json
+
+> {%
+    client.global.set("dewPointSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=Humidity
+Content-Type: application/json
+
+> {%
+    client.global.set("humiditySensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=SolarIrradiance
+Content-Type: application/json
+
+> {%
+    client.global.set("solarIrradianceSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=Switch
+Content-Type: application/json
+
+> {%
+    client.global.set("switchSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=Wind
+Content-Type: application/json
+
+> {%
+    client.global.set("windSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=SunriseTime
+Content-Type: application/json
+
+> {%
+    client.global.set("sunriseTimeSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=SunsetTime
+Content-Type: application/json
+
+> {%
+    client.global.set("sunsetTimeSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=SunsetTime
+Content-Type: application/json
+
+> {%
+    client.global.set("sunsetTimeSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=ElectricConsumptionWh
+Content-Type: application/json
+
+> {%
+    client.global.set("electricConsumptionWh", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=PercentagePosition
+Content-Type: application/json
+
+> {%
+    client.global.set("position", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+###
+GET http://localhost:8080/sensor-models?sensorTypeID=SunsetTime
+Content-Type: application/json
+
+> {%
+    client.global.set("sunsetTimeSensor", response.body._embedded.sensorModelDTOList[0].modelPath);
+%}
+
+
+###
+
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{powerMeterDeviceId}}",
+  "sensorModelPath": "{{instantPowerSensor}}",
+  "sensorName": "GA100K",
+  "sensorTypeID": "InstantPowerConsumption"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{powerSourceDeviceId}}",
+  "sensorModelPath": "{{instantPowerSensor}}",
+  "sensorName": "GA100K",
+  "sensorTypeID": "InstantPowerConsumption"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{temperatureGardenDeviceId}}",
+  "sensorModelPath": "{{temperatureSensor}}",
+  "sensorName": "TX200K",
+  "sensorTypeID": "Temperature"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "gpsSensor",
+  "deviceID": "{{temperatureIndoorDeviceId}}",
+  "sensorModelPath": "{{sunsetTimeSensor}}",
+  "sensorName": "GPS300K",
+  "sensorTypeID": "SunsetTime",
+  "latitude": 48.8566,
+  "longitude": 2.3522
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{temperatureIndoorDeviceId}}",
+  "sensorModelPath": "{{temperatureSensor}}",
+  "sensorName": "TX200K",
+  "sensorTypeID": "Temperature"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{averagePowerConsumptionSensor}}",
+  "sensorName": "RD320C",
+  "sensorTypeID": "AveragePowerConsumption"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{dewPointSensor}}",
+  "sensorName": "RZ320C",
+  "sensorTypeID": "DewPoint"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{humiditySensor}}",
+  "sensorName": "RH320C",
+  "sensorTypeID": "Humidity"
+}
+
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{instantPowerSensor}}",
+  "sensorName": "GA100K",
+  "sensorTypeID": "InstantPowerConsumption"
+}
+
+
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{solarIrradianceSensor}}",
+  "sensorName": "SI320C",
+  "sensorTypeID": "SolarIrradiance"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{switchSensor}}",
+  "sensorName": "SW320C",
+  "sensorTypeID": "Switch"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{windSensor}}",
+  "sensorName": "WS320C",
+  "sensorTypeID": "Wind"
+}
+
+
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "gpsSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{sunriseTimeSensor}}",
+  "sensorName": "SR100K",
+  "sensorTypeID": "SunriseTime",
+  "latitude": 48.8566,
+  "longitude": 2.3522
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "gpsSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{sunsetTimeSensor}}",
+  "sensorName": "SS100K",
+  "sensorTypeID": "SunsetTime",
+  "latitude": 48.8566,
+  "longitude": 2.3522
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "dateSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{electricConsumptionWh}}",
+  "sensorName": "XKU20K",
+  "sensorTypeID": "ElectricConsumptionWh",
+  "startDate": "2024-02-12T00:00:00",
+  "endDate": "2024-02-12T23:59:59"
+}
+
+###
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{houseDeviceID}}",
+  "sensorModelPath": "{{position}}",
+  "sensorName": "XPTO24T",
+  "sensorTypeID": "PercentagePosition"
+}

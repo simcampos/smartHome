@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class GetListOfRoomsController{
+'Attributes'
+- _roomService: RoomService
+- _roomAssembler: RoomAssembler
+'Methods'
++GetListOfRoomsController(serviceRoom: ServiceRoom, roomAssembler : RoomAssembler)
++getRooms(): List<RoomDTO>
+}
+
+class RoomService{
+'Attributes'
+- _factoryRoom: RoomFactory
+- _roomRepo: RoomRepository
+- _houseRepo: HouseRepository
+'Methods'
++RoomService(factoryRoom: RoomFactory, roomRepo: RoomRepository, houseRepo: HouseRepository)
++getRooms(): List<Room>
+}
+
+
+class RoomRepository{
+'Attributes'
+- _DATA: Map <RoomID, Room>
+'Methods'
++findAll(): List<Room>
+}
+
+class RoomAssembler{
+'Methods'
++domainToDTO(rooms: List<Room>): List<RoomDTO>
+}
+
+class RoomDTO{
+'Attributes'
++roomID: String
++roomName: String
++dimensions: String
++floor: String
+
+'Methods'
++RoomDTO(roomName: String, roomDimension : String, roomFloor: String, roomID: String)
+}
+
+GetListOfRoomsController "1" ..> "1" RoomService: uses
+RoomService "1" ..> "1" RoomRepository: uses
+GetListOfRoomsController "1" ..> "1" RoomAssembler: uses
+RoomAssembler "1" ..> "1..*" RoomDTO: creates
+
+@enduml

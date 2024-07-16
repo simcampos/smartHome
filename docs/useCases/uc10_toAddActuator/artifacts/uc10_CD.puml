@@ -1,0 +1,205 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+!pragma layout smetana
+!pragma scale 100 width
+!pragma useVerticalIfPossible
+
+class AddActuatorToDeviceController {
+  - DeviceService _deviceService
+  - DeviceAssembler _deviceAssembler
+  - ActuatorModelService _ActuatorModelService
+  - ActuatorModelAssembler _ActuatorModelAssembler
+  - ActuatorTypeService _ActuatorTypeService
+  - ActuatorTypeAssembler _ActuatorTypeAssembler
+  - ActuatorAssembler _ActuatorAssembler
+  - ActuatorService _ActuatorService
+
+  + AddActuatorToDeviceController(RoomService, RoomAssembler, DeviceService, DeviceAssembler, ActuatorModelService, ActuatorModelAssembler, ActuatorTypeService, ActuatorTypeAssembler, ActuatorAssembler, ActuatorService)
+  + getRooms(): List<RoomDTO>
+  + getDevicesFromRoom(RoomDTO): List<DeviceDTO>
+  + getActuatorTypes(): List<ActuatorTypeDTO>
+  + getActuatorModels(ActuatorTypeDTO): List<ActuatorModelDTO>
+  + addActuatorToDevice(ActuatorDataDTO): ActuatorDTO
+}
+
+class ActuatorModelService
+{
+  - ActuatorModelRepo _ActuatorModelRepository
+  - ActuatorModelFactory _factoryActuatorModel
+
+  + ActuatorModelService(ActuatorModelRepo, ActuatorModelFactory)
+  + createActuatorModel(ActuatorModelName, ModelPath, ActuatorTypeID): ActuatorModel
+  + getAllActuatorModels(): List<ActuatorModel>
+  + getActuatorModel(ModelPath): Optional<ActuatorModel>
+  + getActuatorModelsByActuatorTypeId(ActuatorTypeID): List<ActuatorModel>
+}
+
+class ActuatorModelAssembler {
+  + domainToDTO(ActuatorModel): ActuatorModelDTO
+  + domainToDTO(List<ActuatorModel>): List<ActuatorModelDTO>
+}
+
+class ActuatorTypeService {
+  - ActuatorTypeRepository _ActuatorTypeRepository
+  - ActuatorTypeFactory _ActuatorTypeFactory
+  - UnitRepository _unitRepository
+
+  + ActuatorTypeService(ActuatorTypeRepository, ActuatorTypeFactory, UnitRepository)
+  + createActuatorType(TypeDescription, UnitID): ActuatorType
+  + saveActuatorType(ActuatorType): ActuatorType
+  + findActuatorTypeByID(ActuatorTypeID): Optional<ActuatorType>
+  + findAllActuatorTypes(): List<ActuatorType>
+}
+
+class ActuatorTypeAssembler {
+  + domainToDTO(ActuatorType): ActuatorTypeDTO
+  + domainToDTO(List<ActuatorType>): List<ActuatorTypeDTO>
+}
+
+class ActuatorAssembler {
+  + domainToDTO(Actuator): ActuatorDTO
+  + domainToDTO(List<Actuator>): List<ActuatorDTO>
+}
+
+class ActuatorService {
+  - Repository<ActuatorID, Actuator> _ActuatorRepository
+  - ActuatorFactory _ActuatorFactory
+  - DeviceRepo _deviceRepository
+
+  + ActuatorService(Repository<ActuatorID, Actuator>, ActuatorFactory, DeviceRepo)
+  + addActuator(DeviceID, ModelPath, ActuatorTypeID, ActuatorName): Actuator
+}
+
+class ActuatorModelRepository {
+  - DATA: Map<ModelPath, ActuatorModel>
+  + ActuatorModelRepository()
+  + save(ActuatorModel): ActuatorModel
+  + findAll(): List<ActuatorModel>
+  + ofIdentity(ModelPath): Optional<ActuatorModel>
+  + containsOfIdentity(ModelPath): boolean
+  + findByActuatorTypeId(ActuatorTypeID): List<ActuatorModel>
+}
+
+class ActuatorTypeRepository {
+  - _ActuatorTypeData: Map<ActuatorTypeID, ActuatorType>
+  + ActuatorTypeRepository()
+  + save(ActuatorType): ActuatorType
+  + findAll(): List<ActuatorType>
+  + ofIdentity(ActuatorTypeID): Optional<ActuatorType>
+  + containsOfIdentity(ActuatorTypeID): boolean
+}
+
+class ActuatorRepository {
+  - _ActuatorData: Map<ActuatorID, Actuator>
+  + ActuatorRepository()
+  + save(Actuator): Actuator
+  + findAll(): List<Actuator>
+  + ofIdentity(ActuatorID): Optional<Actuator>
+  + containsOfIdentity(ActuatorID): boolean
+  + findByDeviceId(DeviceID): List<Actuator>
+}
+
+class ActuatorTypeDTO {
+  - ActuatorTypeID: String
+  - ActuatorTypeDescription: String
+  - unit: String
+  + ActuatorTypeDTO(ActuatorTypeID: String, ActuatorTypeDescription: String, unit: String)
+}
+
+class ActuatorModelDTO {
+  - ActuatorModelID: String
+  - ActuatorModelName: String
+  - _modelPath: String
+  + ActuatorModelDTO(ActuatorModelID: String, ActuatorModelName: String, modelPath: String)
+}
+
+class ActuatorDataDTO {
+  - deviceID: String
+  - ActuatorModelPath: String
+  - ActuatorName: String
+  - ActuatorTypeID: String
+  + ActuatorDataDTO(deviceID: String, ActuatorModelPath: String, ActuatorName: String, ActuatorTypeID: String)
+}
+
+class ActuatorDTO {
+  - deviceID: String
+  - modelPath: String
+  - ActuatorTypeID: String
+  - ActuatorID: String
+  - ActuatorName: String
+  + ActuatorDTO(deviceID: String, modelPath: String, ActuatorTypeID: String, ActuatorID: String, ActuatorName: String)
+}
+
+class ImpActuatorModelFactory {
+  + createActuatorModel(ActuatorModelName: ActuatorModelName, modelPath: ModelPath, ActuatorTypeID: ActuatorTypeID): ActuatorModel
+}
+
+
+class ImpActuatorTypeFactory {
+  + createActuatorType(name: TypeDescription, unit: UnitID): ActuatorType
+}
+class ImpActuatorFactory {
+        +create(parameters: Object...): Actuator
+    }
+
+class ActuatorModel {
+        -_ActuatorModelName: ActuatorModelName
+        -_modelPath: ModelPath
+        -_ActuatorTypeID: ActuatorTypeID
+        +ActuatorModel(ActuatorModelName: ActuatorModelName, modelPath: ModelPath, ActuatorTypeID: ActuatorTypeID)
+        +getActuatorTypeID(): ActuatorTypeID
+        +getActuatorModelName(): ActuatorModelName
+        +getModelPath(): ModelPath
+        +getID(): ModelPath
+    }
+
+class ActuatorType {
+        -_id: ActuatorTypeID
+        -_name: TypeDescription
+        -_unit: UnitID
+        +ActuatorType(name: TypeDescription, unit: UnitID)
+        +getID(): ActuatorTypeID
+        +getName(): TypeDescription
+        +getUnit(): UnitID
+        +equals(object: Object): boolean
+        +toString(): String
+    }
+
+interface Actuator{
+        +getID(): ActuatorID
+        +getName(): ActuatorName
+        +getModelPath(): ModelPath
+        +getActuatorTypeID(): ActuatorTypeID
+        +toString(): String
+        +getValue(): ValueObject
+        +getDeviceID(): DeviceID
+    }
+
+AddActuatorToDeviceController "1" ..> "1" ActuatorModelService : uses
+AddActuatorToDeviceController "1" ..> "1" ActuatorModelAssembler : uses
+AddActuatorToDeviceController "1" ..> "1" ActuatorTypeService : uses
+AddActuatorToDeviceController "1" ..> "1" ActuatorTypeAssembler : uses
+AddActuatorToDeviceController "1" ..> "1" ActuatorAssembler : uses
+AddActuatorToDeviceController "1" ..> "1" ActuatorService : uses
+AddActuatorToDeviceController "1" ..> "1" ActuatorDataDTO : uses
+
+ActuatorModelService "1" ..> "1" ActuatorModelRepository : uses
+ActuatorModelService "1" ..> "1" ImpActuatorModelFactory : uses
+ActuatorService "1" ..> "1" ActuatorRepository : uses
+ActuatorService "1" ..> "1" ImpActuatorFactory : uses
+ActuatorTypeService "1" ..> "1" ActuatorTypeRepository : uses
+ActuatorTypeService "1" ..> "1" ImpActuatorTypeFactory : uses
+
+ActuatorModelRepository "1" --> "1" ActuatorModel : has
+ActuatorTypeRepository "1" --> "1" ActuatorType : has
+ActuatorRepository "1" --> "1" Actuator : has
+
+ImpActuatorFactory "1" ..> "1..*" Actuator : creates
+ImpActuatorModelFactory "1" ..> "1..*" ActuatorModel : creates
+ImpActuatorTypeFactory "1" ..> "1..*" ActuatorType : creates
+
+ActuatorAssembler "1" ..> "1..*" ActuatorDTO : creates
+ActuatorModelAssembler "1" ..> "1..*" ActuatorModelDTO : creates
+ActuatorTypeAssembler "1" ..> "1..*" ActuatorTypeDTO : creates
+@enduml

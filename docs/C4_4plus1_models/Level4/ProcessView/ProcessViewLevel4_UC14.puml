@@ -1,0 +1,121 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+participant " " as HTTP
+
+box "Server"
+participant Controller as "Controller"<<component>>
+participant Service as "Service"<<component>>
+participant Repository as "Repository"<<component>>
+end box
+
+participant DataBase as " "
+
+autonumber
+
+HTTP o-> Controller : GET /logs/peak-power-consumption
+
+activate Controller
+
+Controller -> Service: getDevicesByDeviceTypeID(powerMeterTypeID)
+
+activate Service
+
+Service -> Repository: getDevicesByDeviceTypeID(powerMeterTypeID)
+
+activate Repository
+
+Repository ->o DataBase: findByDeviceTypeID
+
+DataBase o--> Repository : deviceList
+
+Repository --> Service: deviceList
+
+deactivate Repository
+
+Service -> Controller: deviceList
+
+deactivate Service
+
+'--------------------------------------------'
+
+Controller -> Service: getDevicesByDeviceType(powerSourceTypeID)
+
+activate Service
+
+Service -> Repository: getDevicesByDeviceType(powerSourceTypeID)
+
+activate Repository
+
+Repository ->o DataBase: findByDeviceTypeID
+
+DataBase o--> Repository : deviceList
+
+Repository --> Service: deviceList
+
+deactivate Repository
+
+Service -> Controller: deviceList
+
+deactivate Service
+
+'--------------------------------------------'
+
+Controller -> Service: getDeviceReadingsBySensorTypeAndTimePeriod (powerMeterDeviceID, sensorTypeID, datePeriod)
+
+activate Service
+
+Service -> Repository: findByDeviceIDAndSensorTypeAndDatePeriodBetween (powerMeterDeviceID, sensorTypeID, datePeriod)
+
+activate Repository
+
+Repository ->o DataBase: findByDeviceTypeID
+
+DataBase o--> Repository : readingsList
+
+Repository --> Service: powerMeterReadings
+
+deactivate Repository
+
+Service --> Controller: powerMeterReadings
+
+deactivate Service
+
+Controller -> Service: getDeviceReadingsBySensorTypeAndTimePeriod (powerSourceDeviceID, sensorTypeID, datePeriod)
+
+'--------------------------------------------'
+
+activate Service
+
+Service -> Repository: findByDeviceIDAndSensorTypeAndDatePeriodBetween (powerSourceDeviceID, sensorTypeID, datePeriod)
+
+activate Repository
+
+Repository ->o DataBase: findByDeviceIDAndSensorTypeAndDatePeriodBetween
+
+DataBase o--> Repository : readingsList
+
+Repository --> Service: powerSourceReadings
+
+deactivate Repository
+
+Service --> Controller: powerSourceReadings
+
+deactivate Service
+
+Controller -> Service: getMaxPowerConsumption(powerMeterReadings, powerSourceReadings, timeDelta)
+
+'--------------------------------------------'
+
+activate Service
+
+Service --> Controller: maxPowerConsumptionValue
+
+deactivate Service
+
+Controller -->o HTTP: maxPowerConsumptionValue
+
+deactivate Controller
+
+@enduml

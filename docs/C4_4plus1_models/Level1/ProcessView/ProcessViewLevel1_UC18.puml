@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "User" as User
+
+participant SmartHome as SH<<System (C4)>>
+
+activate User
+
+User -> SH : I want to have current outside temperature on the main page
+activate SH
+
+
+SH --> User : outsideTemperature
+deactivate SH
+deactivate User
+
+
+@enduml

@@ -1,0 +1,102 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+participant " " as User
+participant Controller as ":GetMaxPowerConsumptionOverAPeriod"
+participant DeviceService as ":DeviceService"
+participant LogService as ":LogService"
+participant DeviceRepository as ":DeviceRepository"
+participant LogRepository as ":LogRepository"
+
+autonumber
+
+User o-> Controller: getMaxPowerConsumption(initialTime, endTime)
+
+activate Controller
+
+Controller -> DeviceService: getDevicesByDeviceTypeID(DeviceTypeID powerMeter)
+
+activate DeviceService
+
+DeviceService -> DeviceRepository: getDevicesByDeviceTypeID(DeviceTypeID powerMeter)
+
+activate DeviceRepository
+
+DeviceRepository --> DeviceService: deviceList
+
+deactivate DeviceRepository
+
+DeviceService -> Controller: deviceList
+
+deactivate DeviceService
+
+'--------------------------------------------'
+
+Controller -> DeviceService: getDevicesByDeviceType(DeviceTypeID powerSource)
+
+activate DeviceService
+
+DeviceService -> DeviceRepository: getDevicesByDeviceType(DeviceTypeID powerSource)
+
+activate DeviceRepository
+
+DeviceRepository --> DeviceService: deviceList
+
+deactivate DeviceRepository
+
+DeviceService -> Controller: deviceList
+
+deactivate DeviceService
+
+'--------------------------------------------'
+
+Controller -> LogService: getDeviceReadingsBySensorTypeAndTimePeriod (powerMeterDeviceID, sensorTypeID, datePeriod)
+
+activate LogService
+
+LogService -> LogRepository: findByDeviceIDAndSensorTypeAndDatePeriodBetween (powerMeterDeviceID, sensorTypeID, datePeriod)
+
+activate LogRepository
+
+LogRepository --> LogService: powerMeterReadings
+
+deactivate LogRepository
+
+LogService --> Controller: powerMeterReadings
+
+deactivate LogService
+
+Controller -> LogService: getDeviceReadingsBySensorTypeAndTimePeriod (powerSourceDeviceID, sensorTypeID, datePeriod)
+
+'--------------------------------------------'
+
+activate LogService
+
+LogService -> LogRepository: findByDeviceIDAndSensorTypeAndDatePeriodBetween (powerSourceDeviceID, sensorTypeID, datePeriod)
+
+activate LogRepository
+
+LogRepository --> LogService: powerSourceReadings
+
+deactivate LogRepository
+
+LogService --> Controller: powerSourceReadings
+
+deactivate LogService
+
+Controller -> LogService: getMaxPowerConsumption(powerMeterReadings, powerSourceReadings, timeDelta)
+
+'--------------------------------------------'
+
+activate LogService
+
+LogService --> Controller: maxPowerConsumptionValue
+
+deactivate LogService
+
+Controller --> User: maxPowerConsumptionValue
+
+
+deactivate Controller
+
+@enduml

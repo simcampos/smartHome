@@ -1,0 +1,22 @@
+@startuml
+!pragma layout smetana
+
+package unit {
+    class Unit <<Entity>><<Root>> {
+
+    }
+    class UnitDescription <<ValueObject>> {
+        - _unit: string
+        }
+    class Symbol<<ValueObject>> {
+        - _symbol: string
+        }
+     class UnitID <<ValueObject>><<ID>> {
+        - _id: string
+        }
+
+Unit  --> "1" UnitDescription
+Unit  --> "1" Symbol
+Unit  --> "1" UnitID
+}
+@enduml

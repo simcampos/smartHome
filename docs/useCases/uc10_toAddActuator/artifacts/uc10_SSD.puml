@@ -1,0 +1,30 @@
+@startuml
+'US12 - As a Power User [or Administrator], I want to add an actuator to an existing
+'device in a room. The actuator must be of a model of an existing type of actuator.
+!pragma layout smetana
+actor "Power User or Admin" as User
+participant System
+
+activate User
+User -> System: I want to add an actuator to an existing device in a room
+activate System
+System --> User: In which room?
+deactivate System
+User -> System: Room!
+activate System
+System --> User: In which device?
+deactivate System
+User -> System: Device!
+activate System
+System --> User: Which Actuator Type?
+deactivate System
+User -> System: Type!
+activate System
+System --> User: Which Actuator Model?
+deactivate System
+User -> System: Model!
+activate System
+System --> User: The actuator is added to the device
+deactivate System
+deactivate User
+@enduml

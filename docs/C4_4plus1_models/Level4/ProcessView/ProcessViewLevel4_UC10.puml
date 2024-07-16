@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as User
+
+box "Server"
+    participant "Controller" as Controller <<component>>
+    participant "Service" as Service<<component>>
+    participant "Repository" as Repo<<component>>
+    participant "Domain" as Domain<<component>>
+end box
+    participant " " as BD
+
+User o-> Controller : POST /actuators
+activate Controller
+
+'Controller -> Controller: actuatorEntryDTO = deserialize(json)
+
+'Controller -> Controller: actuatorParameters = getActuatorParameters(actuatorEntryDTO)
+
+Controller -> Service : addActuator(actuatorParameters)
+activate Service
+
+Service -> Domain: actuator = create(actuatorParameters)
+activate Domain
+deactivate Domain
+
+Service -> Repo : save(actuator)
+activate Repo
+
+Repo ->o BD : save(actuator)
+
+Repo --> Service : actuator
+deactivate Repo
+
+Service --> Controller : actuator
+deactivate Service
+
+'Controller -> Controller : actuatorDTO = domainToDTO(actuator)
+
+'Controller -> Controller : json = serialize(actuatorDTO)
+
+Controller -->o User : actuatorDTO
+deactivate Controller
+
+
+@enduml

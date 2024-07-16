@@ -1,0 +1,126 @@
+@startuml
+!pragma layout smetana
+
+package domain.Actuator {
+    interface Actuator {
+        + getActuatorTypeID(): ActuatorTypeID
+                + getID(): ActuatorID
+                + getName() : ActuatorName
+                + getModelPath() : ModelPath
+                + getDeviceID() : DeviceID
+                + setValue(ValueObject value): ValueObject
+    }
+    interface ActuatorFactory {
+        + createActuator(Object... parameters): Actuator
+    }
+    class ImplActuatorFactory {
+        + createActuator(Object... parameters): Actuator
+    }
+}
+package domain.Actuator.SetDecimalActuator {
+    class SetDecimalActuator {
+        - _actuatorID: ActuatorID
+        - _actuatorName: ActuatorName
+        - _actuatorTypeID: ActuatorTypeID
+        - _modelPath: ModelPath
+        - _deviceID: DeviceID
+        - _value: SetDecimalValue
+        - _limits: SetDecimalActuatorLimits
+        + SetDecimalActuator(ActuatorName: actuatorName, actuatorTypeID: ActuatorTypeID, modelPath: ModelPath, deviceID: DeviceID, lowerLimit: double, upperLimit: double)
+        + getActuatorTypeID(): ActuatorTypeID
+        + getID(): ActuatorID
+        + getName() : ActuatorName
+        + getModelPath() : ModelPath
+        + getDeviceID() : DeviceID
+        + setValue(ValueObject value): ValueObject
+    }
+
+    class ActuatorTypeID {
+            - _description: String
+            + ActuatorTypeID(String strDescription)
+            + getType() : String
+    }
+
+    class ModelPath {
+            - _path: String
+            + ModelPath(String path)
+            + getPath() : String
+    }
+
+    class ActuatorName {
+            - _name: String
+            + ActuatorName(String name)
+            + getName() : String
+    }
+
+    class SetDecimalActuatorLimits {
+            - _lowerLimit: double
+            - _upperLimit: double
+            + SetDecimalActuatorLimits(double lowerLimit, double upperLimit)
+            + getLowerLimit() : double
+            + getUpperLimit() : double
+    }
+
+    class ActuatorID {
+            - _id: String
+            + ActuatorID(String id)
+            + getID() : String
+    }
+
+    class DeviceID {
+            - _id: String
+            + DeviceID(String id)
+            + getID() : String
+    }
+
+    class SetDecimalValue {
+            - _value : double
+            + SetDecimalValue(double value)
+            + toString() : String
+    }
+}
+
+package domain.ddd {
+
+  interface DomainEntity {
+  }
+
+  interface DomainID {
+  }
+
+  interface AggregateRoot {
+  }
+
+  interface ValueObject {
+  }
+}
+
+ImplActuatorFactory ..|> ActuatorFactory
+ImplActuatorFactory "1" ..> "1" domain.Actuator.SetDecimalActuator.SetDecimalActuator : creates
+
+domain.Actuator.SetDecimalActuator.SetDecimalActuator ..|> domain.Actuator.Actuator
+domain.Actuator.SetDecimalActuator.SetDecimalActuator "1" --> "1" SetDecimalValue : has
+domain.Actuator.SetDecimalActuator.SetDecimalActuator "1" -->  "1" ActuatorTypeID : has
+domain.Actuator.SetDecimalActuator.SetDecimalActuator "1" -->  "1" ModelPath : has
+domain.Actuator.SetDecimalActuator.SetDecimalActuator "1" -->  "1" ActuatorName : has
+domain.Actuator.SetDecimalActuator.SetDecimalActuator "1" -->  "1" SetDecimalActuatorLimits : has
+domain.Actuator.SetDecimalActuator.SetDecimalActuator "1" -->  "1" ActuatorID : has
+domain.Actuator.SetDecimalActuator.SetDecimalActuator "1" -->  "1" DeviceID : has
+
+DomainEntity --|> DomainID
+AggregateRoot --|> DomainEntity
+DomainID --|> ValueObject
+
+domain.Actuator.Actuator --|> domain.ddd.AggregateRoot
+
+ActuatorTypeID ..|> domain.ddd.DomainID
+ActuatorID ..|> domain.ddd.DomainID
+DeviceID ..|> domain.ddd.DomainID
+ModelPath ..|> domain.ddd.DomainID
+
+SetDecimalValue ..|> domain.ddd.ValueObject
+SetDecimalActuatorLimits ..|> domain.ddd.ValueObject
+ActuatorName ..|> domain.ddd.ValueObject
+
+
+@enduml

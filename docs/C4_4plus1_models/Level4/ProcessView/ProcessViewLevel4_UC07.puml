@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Server"
+    participant "Controller" as CTRL<<component>>
+    participant "Service" as SV<<component>>
+    participant "Repository" as RP<<component>>
+     participant "Domain" as Domain<<component>>
+
+end box
+participant " " as BD
+
+
+HTTP o-> CTRL : POST /sensors
+activate CTRL
+
+CTRL -> SV : addSensor(sensorParameters)
+
+activate SV
+
+SV -> Domain: sensor = create(sensorParameters)
+activate Domain
+deactivate Domain
+
+SV -> RP : save(sensor)
+activate RP
+
+RP ->o BD : save(sensor)
+
+RP --> SV : sensor
+deactivate RP
+
+SV --> CTRL : sensor
+deactivate SV
+
+CTRL -->o HTTP : sensorDTO
+deactivate CTRL
+
+
+@enduml

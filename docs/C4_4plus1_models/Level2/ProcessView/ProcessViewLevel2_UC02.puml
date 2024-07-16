@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Smart Home <<System (C4)>>"
+    participant "Backend" as Backend<<container (C4)>>
+end box
+
+
+HTTP o-> Backend: POST /rooms
+activate Backend
+
+Backend -->o HTTP: JSON 201
+deactivate Backend
+
+
+
+@enduml

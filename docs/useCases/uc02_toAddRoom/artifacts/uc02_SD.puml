@@ -1,0 +1,49 @@
+@startuml
+
+!pragma layout smetana
+autonumber
+
+participant " " as User
+participant ":AddRoomController" as Controller
+participant "roomService:RoomService" as Service
+participant ":RoomRepository" as Repository
+participant ":RoomAssembler" as Assembler
+participant ":RoomFactory" as Factory
+participant "room :Room" as Room
+participant "roomDTO :RoomDTO" as DTO
+
+User o-> Controller: addRoom(roomDataDTO)
+activate Controller
+Controller -> Service: addRoom(houseID, name, floor, width, length, height): RoomDTO
+activate Service
+Service -> Factory: createRoom(houseID, roomName, dimension, roomFloor):Room
+activate Factory
+create Room
+Factory -> Room: addRoom(houseID, roomName, dimensions, floor)
+activate Room
+Room --> Factory: room
+deactivate Room
+Factory --> Service: room
+deactivate Factory
+Service -> Repository: save(room)
+activate Repository
+Repository --> Service : room
+deactivate Repository
+Service -> Assembler: RoomDTO(room : Room)
+activate Assembler
+create DTO
+Assembler -> DTO: roomDTO(roomName, roomDimension, roomFloor, roomID)
+activate DTO
+DTO --> Assembler: roomDTO
+deactivate DTO
+Assembler --> Service: roomDTO
+deactivate Assembler
+Service --> Controller: roomDTO
+deactivate Service
+Controller --> User: roomDTO
+deactivate Controller
+
+
+
+
+@enduml

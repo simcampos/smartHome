@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "SmartHome <<System (C4)>>"
+    participant "Backend" as BE<<container (C4)>>
+
+end box
+HTTP o-> BE: GET /devices by room and temperature functionality
+activate BE
+
+BE -->o HTTP: JSON 200
+
+
+@enduml

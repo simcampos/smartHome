@@ -1,0 +1,81 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+    participant " " as User
+    participant ":DeactivateDeviceController" as Controller
+    participant ":DeviceService" as Service
+    participant ":DeviceRepository" as Repository
+    participant ":DeviceAssembler" as Assembler
+    participant "deviceDTO:DeviceDTO" as DTO
+    participant "deviceID:DeviceID" as DeviceID
+    participant ":Device" as Device
+    participant "status:DeviceStatus" as Status
+
+' Request all devices
+
+    User o-> Controller: requestAllDevices()
+    activate Controller
+    Controller -> Service: getAllDevices()
+    activate Service
+    Service -> Repository: findAll()
+    activate Repository
+    Repository --> Service: deviceList
+    deactivate Repository
+    Service --> Controller: deviceList
+    deactivate Service
+
+    Controller -> Assembler: domainToDTO(deviceList)
+    activate Assembler
+    loop for each device in deviceList
+        create DTO
+        Assembler -> DTO: DeviceDTO(device)
+        activate DTO
+        DTO --> Assembler: deviceDTO
+        Assembler -> Assembler: addToList(deviceDTO)
+        deactivate DTO
+    end
+    Assembler --> Controller: deviceDTOList
+    deactivate Assembler
+    Controller --> User: deviceDTOList
+    deactivate Controller
+
+' Deactivate device
+
+    User o-> Controller: requestDeactivateDevice(DeviceDTO)
+    activate Controller
+    create DeviceID
+    Controller -> DeviceID: DeviceID(deviceID: String)
+    activate DeviceID
+    DeviceID --> Controller: deviceID
+    deactivate DeviceID
+    Controller -> Service: deactivateDeviceByID(deviceID)
+    activate Service
+    Service -> Repository: ofIdentity(deviceID)
+    activate Repository
+    Repository --> Service: device
+    deactivate Repository
+    Service -> Device: deactivateDevice(): Status
+    activate Device
+    create Status
+    Device -> Status: DeviceStatus(boolean)
+    activate Status
+    Status --> Device: status
+    deactivate Status
+    Device --> Service: status
+    deactivate Device
+    Service --> Controller: device
+    deactivate Service
+    Controller-> Assembler: domainToDTO(device)
+    activate Assembler
+    Assembler -> DTO: DeviceDTO(device)
+    activate DTO
+    DTO --> Assembler: deviceDTO
+    deactivate DTO
+    Assembler --> Controller: deviceDTO
+    deactivate Assembler
+    Controller --> User: deviceDTO
+    deactivate Controller
+
+@enduml

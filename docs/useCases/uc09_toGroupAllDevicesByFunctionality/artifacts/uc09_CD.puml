@@ -1,0 +1,60 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+class GetListOfAllDevicesGroupedByFunctionalityController {
+    -_deviceService: DeviceService
+    -_deviceTypeService: DeviceTypeService
+    -_deviceAssembler: DeviceAssembler
+
+    +GetListOfAllDevicesGroupedByFunctionalityController(deviceService: DeviceService, deviceTypeService: DeviceTypeService, deviceAssembler: DeviceAssembler)
+    +getAllDevicesGroupedByFunctionality(): Map<DeviceType, List<DeviceDTO>>
+
+}
+
+class DeviceService {
+    -_deviceFactory: DeviceFactory
+    -_deviceRepo: DeviceRepository
+    +DeviceService(factoryDevice: FactoryDevice, deviceRepo: DeviceRepository)
+    +getAllDevices(): List<Device>
+}
+
+class DeviceTypeService {
+    -_deviceTypeFactory: DeviceTypeFactory
+    -_deviceTypeRepo: DeviceTypeRepository
+    +DeviceTypeService(factoryDeviceType: FactoryDeviceType, deviceTypeRepo: DeviceTypeRepository)
+    +getDeviceTypeByID(deviceTypeID: DeviceTypeID): DeviceType
+}
+
+class DeviceRepository {
+    -_data: HashMap<DeviceID, Device>
+    +DeviceRepository()
+    +findAll(): List<Device>
+}
+
+class DeviceTypeRepository {
+    -_data: HashMap<DeviceTypeID, DeviceType>
+    +DeviceTypeRepository()
+    +ofIdentity(deviceTypeID): DeviceType
+}
+
+class DeviceAssembler {
+    +DeviceAssembler()
+    +domainToDTO(device: Device): DeviceDTO
+}
+
+class DeviceDTO {
+    +id: String
+    +roomID: String
+    +name: String
+    +deviceStatus: String
+    +DeviceDTO(id: DeviceID, roomID: RoomID, name: DeviceName, deviceStatus: DeviceStatus)
+}
+
+GetListOfAllDevicesGroupedByFunctionalityController "1" ..> "1" DeviceService: uses
+GetListOfAllDevicesGroupedByFunctionalityController "1" ..> "1" DeviceTypeService: uses
+DeviceService "1" ..> "1" DeviceRepository: uses
+DeviceTypeService "1" ..> "1" DeviceTypeRepository: uses
+GetListOfAllDevicesGroupedByFunctionalityController "1" ..> "1" DeviceAssembler: uses
+DeviceAssembler "1" ..> "*" DeviceDTO: creates
+@enduml

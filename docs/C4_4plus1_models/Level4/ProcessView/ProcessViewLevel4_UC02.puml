@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Server"
+    participant "Controller" as CTRL<<component>>
+    participant "Service" as SV<<component>>
+    participant "Repository" as REPO<<component>>
+    participant "Domain" as DOM<<component>>
+
+end box
+participant " " as BD
+
+
+HTTP o-> CTRL : POST /rooms
+activate CTRL
+
+
+
+CTRL -> DOM : RoomName (strName)
+activate DOM
+DOM --> CTRL : roomName
+deactivate DOM
+
+CTRL -> DOM : Dimension (intWidth, intLength, intHeight)
+activate DOM
+DOM --> CTRL : dimension
+deactivate DOM
+
+CTRL -> DOM : RoomFloor (intFloor)
+activate DOM
+DOM --> CTRL : roomFloor
+deactivate DOM
+
+CTRL -> SV :addRoom(roomName,dimension,roomFloor)
+activate SV
+
+SV -> REPO : save(room)
+activate REPO
+REPO ->o BD : save
+REPO --> SV : room
+deactivate REPO
+
+SV --> CTRL : room
+deactivate SV
+
+
+CTRL -->o HTTP : roomDTO
+deactivate CTRL
+
+
+
+
+
+@enduml

@@ -1,0 +1,402 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+class CatalogueSensor{
+'Attributes'
+- _listSensorTypes: List<SensorType>
+- _listStringClassesSensors: List<String>
+
+'Methods'
++CatalogueSensor(filePathname: String)
+-setListSensorTypes(): void
+-setListStringClassesSensors(): void
+}
+
+interface Sensor{
+'Methods'
+getSensorType(): SensorType
+getValue(): Value
+}
+
+class SensorFactory {
+'Methods'
++createSensor(model: String, catalogue: Catalogue): Sensor
+}
+
+class SensorType {
+'Atributes'
+- _strDescription: String
+- _unit_Unit
+
+'Methods'
+#SensorType(strDescription: String, unit: Unit)
+-setStringDescription(strDescription: String): String
+-setUnit(unit: Unit): Unit
++getDescription(): String
++getUnit(): Unit
+}
+
+class SensorTypeFactory {
+'Methods'
++createSensorType(strDescription: String, unit: Unit): SensorType
+}
+
+class AveragePowerConsumptionSensor{
+'Attributes'
+- _sensorType: SensorType
+- _powerConsumptions: HashMap<LocalDateTime, Double>
+- _averageResult: double
+- _Average_powerConsumption: AveragePowerConsumptionSensorValue
+
+'Methods'
++AveragePowerConsumptionSensor(catalogue: CatalogueSensor)
+-setSensorType((catalogue: CatalogueSensor): SensorType
+-setPowerConsumptions(): HashMap<LocalDateTime, Double>
+-setResult(): double
++getSensorType(): SensorType
++setValue(readTime: LocalDateTime, reading: double): Map<LocalDateTime, Double>
++getAverageValue(): double
++filterPowerConsumptionsByTime(initialTime: LocalDateTime, finalTime: LocalDateTime): Map<LocalDateTime, Double>
++getValue(): Value
+}
+
+class AveragePowerConsumptionSensorValue{
+'Attributes'
+- _value: double
+
+'Methods'
++AveragePowerConsumptionSensorValue(dValue: double)
+-setValue(dValue: double): void
++getValue(): double
++toString(): String
+}
+
+class DewPointSensor{
+'Attributes'
+- _sensorType: SensorType
+- _dewPointValue: DewPointValue
+
+'Methods'
++ DewPointSensor(catalogue: CatalogueSensor)
+-setSensorType((catalogue: CatalogueSensor): void
++getSensorType(): SensorType
++getValue(): Value
+}
+
+class DewPointValue{
+'Attributes'
+- _dewPointValue : int
+
+'Methods'
++DewPointValue(dewPointValue: int)
++toString(): String
+}
+
+class EletricConsumptionWhSensor{
+'Attributes'
+- _type : SensorType
+- _EletricConsumptionWhValue: EletricConsumptionWhValue
+
+'Methods'
+-setSensorType(catalogue: CatalogueSensor): void
++getSensorType(): SensorType
+#artificialDatabaseOfReadingsSetTo50W(): Map<LocalDateTime, Integer>
+#getDataFromSelectedTimePeriod(startTimestamp: LocalDateTime, endTimestamp: LocalDateTime): Map<LocalDateTime, Integer>
+-filterPowerConsumptionsByTime(startTimestamp: LocalDateTime, endTimestamp: LocalDateTime, mapAllConsumption : Map<LocalDate, Integer>): Map<LocalDateTime, Integer>
+#calculateConsumptionInWh(startTimestamp: LocalDateTime, endTimestamp: LocalDateTime, mapAllConsumption : Map<LocalDate, Integer>): Integer
++getValue(): Value
++getValue(startTimestamp: LocalDateTime, endTimestamp: LocalDateTime): Value
+}
+
+class EletricConsumptionWhValue{
+'Attributes'
+- _value: int
+
+'Methods'
++EletricConsumptionWhValue(value: int)
+-setValue(value: int): void
++toString(): String
+}
+
+class HumiditySensor{
+'Attributes'
+- _sensorType: SensorType
+- _value: HumiditySensorValue
+
+'Methods'
++HumiditySensor(catalogue: CatalogueSensor)
++getSensorType(): SensorType
++getValue(): Value
+}
+
+class HumiditySensorValue{
+'Attributes'
+- _dValue: double
+
+'Methods'
++HumiditySensorValue(dValue: double)
+-validateValue(dValue: double): void
++toString(): String
+}
+
+class InstantPowerConsumptionSensor{
+'Attributes'
+- _sensorType: SensorType
+- _instantPowerConsumption: InstantPowerConsumptionSensorValue
+
+'Methods'
++InstantPowerConsumptionSensor(catalogueSensor: CatalogueSensor)
+-setSensorType(catalogueSensor: CatalogueSensor): void
++getSensorType(): SensorType
++getValue(): Value
+}
+
+class InstantPowerConsumptionSensorValue{
+'Attributes'
+- _instantPowerConsumptionValue: double
+
+'Methods'
++InstantPowerConsumptionSensorValue(instantPowerConsumptionValue: double)
++toString(): String
+}
+
+
+class PercentagePositionSensor{
+'Attributes'
+- _sensorType: SensorType
+- _value: PercentagePositionSensorValue
+
+'Methods'
++PercentagePositionSensor(catalogue: CatalogueSensor)
+-setSensorType(): SensorType
++getSensorType(): SensorType
++getValue(): Value
+}
+
+class PercentagePositionSensorValue{
+'Attributes'
+- _percented: double
+
+'Methods'
++PercentagePositionSensorValue(percented: double)
+-validatePosition(percented: double): void
++toString(): String
+}
+
+class SolarIrriadianceSensor{
+'Attributes'
+- _sensorType: SensorType
+- _value: SolarIrriadianceSensorValue
+
+'Methods'
++SolarIrriadianceSensor(catalogue: CatalogueSensor)
+-setSensorType(catalogue: CatalogueSensor): void
++getSensorType(): SensorType
++getValue(): Value
+}
+
+class SolarIrriadianceSensorValue{
+'Attributes'
+- _dValue: double
+
+'Methods'
++SolarIrriadianceSensorValue(nValue: double)
++toString(): String
+}
+
+class SunriseTimeSensor{
+'Attributes'
+- _sensorType: SensorType
+- _gps: Gps
+
+'Methods'
++SunriseTimeSensor(catalogue: CatalogueSensor)
+-setSensorType(catalogue: CatalogueSensor): SensorType
++configureGpsLocation(gps: Gps): Gps
++getSensorType(): SensorType
++getSunriseTime(): LocalTime
++getSunriseTime(date: LocalDate): LocalTime
++getValue(): Value
++getValue(date: LocalDate): Value
+}
+
+class SunriseTimeValue{
+'Attributes'
+- _value: LocalTime
+
+'Methods'
++SunsetTimeValue(value: LocalTime)
+-setValue(value: LocalTime): void
++toString(): String
+}
+
+class SunsetTimeSensor{
+'Attributes'
+- _sensorType: SensorType
+- _latitude: double
+- _longitude: double
+- _sunsetTimeValue: SunsetTimeValue
+
+'Methods'
++SunsetTimeSensor(catalogue: CatalogueSensor)
+-setSensorType(catalogue: CatalogueSensor): void
+-configureGpsLocation(): void
++getSensorType(): SensorType
++getValue(): Value
++getValue(date: LocalDate): Value
+}
+
+class SwitchSensor{
+'Attributes'
+- _sensorType: SensorType
+- _value: SwitchSensorValue
+
+'Methods'
++SwitchSensor(catalogue: CatalogueSensor)
+-setSensorType(catalogue: CatalogueSensor): void
++getSensorType(): SensorType
++getValue(): Value
+}
+
+class SwitchSensorValue{
+'Attributes'
+- _value: boolean
+
+'Methods'
++SwitchSensorValue(bValue: boolean)
++toString(): String
+}
+
+class TemperatureSensor{
+'Attributes'
+- _sensorType: SensorType
+- _value: TemperatureSensorValue
+
+'Methods'
++TemperatureSensor(catalogue: CatalogueSensor)
+-setSensorType(catalogue: CatalogueSensor): void
++getSensorType(): SensorType
++getValue(): Value
+}
+
+class TemperatureSensorValue{
+'Attributes'
+- _nValue: double
+
+'Methods'
++TemperatureSensorValue(nValue: double)
+-validateValue(nValue: double): void
++toString(): String
+}
+
+class WindSensor{
+'Attributes'
+- _sensorType: SensorType
+- _value: WindSensorValue
+
+'Methods'
++WindSensor(catalogue: CatalogueSensor)
+-setSensorType(catalogue: CatalogueSensor): void
++getSensorType(): SensorType
++getValue(): Value
+}
+
+class Device{
+'Attributes'
+- _name : String
+- _status : boolean
+- _sensors: List<Sensor>
+- _deviceId: UUID
+- _actuators: List<Sensor>
+
+'Methods'
+#Device(name: String)
+-setName(name: String): void
++deactivateDevice(): boolean
++getName(): String
++getStatus(): boolean
++getDeviceId(): UUID
++getDeviceFunctionalities(): List<String>
++getSensorList(): List<String>
++addSensor(strModel : String, catalogue: CatalogueSensor, sensorFactory SensorFactory): Sensor
+#addSensorToDevice(sensor: Sensor): Sensor
++toString(): String
+}
+
+
+Device "1" --> "1" CatalogueSensor : <<uses>>
+
+Device "1" ---> "1" AveragePowerConsumptionSensor : <<has>>
+Device "1" ---> "1" DewPointSensor : <<has>>
+Device "1" ---> "1" EletricConsumptionWhSensor : <<has>>
+Device "1" ---> "1" HumiditySensor : <<has>>
+Device "1" ---> "1" InstantPowerConsumptionSensor : <<has>>
+Device "1" ---> "1" PercentagePositionSensor : <<has>>
+Device "1" ---> "1" SolarIrriadianceSensor : <<has>>
+Device "1" ---> "1" SunriseTimeSensor : <<has>>
+Device "1" ---> "1" SunsetTimeSensor : <<has>>
+Device "1" ---> "1" SwitchSensor : <<has>>
+Device "1" ---> "1" TemperatureSensor : <<has>>
+Device "1" ---> "1" WindSensor : <<has>>
+
+CatalogueSensor "1" ---> "1" SensorFactory: <<creates>>
+CatalogueSensor "1" ----> "1" SensorTypeFactory: <<creates>>
+
+SensorTypeFactory "1" --> "1" SensorType: <<creates>>
+
+SensorFactory "1" --> "1" AveragePowerConsumptionSensor : <<creates>>
+SensorFactory "1" --> "1" DewPointSensor : <<creates>>
+SensorFactory "1" --> "1" EletricConsumptionWhSensor : <<creates>>
+SensorFactory "1" --> "1" HumiditySensor : <<creates>>
+SensorFactory "1" --> "1" InstantPowerConsumptionSensor : <<creates>>
+SensorFactory "1" --> "1" PercentagePositionSensor : <<creates>>
+SensorFactory "1" --> "1" SolarIrriadianceSensor : <<creates>>
+SensorFactory "1" --> "1" SunriseTimeSensor : <<creates>>
+SensorFactory "1" --> "1" SunsetTimeSensor : <<creates>>
+SensorFactory "1" --> "1" SwitchSensor : <<creates>>
+SensorFactory "1" --> "1" TemperatureSensor : <<creates>>
+SensorFactory "1" --> "1" WindSensor : <<creates>>
+
+AveragePowerConsumptionSensor "1" --> "1" SensorType : <<has>>
+DewPointSensor "1" --> "1" SensorType : <<has>>
+EletricConsumptionWhSensor "1" --> "1" SensorType : <<has>>
+HumiditySensor "1" --> "1" SensorType : <<has>>
+InstantPowerConsumptionSensor "1" --> "1" SensorType : <<has>>
+PercentagePositionSensor "1" --> "1" SensorType : <<has>>
+SolarIrriadianceSensor "1" --> "1" SensorType : <<has>>
+SunriseTimeSensor "1" --> "1" SensorType : <<has>>
+SunsetTimeSensor "1" --> "1" SensorType : <<has>>
+SwitchSensor "1" --> "1" SensorType : <<has>>
+TemperatureSensor "1" --> "1" SensorType : <<has>>
+WindSensor "1" --> "1" SensorType : <<has>>
+
+
+AveragePowerConsumptionSensor "1" ---> "1" AveragePowerConsumptionSensorValue : <<uses>>
+DewPointSensor "1" ---> "1" DewPointValue : <<uses>>
+EletricConsumptionWhSensor "1" ---> "1" EletricConsumptionWhValue : <<uses>>
+HumiditySensor "1" ---> "1" HumiditySensorValue : <<uses>>
+InstantPowerConsumptionSensor "1" ---> "1" InstantPowerConsumptionSensorValue : <<uses>>
+PercentagePositionSensor "1" ---> "1" PercentagePositionSensorValue : <<uses>>
+SolarIrriadianceSensor "1" ---> "1" SolarIrriadianceSensorValue : <<uses>>
+SunriseTimeSensor "1" ---> "1" SunriseTimeValue : <<uses>>
+SunsetTimeSensor "1" ---> "1" SunsetTimeValue : <<uses>>
+SwitchSensor "1" ---> "1" SwitchSensorValue : <<uses>>
+TemperatureSensor "1" ---> "1" TemperatureSensorValue : <<uses>>
+WindSensor "1" ---> "1" WindSensorValue : <<uses>>
+
+
+AveragePowerConsumptionSensor "1" .....|> "1" Sensor: <<implements>>
+DewPointSensor "1" .....|> "1" Sensor: <<implements>>
+EletricConsumptionWhSensor "1" .....|> "1" Sensor: <<implements>>
+HumiditySensor "1" .....|> "1" Sensor: <<implements>>
+InstantPowerConsumptionSensor "1" .....|> "1" Sensor: <<implements>>
+PercentagePositionSensor "1" .....|> "1" Sensor: <<implements>>
+SolarIrriadianceSensor "1" .....|> "1" Sensor: <<implements>>
+SunriseTimeSensor "1" .....|> "1" Sensor: <<implements>>
+SunsetTimeSensor "1" .....|> "1" Sensor: <<implements>>
+SwitchSensor "1" .....|> "1" Sensor: <<implements>>
+TemperatureSensor "1" .....|> "1" Sensor: <<implements>>
+WindSensor "1" .....|> "1" Sensor: <<implements>>
+
+@enduml

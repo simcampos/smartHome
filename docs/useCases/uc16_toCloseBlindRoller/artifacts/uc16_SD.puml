@@ -1,0 +1,105 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+autonumber
+
+    participant " " as User
+    participant ":ActuatorController" as ActuatorController
+    participant "actuatorService:ActuatorService" as ActuatorService
+    participant "logService:LogService" as LogService
+    participant "actuatorRepo:ActuatorRepo" as ActuatorRepo
+    participant "logRepository:LogRepository" as LogRepository
+    participant "sensorTypeID:SensorTypeID" as SensorTypeID
+    participant "blindRollerValue:BlindRollerValue" as BlindRollerValue
+    participant "actuatorID:ActuatorID" as ActuatorID
+    participant "deviceID:DeviceID" as DeviceID
+    participant "blindRollerActuator:BlindRollerActuator" as BlindRollerActuator
+    participant ":ActuatorAssembler" as ActuatorAssembler
+
+
+    ref over User, ActuatorController: getActuatorsByDeviceID
+
+User o-> ActuatorController: closeBlindRoller(actuatorValueDTO)
+activate ActuatorController
+
+create SensorTypeID
+ActuatorController -> SensorTypeID: SensorTypeID ("PercentagePosition")
+activate SensorTypeID
+
+SensorTypeID --> ActuatorController: sensorTypeID
+deactivate SensorTypeID
+
+create BlindRollerValue
+ActuatorController -> BlindRollerValue: BlindRollerValue(value)
+activate BlindRollerValue
+
+BlindRollerValue --> ActuatorController: blindRollerValue
+deactivate BlindRollerValue
+
+create ActuatorID
+ActuatorController -> ActuatorID : ActuatorID (strActuatorID)
+activate ActuatorID
+
+ActuatorID --> ActuatorController: actuatorID
+deactivate ActuatorID
+
+create DeviceID
+ActuatorController -> DeviceID : DeviceID (strDeviceID)
+activate DeviceID
+
+DeviceID --> ActuatorController: deviceID
+deactivate DeviceID
+
+ActuatorController -> ActuatorService: getActuatorByID (actuatorID)
+activate ActuatorService
+
+ActuatorService -> ActuatorRepo: ofIdentity(actuatorID)
+activate ActuatorRepo
+
+ActuatorRepo --> ActuatorService: actuatorBlindRoller
+deactivate ActuatorRepo
+
+ActuatorService --> ActuatorController: actuatorBlindRoller
+deactivate ActuatorService
+
+ActuatorController -> LogService: getDeviceReadings (deviceID, sensorTypeID)
+activate LogService
+
+LogService -> LogRepository: getDeviceReadings (deviceID, sensorTypeID)
+activate LogRepository
+
+LogRepository --> LogService: deviceReadingsList
+deactivate LogRepository
+
+LogService --> ActuatorController: deviceReadingsList
+deactivate LogService
+
+ActuatorController -> ActuatorService: setValue (actuatorBlindRoller, blindRollerValue, blindRollerCurrentValue)
+activate ActuatorService
+
+alt value lower than blindRollerValue
+
+ActuatorService -> BlindRollerActuator: setValue(value)
+activate BlindRollerActuator
+
+BlindRollerActuator --> ActuatorService: blindRollerValue
+deactivate BlindRollerActuator
+
+ActuatorService --> ActuatorController: blindRollerValue
+
+else value higher than blindRollerValue
+ActuatorService --> ActuatorController: IllegalArgumentException
+
+deactivate ActuatorService
+end
+
+ActuatorController -> ActuatorAssembler: domainToDTO (actuatorBlindRoller)
+activate ActuatorAssembler
+
+ActuatorAssembler --> ActuatorController: actuatorDTO
+deactivate ActuatorAssembler
+
+ActuatorController -->o User: actuatorDTO
+deactivate ActuatorController
+
+@enduml

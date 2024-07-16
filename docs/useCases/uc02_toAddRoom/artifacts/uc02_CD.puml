@@ -1,0 +1,65 @@
+@startuml
+!pragma layout smetana
+
+class AddRoomController<<Controller>> {
+- _roomService: RoomService
+- _roomAssembler: RoomAssembler
++AddRoomToHouseController(RoomService roomService, RoomAssembler roomAssembler)
++AddRoom(houseID: String, name: String, int floor, int width, int length, int height):RoomDTO
+}
+
+class RoomService <<Service>>{
+- _roomRepository: RoomRepository
+- _roomFactory: RoomFactory
+- _roomAssembler: RoomAssembler
+- _houseRepository: HouseRepository
++RoomService(roomRepository:RoomRepository, roomFactory:RoomFactory, roomAssembler:RoomAssembler, houseRepository:HouseRepository)
++addRoom(houseID: String, name: String, int floor, int width, int length, int height): RoomDTO
+}
+
+class RoomRepository <<Repository>>{
+- _map<RoomID,Room> room
++save(room: Room): Room
+}
+
+class RoomFactory <<Factory>>{
++createRoom(houseID: HouseID, roomName: RoomName, dimension: Dimension, roomFloor: RoomFloor):Room
+}
+
+class RoomAssembler <<Assembler>>{
++domainToDTO(room:Room):RoomDTO
+}
+
+class RoomDTO <<DTO>>{
++ _roomName: String
++ _roomFloor: String
++ _roomDimension: String
++ _roomID: String
++RoomDTO(roomId: String, roomName: String, floor: String, dimension: String)
+}
+
+class Room <<Entity>>{
+- _houseID: HouseID
+- _roomID: RoomID
+- _roomName: RoomName
+- _dimensions: Dimensions
+- _floor: Floor
++Room(houseID: HouseID, name: RoomName, dimensions: Dimensions, floor: Floor)
++getID(): String
++getRoomName(): String
++getDimensions(): Dimensions
++getFloor(): Floor
++getHouseID(): HouseID
+}
+
+
+AddRoomController "1" .down.> "1" RoomService: uses
+RoomService "1" .down.> "1" RoomFactory: uses
+RoomService "1" .right.> "1" RoomRepository: uses
+RoomRepository "1" -left-> "1..*" Room: has
+AddRoomController "1" .left.> "1" RoomAssembler: uses
+RoomAssembler "1" .down.> "1" RoomDTO: creates
+RoomFactory "1" .down.> "1" Room: creates
+
+
+@enduml

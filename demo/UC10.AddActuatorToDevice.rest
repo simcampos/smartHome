@@ -1,0 +1,88 @@
+GET http://localhost:8080/actuator-models?actuatorTypeID=BlindRoller
+Content-Type: application/json
+
+> {%
+    client.global.set("actuatorModelPath", response.body._embedded.actuatorModelDTOList[0].actuatorModelPath);
+%}
+
+###
+GET http://localhost:8080/actuator-models?actuatorTypeID=Switch
+Content-Type: application/json
+
+> {%
+    client.global.set("switchActuator", response.body._embedded.actuatorModelDTOList[0].actuatorModelPath);
+%}
+
+###
+GET http://localhost:8080/actuator-models?actuatorTypeID=SetDecimal
+Content-Type: application/json
+
+> {%
+    client.global.set("setDecimalActuator", response.body._embedded.actuatorModelDTOList[0].actuatorModelPath);
+%}
+
+###
+GET http://localhost:8080/actuator-models?actuatorTypeID=SetInteger
+Content-Type: application/json
+
+> {%
+    client.global.set("setIntegerActuator", response.body._embedded.actuatorModelDTOList[0].actuatorModelPath);
+%}
+
+
+###
+
+POST http://localhost:8080/actuators
+Content-Type: application/json
+
+{
+  "type": "genericActuator",
+  "deviceID": "{{blindsDeviceId}}",
+  "actuatorModelPath": "{{actuatorModelPath}}",
+  "actuatorName": "GTX2000",
+  "actuatorTypeID": "BlindRoller"
+}
+
+> {%
+    client.global.set("blindRollerActuatorID", response.body.id);
+%}
+
+###
+POST http://localhost:8080/actuators
+Content-Type: application/json
+
+{
+  "type": "genericActuator",
+  "deviceID": "{{houseDeviceID}}",
+  "actuatorModelPath": "{{switchActuator}}",
+  "actuatorName": "GTX2000",
+  "actuatorTypeID": "Switch"
+}
+
+###
+POST http://localhost:8080/actuators
+Content-Type: application/json
+
+{
+  "type": "decimalActuator",
+  "deviceID": "{{houseDeviceID}}",
+  "actuatorModelPath": "{{setDecimalActuator}}",
+  "actuatorName": "GTX2000",
+  "actuatorTypeID": "SetDecimal",
+    "minLimit": 0.0,
+    "maxLimit": 100
+}
+
+###
+POST http://localhost:8080/actuators
+Content-Type: application/json
+
+{
+  "type": "integerActuator",
+  "deviceID": "{{houseDeviceID}}",
+  "actuatorModelPath": "{{setIntegerActuator}}",
+  "actuatorName": "GTX2000",
+  "actuatorTypeID": "SetInteger",
+    "minLimit": 5,
+    "maxLimit": 15
+}

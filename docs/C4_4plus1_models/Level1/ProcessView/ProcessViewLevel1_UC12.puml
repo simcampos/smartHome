@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!pragma layout smetana
+
+autonumber
+
+actor "User" as User
+participant "SmartHome" as SH<<System (C4)>>
+
+User -> SH : I want to get all devices by room and temperature functionality
+activate SH
+activate User
+
+SH --> User : Devices by room and temperature functionality
+deactivate SH
+deactivate User
+
+@enduml

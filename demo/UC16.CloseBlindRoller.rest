@@ -1,0 +1,15 @@
+POST http://localhost:8080/actuators/set-blindRoller
+Content-Type: application/json
+
+{
+  "type": "valueDTO",
+  "deviceID": "72e287c5-9679-407f-af3f-bb8c0d00b757",
+  "actuatorID": "1001",
+  "value": 90
+}
+
+### Get the position of the blind roller
+GET http://localhost:8080/logs/get-position-blindRoller?deviceID=727de832-bd33-4135-be7c-bde10747a854
+
+### Get the actuator by deviceId
+GET http://localhost:8080/actuators?deviceID=28b096e6-9f0b-4e61-a87c-104c0e1c08da

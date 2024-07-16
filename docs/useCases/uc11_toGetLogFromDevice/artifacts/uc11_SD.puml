@@ -1,0 +1,75 @@
+@startuml
+!pragma layout smetana
+
+participant " " as User
+participant ":GetLogFromDeviceController" as Controller
+
+participant "period:DatePeriod" as DatePeriod
+participant "deviceID:DeviceID" as DeviceID
+participant ":LogService" as LogService
+participant ":LogRepository" as Repository
+participant ":LogAssembler" as Assembler
+participant "logDTO:LogDTO" as DTO
+
+autonumber
+
+note right of User
+
+  Ref UC06:
+   I want to get a list of all
+   devices in a room.
+end note
+
+
+
+User o-> Controller: getLogFromDevice(logEntryDTO)
+
+activate Controller
+'DatePeriod and DeviceID are created
+create DatePeriod
+Controller -> DatePeriod: DatePeriod (start, end)
+activate DatePeriod
+DatePeriod --> Controller: period
+deactivate DatePeriod
+
+create DeviceID
+Controller -> DeviceID: DeviceID (deviceID)
+activate DeviceID
+DeviceID --> Controller: deviceID
+deactivate DeviceID
+
+
+'getAllunitsOfDeviceInGivenPeriod -> getStartDate, getEndDate
+Controller -> LogService: getDeviceReadingsByTimePeriod (deviceID, period)
+
+'getStartDate -> localDateTimeStart
+activate LogService
+
+'findByDeviceIdAndTimeStampBetween -> look in all unit repositories
+LogService -> Repository: findByDeviceIdAndDatePeriodBetween(deviceID, period)
+
+activate Repository
+Repository --> LogService: logList
+
+deactivate Repository
+LogService --> Controller: logList
+
+
+deactivate LogService
+Controller -> Assembler: domainToDTO(logList)
+
+activate Assembler
+create DTO
+Assembler -> DTO: LogDTO (log)
+activate DTO
+DTO --> Assembler: logDTO
+
+deactivate DTO
+Assembler --> Controller: logListDTO
+
+deactivate Assembler
+Controller --> User: logListDTO
+deactivate Controller
+
+
+@enduml

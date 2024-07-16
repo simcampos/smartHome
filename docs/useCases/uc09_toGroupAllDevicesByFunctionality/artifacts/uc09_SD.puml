@@ -1,0 +1,91 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+participant " " as User
+
+box "Controller" #LightBlue
+participant ":GetAllDevicesGroupedByFunctionalityController" as GetAllDevicesGroupedByFunctionalityController
+end box
+
+box "Service" #LightGreen
+participant "deviceService:DeviceService" as DeviceService
+participant "deviceTypeService:DeviceTypeService" as DeviceTypeService
+end box
+
+box "Repository" #LightYellow
+participant "deviceRepository:DeviceRepository" as DeviceRepository
+participant "deviceTypeRepository:DeviceTypeRepository" as DeviceTypeRepository
+end box
+
+box "Assembler" #LightCyan
+participant "DeviceAssembler" as DeviceAssembler
+
+participant "deviceDTO : DeviceDTO" as DeviceDTO
+end box
+
+autonumber
+
+User o-> GetAllDevicesGroupedByFunctionalityController: getAllDevicesGroupedByFunctionality()
+
+activate GetAllDevicesGroupedByFunctionalityController
+
+
+GetAllDevicesGroupedByFunctionalityController -> DeviceService : getAllDevices()
+
+activate DeviceService
+
+DeviceService -> DeviceRepository: findAll()
+
+activate DeviceRepository
+
+DeviceRepository --> DeviceService: devices
+
+deactivate DeviceRepository
+
+DeviceService --> GetAllDevicesGroupedByFunctionalityController: devices
+
+deactivate DeviceService
+
+loop for each device in devices
+
+    GetAllDevicesGroupedByFunctionalityController -> DeviceTypeService: getDeviceTypeByID(deviceTypeID)
+
+    activate DeviceTypeService
+
+    DeviceTypeService -> DeviceTypeRepository: ofIdentity(deviceTypeID)
+
+    activate DeviceTypeRepository
+
+    DeviceTypeRepository --> DeviceTypeService: deviceType
+
+    deactivate DeviceTypeRepository
+
+    DeviceTypeService --> GetAllDevicesGroupedByFunctionalityController: deviceType
+
+    deactivate DeviceTypeService
+
+    GetAllDevicesGroupedByFunctionalityController -> DeviceAssembler: domainToDTO(device)
+
+    activate DeviceAssembler
+    create DeviceDTO
+    DeviceAssembler -> DeviceDTO: createDeviceDTO(device)
+
+    activate DeviceDTO
+
+    DeviceDTO --> DeviceAssembler: deviceDTO
+
+    deactivate DeviceDTO
+
+    DeviceAssembler --> GetAllDevicesGroupedByFunctionalityController: deviceDTO
+
+    deactivate DeviceAssembler
+
+    GetAllDevicesGroupedByFunctionalityController -> GetAllDevicesGroupedByFunctionalityController: addDeviceByFunctionality(deviceDTO)
+end
+
+GetAllDevicesGroupedByFunctionalityController --> User: deviceDTOsByFunctionality
+
+deactivate GetAllDevicesGroupedByFunctionalityController
+
+@enduml

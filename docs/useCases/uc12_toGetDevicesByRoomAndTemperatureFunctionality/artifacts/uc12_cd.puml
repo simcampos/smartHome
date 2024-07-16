@@ -1,0 +1,22 @@
+@startuml
+!pragma layout smetana
+
+
+class GetDevicesByRoomAndTemperatureFunctionalityCTRL {
+'Attributes'
+- deviceService: IDeviceService
+
+'Methods'
++ getDevicesByRoomAndTemperature(map : Map <DeviceType, List<DeviceDTO>>, roomDTO : RoomDTO): List<DeviceDTO>
+}
+
+class DeviceServiceImpl {
+'Attributes'
+
+'Methods'
++ getDevicesByTypeDescriptonFromMap(deviceMap : Map <DeviceType, List<DeviceDTO>>, typeDescription : String): List<DeviceDTO>
++ getDevicesFromListByRoomId(devicesDTO : List<DeviceDTO>, roomId : RoomID): List<DeviceDTO>, roomID : RoomID): List<DeviceDTO>
+}
+
+GetDevicesByRoomAndTemperatureFunctionalityCTRL "1" ..> "1" DeviceServiceImpl: uses
+@enduml

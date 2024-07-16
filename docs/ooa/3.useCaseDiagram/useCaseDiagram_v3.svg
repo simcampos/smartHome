@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="844.8px" preserveAspectRatio="none" style="width:1231px;height:844px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 1231 844" width="1231.2px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--entity Admin-->
+        <g id="elem_Admin">
+            <ellipse cx="28.5" cy="524.508" fill="#000000" rx="9.6" ry="9.6" style="stroke:#181818;stroke-width:0.3;"/>
+            <path d="M28.5,536.508 C30.9,536.508 32.7,536.508 35.1,534.108 C39.9,534.108 44.7,538.908 44.7,543.708 L44.7,546.108 C44.7,548.508 42.3,550.908 39.9,550.908 L17.1,550.908 C14.7,550.908 12.3,548.508 12.3,546.108 L12.3,543.708 C12.3,538.908 17.1,534.108 21.9,534.108 C24.3,536.508 26.1,536.508 28.5,536.508 "
+                  fill="#000000" style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="49.8"
+                  x="3.6" y="560.2725">Administrator
+            </text>
+        </g><!--entity Power_User-->
+        <g id="elem_Power_User">
+            <ellipse cx="1205.4" cy="403.308" fill="#000000" rx="9.6" ry="9.6"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <path d="M1205.4,415.308 C1207.8,415.308 1209.6,415.308 1212,412.908 C1216.8,412.908 1221.6,417.708 1221.6,422.508 L1221.6,424.908 C1221.6,427.308 1219.2,429.708 1216.8,429.708 L1194,429.708 C1191.6,429.708 1189.2,427.308 1189.2,424.908 L1189.2,422.508 C1189.2,417.708 1194,412.908 1198.8,412.908 C1201.2,415.308 1203,415.308 1205.4,415.308 "
+                  fill="#000000" style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="43.2"
+                  x="1183.8" y="439.0725">Power User
+            </text>
+        </g><!--entity Room_Owner-->
+        <g id="elem_Room_Owner">
+            <ellipse cx="1059" cy="205.308" fill="#000000" rx="9.6" ry="9.6" style="stroke:#181818;stroke-width:0.3;"/>
+            <path d="M1059,217.308 C1061.4,217.308 1063.2,217.308 1065.6,214.908 C1070.4,214.908 1075.2,219.708 1075.2,224.508 L1075.2,226.908 C1075.2,229.308 1072.8,231.708 1070.4,231.708 L1047.6,231.708 C1045.2,231.708 1042.8,229.308 1042.8,226.908 L1042.8,224.508 C1042.8,219.708 1047.6,214.908 1052.4,214.908 C1054.8,217.308 1056.6,217.308 1059,217.308 "
+                  fill="#000000" style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="49.2"
+                  x="1034.4" y="241.0725">Room Owner
+            </text>
+        </g>
+        <g id="elem_Use1">
+            <ellipse cx="303.0172" cy="716.7514" fill="#F1F1F1" rx="76.5172" ry="16.7434"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="131.4"
+                  x="237.3172" y="719.0296">UC01: To configure house location
+            </text>
+        </g>
+        <g id="elem_Use2">
+            <ellipse cx="302.9704" cy="772.6021" fill="#F1F1F1" rx="81.2704" ry="17.6941"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="141.6"
+                  x="232.1704" y="774.8802">UC02: To add new room to the house
+            </text>
+        </g>
+        <g id="elem_Use3">
+            <ellipse cx="1058.8886" cy="535.6457" fill="#F1F1F1" rx="70.9886" ry="15.6377"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="119.4"
+                  x="999.1886" y="537.9239">UC03: To get list existing rooms
+            </text>
+        </g>
+        <g id="elem_Use4">
+            <ellipse cx="303.0852" cy="825.965" fill="#F1F1F1" rx="66.0852" ry="14.657"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="108.6"
+                  x="248.7852" y="828.2432">UC04: To define sensor type
+            </text>
+        </g>
+        <g id="elem_Use5">
+            <ellipse cx="743.269" cy="674.8418" fill="#F1F1F1" rx="78.469" ry="17.1338"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="135.6"
+                  x="675.469" y="677.1199">UC05: To add new device to a room
+            </text>
+        </g>
+        <g id="elem_Use6">
+            <ellipse cx="743.3704" cy="498.4021" fill="#F1F1F1" rx="81.2704" ry="17.6941"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="141.6"
+                  x="672.5704" y="500.6802">UC06: To get list of devices in a room
+            </text>
+        </g>
+        <g id="elem_Use7">
+            <ellipse cx="302.8764" cy="575.7833" fill="#F1F1F1" rx="82.6764" ry="17.9753"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="144.6"
+                  x="230.5764" y="578.0614">UC7: To add a new sensor to a device
+            </text>
+        </g>
+        <g id="elem_Use8">
+            <ellipse cx="302.8758" cy="479.9032" fill="#F1F1F1" rx="65.2758" ry="14.4952"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="106.8"
+                  x="249.4758" y="482.1813">UC8: To deactivate a device
+            </text>
+        </g>
+        <g id="elem_Use9">
+            <ellipse cx="1059.132" cy="337.5144" fill="#F1F1F1" rx="88.332" ry="19.1064"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="156.6"
+                  x="980.832" y="339.7925">UC9: To group all devices by functionality
+            </text>
+        </g>
+        <g id="elem_Use10">
+            <ellipse cx="302.8807" cy="425.2441" fill="#F1F1F1" rx="87.4807" ry="18.9361"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="154.8"
+                  x="225.4807" y="427.5223">UC10: To add a new actuator to a device
+            </text>
+        </g>
+        <g id="elem_Use11">
+            <ellipse cx="743.304" cy="219.3288" fill="#F1F1F1" rx="152.904" ry="32.0208"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="289.8"
+                  x="598.404" y="221.6069">UC11: To get list of units from a device in a room, in a given period
+            </text>
+        </g>
+        <g id="elem_Use12">
+            <ellipse cx="743.2531" cy="302.2386" fill="#F1F1F1" rx="139.9531" ry="29.4306"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="263.4"
+                  x="611.5531" y="304.5167">UC12: To get devices in a room with temperature reading functionality
+            </text>
+        </g>
+        <g id="elem_Use13">
+            <ellipse cx="303.0547" cy="166.5589" fill="#F1F1F1" rx="213.0547" ry="44.0509"
+                     style="stroke:#181818;stroke-width:0.3;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="411.6"
+                  x="97.2547" y="168.8371">UC13: To get maximum temperature difference between a device in a room and
+                the outside, in a given period
+            </text>
+        </g><!--link Admin to Use1-->
+        <g id="link_Admin_Use1">
+            <path d="M28.668,562.854 C29.514,595.602 36.294,653.352 71.4,683.808 C116.304,722.766 182.0391,728.0927 233.0391,725.3867 "
+                  fill="none" id="Admin-to-Use1" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="236.634,725.196,231.1144,723.0855,233.6382,725.355,231.3687,727.8787,236.634,725.196"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use2-->
+        <g id="link_Admin_Use2">
+            <path d="M32.802,562.638 C40.896,611.76 61.704,721.032 90,744.408 C128.928,776.574 182.6959,782.6737 228.0019,781.1917 "
+                  fill="none" id="Admin-to-Use2" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="231.6,781.074,226.1244,778.8518,228.6016,781.1721,226.2814,783.6493,231.6,781.074"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use3-->
+        <g id="link_Admin_Use3">
+            <path d="M43.944,562.698 C54.672,577.656 70.656,595.59 90,604.008 C256.278,676.38 823.7163,579.4101 1001.5503,546.4461 "
+                  fill="none" id="Admin-to-Use3" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="1005.09,545.79,999.343,544.4144,1002.1402,546.3368,1000.2179,549.134,1005.09,545.79"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use4-->
+        <g id="link_Admin_Use4">
+            <path d="M31.224,562.734 C36.9,621.39 54.492,769.008 90,800.808 C133.362,839.64 199.6778,840.7618 247.3538,835.4878 "
+                  fill="none" id="Admin-to-Use4" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="250.932,835.092,245.3009,833.3003,247.9502,835.4219,245.8286,838.0712,250.932,835.092"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use5-->
+        <g id="link_Admin_Use5">
+            <path d="M31.71,562.668 C35.736,586.902 45.906,623.202 71.4,641.208 C118.83,674.7 494.6221,676.4473 661.2181,675.5533 "
+                  fill="none" id="Admin-to-Use5" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="664.818,675.534,659.4052,673.163,661.818,675.5501,659.431,677.9629,664.818,675.534"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use6-->
+        <g id="link_Admin_Use6">
+            <path d="M53.46,537.234 C149.592,531.822 501.5397,511.9965 660.9717,503.0145 " fill="none"
+                  id="Admin-to-Use6" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="664.566,502.812,659.0396,500.7195,661.5707,502.9807,659.3095,505.5119,664.566,502.812"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use7-->
+        <g id="link_Admin_Use7">
+            <path d="M53.592,541.944 C93.492,547.374 170.3669,557.8387 229.0169,565.8187 " fill="none"
+                  id="Admin-to-Use7" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="232.584,566.304,227.5569,563.1979,229.6114,565.8995,226.9097,567.9541,232.584,566.304"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use8-->
+        <g id="link_Admin_Use8">
+            <path d="M53.568,519.6 C59.172,516.036 65.286,512.706 71.4,510.408 C125.07,490.218 186.5327,483.183 233.9147,480.771 "
+                  fill="none" id="Admin-to-Use8" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="237.51,480.588,231.995,478.4656,234.5139,480.7405,232.239,483.2594,237.51,480.588"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use9-->
+        <g id="link_Admin_Use9">
+            <path d="M31.734,514.332 C36.738,481.356 50.892,423.366 90,395.808 C125.73,370.626 736.898,348.1311 967.958,340.4811 "
+                  fill="none" id="Admin-to-Use9" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="971.556,340.362,966.0795,338.142,968.5576,340.4613,966.2384,342.9394,971.556,340.362"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use10-->
+        <g id="link_Admin_Use10">
+            <path d="M39.858,514.482 C49.908,494.958 66.834,468.51 90,454.608 C127.668,432.006 172.1386,424.172 213.0226,422.102 "
+                  fill="none" id="Admin-to-Use10" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="216.618,421.92,211.1035,419.7961,213.6218,422.0717,211.3463,424.59,216.618,421.92"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use11-->
+        <g id="link_Admin_Use11">
+            <path d="M31.188,514.488 C35.67,468.486 47.79,370.74 71.4,347.808 C144.612,276.702 418.9381,243.4748 593.4361,229.1348 "
+                  fill="none" id="Admin-to-Use11" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="597.024,228.84,591.4456,226.8903,594.0341,229.0857,591.8387,231.6742,597.024,228.84"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Admin to Use13-->
+        <g id="link_Admin_Use13">
+            <path d="M29.166,514.398 C29.832,449.754 35.04,275.184 71.4,233.208 C86.976,215.226 103.7845,203.4196 125.6065,193.6456 "
+                  fill="none" id="Admin-to-Use13" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="128.892,192.174,122.9827,192.191,126.1541,193.4003,124.9448,196.5717,128.892,192.174"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use5 to Power_User-->
+        <g id="link_Use5_Power_User">
+            <path d="M810.9484,685.228 C904.8604,696.046 1075.956,699.576 1165.8,598.608 C1186.308,575.562 1197.972,485.382 1202.538,441.564 "
+                  fill="none" id="Use5-backto-Power_User" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="807.372,684.816,812.4619,687.8182,810.3523,685.1593,813.0112,683.0497,807.372,684.816"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use6 to Power_User-->
+        <g id="link_Use6_Power_User">
+            <path d="M828.4917,498.2421 C933.9057,496.8981 1107.996,490.254 1165.8,461.208 C1174.806,456.684 1182.678,449.106 1188.948,441.516 "
+                  fill="none" id="Use6-backto-Power_User" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="824.892,498.288,830.3222,500.619,827.8918,498.2498,830.261,495.8194,824.892,498.288"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use7 to Power_User-->
+        <g id="link_Use7_Power_User">
+            <path d="M387.8489,579.581 C586.7489,587.819 1085.49,603.96 1147.2,561.408 C1186.77,534.126 1199.16,474.876 1203.036,441.51 "
+                  fill="none" id="Use7-backto-Power_User" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="384.252,579.432,389.5481,582.0534,387.2494,579.5561,389.7467,577.2575,384.252,579.432"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use8 to Power_User-->
+        <g id="link_Use8_Power_User">
+            <path d="M371.9536,478.976 C414.8476,476.852 468.21,470.94 516,454.608 C524.826,451.59 525.036,446.388 534,443.808 C623.454,418.062 859.794,439.218 952.8,435.408 C1047.57,431.52 1071.354,430.938 1165.8,422.208 C1171.644,421.668 1177.962,420.948 1183.776,420.234 "
+                  fill="none" id="Use8-backto-Power_User" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="368.358,479.154,373.8701,481.284,371.3543,479.0056,373.6327,476.4899,368.358,479.154"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use9 to Power_User-->
+        <g id="link_Use9_Power_User">
+            <path d="M1123.1655,352.7076 C1138.9275,357.9576 1151.952,363.822 1165.8,373.008 C1173.924,378.396 1181.388,385.902 1187.562,393.21 "
+                  fill="none" id="Use9-backto-Power_User" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="1119.75,351.57,1124.1149,355.5535,1122.5963,352.518,1125.6317,350.9994,1119.75,351.57"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use10 to Power_User-->
+        <g id="link_Use10_Power_User">
+            <path d="M393.3525,422.4597 C436.6305,421.2297 486.288,419.982 534,419.208 C789.882,415.068 1100.742,416.712 1183.65,417.258 "
+                  fill="none" id="Use10-backto-Power_User" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="389.754,422.562,395.22,424.8076,392.7528,422.4768,395.0836,420.0096,389.754,422.562"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use11 to Power_User-->
+        <g id="link_Use11_Power_User">
+            <path d="M864.9858,240.5305 C975.6738,260.6725 1124.376,290.202 1147.2,307.608 C1175.274,329.016 1191.018,368.058 1198.704,393.354 "
+                  fill="none" id="Use11-backto-Power_User" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="861.444,239.886,866.3271,243.214,864.3955,240.4231,867.1864,238.4915,861.444,239.886"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use13 to Power_User-->
+        <g id="link_Use13_Power_User">
+            <path d="M417.2453,127.8733 C595.5413,74.5933 944.274,3.6 1147.2,184.608 C1178.346,212.394 1196.04,339.456 1202.244,393.246 "
+                  fill="none" id="Use13-backto-Power_User" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="413.796,128.904,419.6571,129.6574,416.6704,128.045,418.2828,125.0584,413.796,128.904"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use6 to Room_Owner-->
+        <g id="link_Use6_Room_Owner">
+            <path d="M768.7236,479.0944 C807.3696,448.6984 886.986,385.008 952.8,325.008 C961.038,317.496 1005.876,272.412 1034.412,243.63 "
+                  fill="none" id="Use6-backto-Room_Owner" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="765.894,481.32,771.6222,479.8681,768.252,479.4654,768.6547,476.0952,765.894,481.32"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use11 to Room_Owner-->
+        <g id="link_Use11_Room_Owner">
+            <path d="M900.198,219.408 C953.544,219.408 1004.004,219.408 1034.166,219.408 " fill="none"
+                  id="Use11-backto-Room_Owner" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="896.598,219.408,901.998,221.808,899.598,219.408,901.998,217.008,896.598,219.408"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--reverse link Use13 to Room_Owner-->
+        <g id="link_Use13_Room_Owner">
+            <path d="M515.6096,157.9881 C629.6636,156.3441 769.584,159.3 896.4,176.808 C946.38,183.708 1003.026,200.82 1034.34,211.134 "
+                  fill="none" id="Use13-backto-Room_Owner" style="stroke:#181818;stroke-width:0.6;"/>
+            <polygon fill="#181818"
+                     points="512.01,158.04,517.444,160.3619,515.0097,157.9968,517.3748,155.5624,512.01,158.04"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+        </g><!--link Use6 to Use3-->
+        <g id="link_Use6_Use3">
+            <path d="M815.148,506.826 C869.58,513.264 940.3329,521.6369 992.4549,527.8049 " fill="none"
+                  id="Use6-to-Use3" style="stroke:#181818;stroke-width:0.6;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="996.03,528.228,990.9495,525.21,993.0508,527.8754,990.3854,529.9768,996.03,528.228"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="37.2"
+                  x="915" y="517.025">&#171;includes&#187;
+            </text>
+        </g><!--link Use5 to Use3-->
+        <g id="link_Use5_Use3">
+            <path d="M818.94,679.584 C860.448,679.188 911.79,673.5 952.8,652.608 C998.514,629.316 1032.0629,580.4676 1047.7289,554.3376 "
+                  fill="none" id="Use5-to-Use3" style="stroke:#181818;stroke-width:0.6;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="1049.58,551.25,1044.7449,554.6473,1048.0374,553.823,1048.8617,557.1155,1049.58,551.25"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="37.2"
+                  x="915" y="650.225">&#171;includes&#187;
+            </text>
+        </g><!--link Use7 to Use6-->
+        <g id="link_Use7_Use6">
+            <path d="M385.434,573.648 C439.038,571.068 510.402,565.404 572.4,553.008 C618.324,543.828 665.8713,527.7775 699.9873,515.1055 "
+                  fill="none" id="Use7-to-Use6" style="stroke:#181818;stroke-width:0.6;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="703.362,513.852,697.4643,513.4824,700.5497,514.8966,699.1356,517.9821,703.362,513.852"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="37.2"
+                  x="534.6" y="550.625">&#171;includes&#187;
+            </text>
+        </g><!--link Use8 to Use6-->
+        <g id="link_Use8_Use6">
+            <path d="M365.916,483.906 C412.254,486.828 477.054,490.644 534,493.008 C576.3,494.766 619.8429,495.9633 658.6209,496.8333 "
+                  fill="none" id="Use8-to-Use6" style="stroke:#181818;stroke-width:0.6;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="662.22,496.914,656.8752,494.3935,659.2208,496.8467,656.7675,499.1923,662.22,496.914"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="37.2"
+                  x="534.6" y="490.625">&#171;includes&#187;
+            </text>
+        </g><!--link Use10 to Use6-->
+        <g id="link_Use10_Use6">
+            <path d="M378.948,434.646 C419.616,439.986 470.646,447.096 516,454.608 C573.366,464.112 634.9804,476.1798 680.6884,485.4858 "
+                  fill="none" id="Use10-to-Use6" style="stroke:#181818;stroke-width:0.6;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="684.216,486.204,679.4034,482.7749,681.2763,485.6055,678.4457,487.4784,684.216,486.204"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="37.2"
+                  x="534.6" y="455.825">&#171;includes&#187;
+            </text>
+        </g><!--link Use12 to Use3-->
+        <g id="link_Use12_Use3">
+            <path d="M782.082,330.48 C849.276,380.358 983.7554,480.1942 1035.3374,518.4862 " fill="none"
+                  id="Use12-to-Use3" style="stroke:#181818;stroke-width:0.6;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="1038.228,520.632,1035.3227,515.4862,1035.8192,518.8438,1032.4616,519.3403,1038.228,520.632"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="37.2"
+                  x="915" y="430.625">&#171;includes&#187;
+            </text>
+        </g><!--link Use12 to Use9-->
+        <g id="link_Use12_Use9">
+            <path d="M867.132,316.074 C905.256,320.364 942.6167,324.5688 976.7927,328.4208 " fill="none"
+                  id="Use12-to-Use9" style="stroke:#181818;stroke-width:0.6;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="980.37,328.824,975.2728,325.8343,977.3889,328.488,974.7352,330.6041,980.37,328.824"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="37.2"
+                  x="915" y="320.225">&#171;includes&#187;
+            </text>
+        </g><!--link Use13 to Use12-->
+        <g id="link_Use13_Use12">
+            <path d="M412.206,204.534 C465.624,222.726 531.12,244.35 590.4,262.008 C610.722,268.062 629.2329,273.2087 650.0109,278.7347 "
+                  fill="none" id="Use13-to-Use12" style="stroke:#181818;stroke-width:0.6;stroke-dasharray:7.0,7.0;"/>
+            <polygon fill="#181818"
+                     points="653.49,279.66,648.8883,275.9527,650.5908,278.8889,647.6546,280.5915,653.49,279.66"
+                     style="stroke:#181818;stroke-width:0.6;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="37.2"
+                  x="534.6" y="242.825">&#171;includes&#187;
+            </text>
+        </g><!--SRC=[XLJRRk8m47ttLypR5ccv12YNg49g-m6xsjq-LoQU1Ak97TaEbBzVNo0f9j2N29_Bv8ndme-TCRLEn-EwfC8qLJdAP3LkD0upQX-CqqBHYfIO6p0I52zs1XXNc1ak1T4VNDJKAe1cHgg_vbWYq0DgMU4NyjcHBpJxA9Hi17kLfLImBIr0IFhCAYwuDefQKGfKWqT8-biUKC6Rne3wuxixalIFb1NyEeWJvOxl_aZ8mzlh94dXduHCYfmNZKBOITiHb3AZBlN0MHvieMJWrLElfeo1m0CeLzgsQdOdNokV1ldComiqKDhKW9_soKNXZReLpu9uxiKCSouGD0fj6pV7kYiw3xh7YmmCzpn3buBwigtwCQWNbn5aVd9eu2AsBBnbsTQd_WtdAEuDmTiQbjwmEWMtS-LxQl1Qj_AwTOXYvre3BSisoFO8UIFybj2IcsDhMtjRCea2sVSqRW5w8oMJO4gk-gwGQZlX2eNHa2ixkhEvkugVuMV1zoYWHiKbwog77KYcRUMhcuG3DpimM5ahDMwT55Bc9jxVO1Bs9EdsfAAVl6ggYngCvpag53Re5iq1KVGa1ogONqJP6CqPtkt4RXpnNmuCXvlpVby2qnYOnS0y1XvZO143onXOnS0w1jmy8-Ggg- -d- -PXsDHTf5vySGDVti1ND_3r3TobxYUIMuJheVjpkipQYxjI_OGh5Pmm6fsdbyBJ4nTPsJ3Kcmq9jtEVNtRyeezVVSFRM_X6C1tS3V25N_VoivQtqaX0o7y0]-->
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+box "Smart Home <<System (C4)>>"
+    participant "Backend" as BE<<container>>
+end box
+
+
+HTTP o-> BE : GET /logs by device ID and time period
+activate BE
+
+BE -->o HTTP : JSON 200
+deactivate BE
+
+
+@enduml

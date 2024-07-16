@@ -1,0 +1,207 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+!pragma layout smetana
+!pragma scale 100 width
+!pragma useVerticalIfPossible
+
+class AddSensorToDeviceController {
+  - RoomService _roomService
+  - RoomAssembler _roomAssembler
+  - DeviceService _deviceService
+  - DeviceAssembler _deviceAssembler
+  - SensorModelService _sensorModelService
+  - SensorModelAssembler _sensorModelAssembler
+  - SensorTypeService _sensorTypeService
+  - SensorTypeAssembler _sensorTypeAssembler
+  - SensorAssembler _sensorAssembler
+  - SensorService _sensorService
+
+  + AddSensorToDeviceController(RoomService, RoomAssembler, DeviceService, DeviceAssembler, SensorModelService, SensorModelAssembler, SensorTypeService, SensorTypeAssembler, SensorAssembler, SensorService)
+  + getRooms(): List<RoomDTO>
+  + getDevicesFromRoom(RoomDTO): List<DeviceDTO>
+  + getSensorTypes(): List<SensorTypeDTO>
+  + getSensorModels(SensorTypeDTO): List<SensorModelDTO>
+  + addSensorToDevice(SensorDataDTO): SensorDTO
+}
+
+class SensorModelService
+{
+  - SensorModelRepo _sensorModelRepository
+  - SensorModelFactory _factorySensorModel
+
+  + SensorModelService(SensorModelRepo, SensorModelFactory)
+  + createSensorModel(SensorModelName, ModelPath, SensorTypeID): SensorModel
+  + getAllSensorModels(): List<SensorModel>
+  + getSensorModel(ModelPath): Optional<SensorModel>
+  + getSensorModelsBySensorTypeId(SensorTypeID): List<SensorModel>
+}
+
+class SensorModelAssembler {
+  + domainToDTO(SensorModel): SensorModelDTO
+  + domainToDTO(List<SensorModel>): List<SensorModelDTO>
+}
+
+class SensorTypeService {
+  - SensorTypeRepository _sensorTypeRepository
+  - SensorTypeFactory _sensorTypeFactory
+  - UnitRepository _unitRepository
+
+  + SensorTypeService(SensorTypeRepository, SensorTypeFactory, UnitRepository)
+  + createSensorType(TypeDescription, UnitID): SensorType
+  + saveSensorType(SensorType): SensorType
+  + findSensorTypeByID(SensorTypeID): Optional<SensorType>
+  + findAllSensorTypes(): List<SensorType>
+}
+
+class SensorTypeAssembler {
+  + domainToDTO(SensorType): SensorTypeDTO
+  + domainToDTO(List<SensorType>): List<SensorTypeDTO>
+}
+
+class SensorAssembler {
+  + domainToDTO(Sensor): SensorDTO
+  + domainToDTO(List<Sensor>): List<SensorDTO>
+}
+
+class SensorService {
+  - Repository<SensorID, Sensor> _sensorRepository
+  - SensorFactory _sensorFactory
+  - DeviceRepo _deviceRepository
+
+  + SensorService(Repository<SensorID, Sensor>, SensorFactory, DeviceRepo)
+  + addSensor(DeviceID, ModelPath, SensorTypeID, SensorName): Sensor
+}
+
+class SensorModelRepository {
+  - DATA: Map<ModelPath, SensorModel>
+  + SensorModelRepository()
+  + save(SensorModel): SensorModel
+  + findAll(): List<SensorModel>
+  + ofIdentity(ModelPath): Optional<SensorModel>
+  + containsOfIdentity(ModelPath): boolean
+  + findBySensorTypeId(SensorTypeID): List<SensorModel>
+}
+
+class SensorTypeRepository {
+  - _sensorTypeData: Map<SensorTypeID, SensorType>
+  + SensorTypeRepository()
+  + save(SensorType): SensorType
+  + findAll(): List<SensorType>
+  + ofIdentity(SensorTypeID): Optional<SensorType>
+  + containsOfIdentity(SensorTypeID): boolean
+}
+
+class SensorRepository {
+  - _SensorData: Map<SensorID, Sensor>
+  + SensorRepository()
+  + save(Sensor): Sensor
+  + findAll(): List<Sensor>
+  + ofIdentity(SensorID): Optional<Sensor>
+  + containsOfIdentity(SensorID): boolean
+  + findByDeviceId(DeviceID): List<Sensor>
+}
+
+class SensorTypeDTO {
+  - sensorTypeID: String
+  - sensorTypeDescription: String
+  - unit: String
+  + SensorTypeDTO(sensorTypeID: String, sensorTypeDescription: String, unit: String)
+}
+
+class SensorModelDTO {
+  - sensorModelID: String
+  - sensorModelName: String
+  - _modelPath: String
+  + SensorModelDTO(sensorModelID: String, sensorModelName: String, modelPath: String)
+}
+
+class SensorDataDTO {
+  - deviceID: String
+  - sensorModelPath: String
+  - sensorName: String
+  - sensorTypeID: String
+  + SensorDataDTO(deviceID: String, sensorModelPath: String, sensorName: String, sensorTypeID: String)
+}
+
+class SensorDTO {
+  - deviceID: String
+  - modelPath: String
+  - sensorTypeID: String
+  - sensorID: String
+  - sensorName: String
+  + SensorDTO(deviceID: String, modelPath: String, sensorTypeID: String, sensorID: String, sensorName: String)
+}
+
+class ImpSensorModelFactory {
+  + createSensorModel(sensorModelName: SensorModelName, modelPath: ModelPath, sensorTypeID: SensorTypeID): SensorModel
+}
+
+
+class ImpSensorTypeFactory {
+  + createSensorType(name: TypeDescription, unit: UnitID): SensorType
+}
+class ImpSensorFactory {
+        +create(parameters: Object...): Sensor
+    }
+
+class SensorModel {
+        -_sensorModelName: SensorModelName
+        -_modelPath: ModelPath
+        -_sensorTypeID: SensorTypeID
+        +SensorModel(sensorModelName: SensorModelName, modelPath: ModelPath, sensorTypeID: SensorTypeID)
+        +getSensorTypeID(): SensorTypeID
+        +getSensorModelName(): SensorModelName
+        +getModelPath(): ModelPath
+        +getID(): ModelPath
+    }
+
+class SensorType {
+        -_id: SensorTypeID
+        -_name: TypeDescription
+        -_unit: UnitID
+        +SensorType(name: TypeDescription, unit: UnitID)
+        +getID(): SensorTypeID
+        +getName(): TypeDescription
+        +getUnit(): UnitID
+        +equals(object: Object): boolean
+        +toString(): String
+    }
+
+interface Sensor{
+        +getID(): SensorID
+        +getName(): SensorName
+        +getModelPath(): ModelPath
+        +getSensorTypeID(): SensorTypeID
+        +toString(): String
+        +getValue(): ValueObject
+        +getDeviceID(): DeviceID
+    }
+
+AddSensorToDeviceController "1" ..> "1" SensorModelService : uses
+AddSensorToDeviceController "1" ..> "1" SensorModelAssembler : uses
+AddSensorToDeviceController "1" ..> "1" SensorTypeService : uses
+AddSensorToDeviceController "1" ..> "1" SensorTypeAssembler : uses
+AddSensorToDeviceController "1" ..> "1" SensorAssembler : uses
+AddSensorToDeviceController "1" ..> "1" SensorService : uses
+AddSensorToDeviceController "1" ..> "1" SensorDataDTO : uses
+
+SensorModelService "1" ..> "1" SensorModelRepository : uses
+SensorModelService "1" ..> "1" ImpSensorModelFactory : uses
+SensorService "1" ..> "1" SensorRepository : uses
+SensorService "1" ..> "1" ImpSensorFactory : uses
+SensorTypeService "1" ..> "1" SensorTypeRepository : uses
+SensorTypeService "1" ..> "1" ImpSensorTypeFactory : uses
+
+SensorModelRepository "1" --> "1" SensorModel : has
+SensorTypeRepository "1" --> "1" SensorType : has
+SensorRepository "1" --> "1" Sensor : has
+
+ImpSensorFactory "1" ..> "1..*" Sensor : creates
+ImpSensorModelFactory "1" ..> "1..*" SensorModel : creates
+ImpSensorTypeFactory "1" ..> "1..*" SensorType : creates
+
+SensorAssembler "1" ..> "1..*" SensorDTO : creates
+SensorModelAssembler "1" ..> "1..*" SensorModelDTO : creates
+SensorTypeAssembler "1" ..> "1..*" SensorTypeDTO : creates
+@enduml

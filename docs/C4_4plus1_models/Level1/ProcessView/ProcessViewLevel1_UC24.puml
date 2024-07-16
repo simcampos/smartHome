@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "User" as User
+
+participant "SmartHome" as SH<<System (C4)>>
+
+User -> SH : I want to get the blind roller position
+activate SH
+activate User
+
+SH --> User : Position of the blind roller
+deactivate SH
+deactivate User
+
+
+@enduml

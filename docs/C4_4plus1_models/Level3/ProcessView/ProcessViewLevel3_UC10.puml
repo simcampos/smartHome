@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Backend" <<Container (C4)>>"
+    participant "Server" as SE<<container (C4)>>
+    participant "Database" as DB<<container (C4)>>
+end box
+
+
+HTTP o-> SE : POST /actuators
+activate SE
+
+SE -> DB : SAVE actuator
+activate DB
+
+DB --> SE : actuatorDataModel
+deactivate DB
+
+
+SE -->o HTTP : JSON 201
+deactivate SE
+
+deactivate HTTP
+
+
+@enduml

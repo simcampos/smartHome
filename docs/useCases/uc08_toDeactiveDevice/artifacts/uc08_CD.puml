@@ -1,0 +1,72 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+!pragma layout smetana
+!pragma scale 100 width
+!pragma useVerticalIfPossible
+
+class DeactivateDeviceController <<Controller>> {
+    'Attributes
+    -deviceService: DeviceService
+    -deviceAssembler: DeviceAssembler
+    'Methods
+    +DeactivateDeviceController(deviceService: DeviceService, deviceAssembler: DeviceAssembler)
+    +requestAllDevices(): List<DeviceDTO>
+    +requestDeactivateDevice((deviceDTO: DeviceDTO): DeviceDTO
+}
+
+class DeviceService <<Service>> {
+    'Attributes
+    -deviceRepository: DeviceRepository
+    -deviceFactory: DeviceFactory
+    -roomRepository: RoomRepository
+    'Methods
+    +DeviceService(deviceRepository: DeviceRepository, deviceFactory: DeviceFactory, roomRepository: RoomRepository)
+    +deactivateDeviceById(deviceID, DeviceID): Device
+    +getAllDevices(): List<Device>
+    +getDeviceById(deviceID: DeviceID): Optional<Device>
+}
+
+class DeviceRepository <<Repository>>{
+    'Attributes
+    -DATA: Map<deviceID, Device>
+    'Methods
+    +findAll(): List<Device>
+    +ofIdentity(deviceID: DeviceID): Optional<Device>
+}
+
+class DeviceAssembler <<Assembler>>{
+    'Methods
+    +domainToDTO(device: Device): DeviceDTO
+    +domainToDTO(deviceList: List<Device>): List<DeviceDTO>
+}
+
+
+class DeviceDTO <<DTO>>{
+    'Attributes
+    +deviceID: String
+    +roomID: String
+    +deviceName: String
+    +deviceStatus: String
+    'Methods
+    +DeviceDTO(deviceID: String, roomID: String, deviceName: String, deviceStatus: String)
+}
+
+class Device<<entity>><<root>> {
+    'Attributes
+    -roomID: RoomID
+    -deviceID: DeviceID
+    -deviceName: DeviceName
+    -status: DeviceStatus
+    -deviceTypeID: DeviceTypeID
+    'Methods
+    #Device(roomID: RoomID, deviceID: DeviceID, deviceName: DeviceName, status: DeviceStatus, deviceTypeID: DeviceTypeID)
+    +deactivateDevice(): DeviceStatus
+}
+
+DeactivateDeviceController "1" ..> "1" DeviceService: uses
+DeactivateDeviceController "1" ..> "1" DeviceAssembler: uses
+DeviceService "1" ..> "1" DeviceRepository: uses
+DeviceAssembler "1" ..> "*" DeviceDTO: creates
+DeviceService "1" ..> "1" Device: deactivates
+@enduml

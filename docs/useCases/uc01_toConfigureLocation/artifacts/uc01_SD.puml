@@ -1,0 +1,74 @@
+@startuml
+
+participant " "
+participant ":ConfigureHouseLocationController" as ConfigureHouseLocationController
+
+participant "address:Address" as Address
+participant "gps:Gps" as Gps
+
+participant ":HouseService" as Service
+participant ":HouseAssembler" as Assembler
+
+participant ":HouseFactory" as Factory
+participant "house:House" as House
+participant ":HouseRepository" as Repository
+
+participant "houseDTO:HouseDTO" as DTO
+
+'----------------------------------------------------------
+autonumber
+" " o-> ConfigureHouseLocationController : requestconfigureHouseLocation(houseDataDTO)
+activate ConfigureHouseLocationController
+
+create Address
+ConfigureHouseLocationController -> Address : createAddress(street, doorNumber, postalCode, countryCode, postalCodeFactory)
+
+activate Address
+
+Address --> ConfigureHouseLocationController : address
+deactivate Address
+
+create Gps
+ConfigureHouseLocationController -> Gps : createGPS(latitude, longitude)
+
+activate Gps
+
+Gps --> ConfigureHouseLocationController : gps
+deactivate Gps
+
+
+ConfigureHouseLocationController -> Service : addHouse(address, gps)
+
+activate Service
+
+Service -> Factory : createHouseLocation(address, gps)
+activate Factory
+create House
+Factory -> House: createHouse(address, gps)
+activate House
+House --> Factory: house
+deactivate House
+Factory --> Service: house
+deactivate Factory
+Service -> Repository : saveHouse(house)
+activate Repository
+
+Repository --> Service : house
+deactivate Repository
+Service --> ConfigureHouseLocationController : house
+deactivate Service
+
+ConfigureHouseLocationController -> Assembler : domainToDTO(house)
+activate Assembler
+create DTO
+Assembler -> DTO : create(house)
+activate DTO
+DTO --> Assembler : houseDTO
+deactivate DTO
+Assembler --> ConfigureHouseLocationController : houseDTO
+deactivate Assembler
+
+" " <-- ConfigureHouseLocationController : houseDTO
+deactivate ConfigureHouseLocationController
+
+@enduml

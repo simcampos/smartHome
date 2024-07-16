@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Administrator/Power User" as admin
+
+activate admin
+admin -> System: I want to deactivate a device
+activate System
+System -> admin: What device do you want to deactivate?
+deactivate System
+admin -> System: I want to deactivate this device
+activate System
+System -> admin: Device deactivated
+deactivate System
+deactivate admin
+
+
+@enduml

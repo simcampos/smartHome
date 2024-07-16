@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor "Room Owner/Administrator/Power User" as User
+autonumber
+
+activate User
+User -> System: I want to add a sensor to a device
+activate System
+System --> User: From what room?
+deactivate System
+User -> System: This room
+activate System
+System --> User: What device?
+deactivate System
+User -> System: This device
+activate System
+System --> User: What sensorType?
+deactivate System
+User -> System: This sensorType
+activate System
+System --> User: What sensorModel?
+deactivate System
+User -> System: This sensorModel
+activate System
+System --> User: Sensor added to device
+deactivate System
+deactivate User
+
+
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+
+actor "Client" as User
+    box SmartHome <<System (C4)>>
+    participant Frontend as FE<<container (C4)>>
+    participant WeatherService as WS<<container (C4)>>
+    end box
+
+
+
+User -> FE : I want to have current outside temperature on the main page
+activate FE
+activate User
+
+FE -> WS : GET / InstantaneousTemperature
+activate WS
+
+WS --> FE : JSON 200
+deactivate WS
+
+User <-- FE : outsideTemperature
+deactivate FE
+deactivate User
+
+
+
+
+@enduml

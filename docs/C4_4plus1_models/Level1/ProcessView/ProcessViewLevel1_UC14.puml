@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!pragma layout smetana
+
+autonumber
+
+actor "User" as User
+participant "SmartHome" as SH<<System (C4)>>
+
+User -> SH : I want to get the peak power consumption of the house
+activate SH
+activate User
+
+SH --> User : Peak power consumption.
+deactivate SH
+deactivate User
+
+@enduml

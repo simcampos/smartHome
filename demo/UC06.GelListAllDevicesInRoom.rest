@@ -1,0 +1,6 @@
+GET http://localhost:8080/devices?room_id={{roomId}}
+
+###
+
+GET http://localhost:8080/devices?room_id={{roomGardenId}}&device_type_id=Temperature
+

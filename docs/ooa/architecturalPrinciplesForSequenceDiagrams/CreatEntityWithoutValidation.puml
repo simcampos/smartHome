@@ -1,0 +1,40 @@
+@startuml
+participant "  " as User
+participant ":ControlerX" as Controller
+participant ":AssemblerX" as Assembler
+participant "valueObject:ValueObjectX" as ValueObject
+participant ":ServiceX" as Service
+participant ":FactoryX" as Factory
+participant "entity:EntityX" as Entity
+participant ":RepositoryX" as Repository
+participant "entityDTO:XDTO" as XDTO
+
+User -> Controller: 1: addEntity(EntityDTO data)
+activate Controller
+Controller -> Assembler: 1.1: toValueObject(data.attribute)
+activate Assembler
+create ValueObject
+Assembler -> ValueObject: 1.1.1: ValueObject(data.attribute)
+deactivate Assembler
+Controller -> Service: 1.2: addEntity(valueObject, ...)
+activate Service
+Service -> Factory: 1.2.1: createEntity(valueObject, ...)
+activate Factory
+create Entity
+Factory -> Entity: 1.2.1.1: Entity(valueObject, ...)
+deactivate Factory
+Service -> Repository: 1.2.2: save(entity)
+activate Repository
+Repository -> Service: entity
+deactivate Repository
+Service -> Controller: entity
+deactivate Service
+
+Controller -> Assembler: 1.3: toDTO(entity)
+activate Assembler
+create XDTO
+Assembler -> XDTO: 1.3.1: toDTO(entity)
+deactivate Assembler
+Controller -> User: entityDTO
+deactivate Controller
+@enduml

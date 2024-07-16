@@ -1,0 +1,12 @@
+@startuml
+
+participant ":Controller" as Controller
+participant ":Assembler" as Assembler
+participant "dto:DTO" as DTO
+
+Controller -> Assembler: 1: createDTO(domainObject)
+Create DTO
+Assembler -> DTO: 1.1: new DTO(domainObject.field1.toString, domainObject.field2.toString, ...)
+DTO --> Assembler: dto
+Assembler --> Controller: dto
+@enduml

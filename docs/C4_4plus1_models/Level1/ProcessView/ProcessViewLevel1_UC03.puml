@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "User" as User
+participant "SmartHome" as SH<<System (C4)>>
+
+User -> SH : I want to get the list of rooms
+activate SH
+activate User
+
+SH --> User : List of rooms
+deactivate SH
+deactivate User
+
+
+
+@enduml

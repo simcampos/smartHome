@@ -1,0 +1,16 @@
+//Get all sensor types
+
+GET http://localhost:8080/sensor-types
+
+//Add a new sensor type
+
+###
+
+POST http://localhost:8080/sensor-types
+Content-Type: application/json
+
+{
+  "description": "Water Temperature",
+  "unitID": "Celsius"
+}
+

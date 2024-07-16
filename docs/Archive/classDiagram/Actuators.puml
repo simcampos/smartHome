@@ -1,0 +1,183 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+class Device {
+- _name : String
+- _status : boolean
+- _sensors : List<Sensor>
+- _actuators : List<Actuator>
+- _deviceId : UUID
+
+# Device (name : String)
+- setName (name : String) : void
++ deactivateDevice () : boolean
++ getName () : String
++ getStatus () : boolean
++ getDeviceId () : UUID
++ getDeviceFunctionalities () : List<String>
++ getSensorList () : List<String>
++ getActuatorList () : List<String>
++ addSensor (strModel : String, catalogue : CatalogueSensor, sensorFactory : SensorFactory) : Sensor
+# addSensorToDevice (sensor : Sensor) : Sensor
++ addActuator (strModel : String, catalogue : CatalogueActuator, actuatorFactory : ActuatorFactory) : Actuator
+#addActuatorToDevice (actuator : Actuator) : Actuator
++ toString () : String
+}
+
+interface Actuator {
+
++getActuatorType () : ActuatorType
+}
+
+class ActuatorFactory {
+
++createActuator (strModel : string, catalogue : CatalogueActuator) : Actuator
+}
+
+class ActuatorType {
+- _strDescription : String
+
+# ActuatorType (strDescription : String)
+- setDescription (strDescription : String) : void
++ getDescription () : String
+}
+
+class ActuatorTypeFactory {
+
++createActuatorType (strDescription : String) : ActuatorType
+}
+
+class CatalogueActuator {
+-   _listActuatorType : List<ActuatorType>
+- _listStringClassesActuator : List<String>
+
++ CatalogueActuator (filePathname : String)
+- validateConstructorParameters (strDescription : String) : boolean
++ addActuatorType ((strDescription : String, actuatorTypeFactory : ActuatorTypeFactory) : ActuatorType
++ getActuatorTypes () + List<ActuatorType>
++getActuatorTypes (strDescription : String) : ActuatorType
++ getActuatorModels () : List<String>
++ getActuator (strModel : String, actuatorFactory : ActuatorFactory) : Actuator
+}
+
+class BlindRollerActuator {
+- _actuatorType : ActuatorType
+- _value : BlindRollerValue
+
++ BlindRollerActuator (catalogue : CatalogueActuator)
+- setActuatorType (catalogue : CatalogueActuator) : void
++ getActuatorType () : ActuatorType
++ setValue (value : Value) : Value
+}
+
+class BlindRollerValue {
+- _nValue : int
+
++ BlindRollerValue (nValue : int)
+- validateValue (nValue : int) : void
++ toString () : string
++ clone : BlindRollerValue
+}
+
+class SetDecimalActuator {
+- _actuatorType : ActuatorType
+- _value : SetDecimalValue
+- _lowerLimit: double
+- _upperLimit: double
+
++ SetDecimalActuator (catalogue : CatalogueActuator)
+- setActuatorType (catalogue : CatalogueActuator) : void
+- setLowerLimit (lowerLimit : double) : double
+- setUpperLimit (upperLimit : double) : double
++ getActuatorType () : ActuatorType
++ setValueRange (value : Value, lowerLimit : double, upperLimit : double) : Value
+}
+
+class SetDecimalValue {
+- _Value : double
+
++ SetDecimalValue (value : double)
+- setValue (value : double) : void
++ toString () : string
++ clone : SetDecimalValue
+}
+
+class SetIntegerActuator {
+- _actuatorType : ActuatorType
+- _value : SetIntegerValue
+- _lowerLimit: int
+- _upperLimit: int
+
++ SetIntegerActuator (catalogue : CatalogueActuator)
+- setActuatorType (catalogue : CatalogueActuator) : void
+- setLowerLimit (lowerLimit : int) : int
+- setUpperLimit (upperLimit : int) : int
++ getActuatorType () : ActuatorType
++ setValueInRange (lowerLimit : int, upperLimit : int, value : Value) : Value
+}
+
+class SetIntegerValue {
+- _value : int
+
++ SetIntegerValue (value : int)
+- setValue (value : int) : void
++ toString () : string
++ clone : SetIntegerValue
+}
+
+
+class SwitchActuator {
+- _actuatorType : ActuatorType
+- _value : SwitchActuatorValue
+
++ SwitchActuator (catalogue : CatalogueActuator)
+- setActuatorType (catalogue : CatalogueActuator) : void
++ getActuatorType () : ActuatorType
++ setValue (value : Value) : Value
+}
+
+class SwitchActuatorValue {
+- _value : boolean
+
++ SwitchActuatorValue (value : boolean)
++ clone () : SwitchActuatorValue
++ setValueOn () : boolean
++ setValueOff () : boolean
++ toString () : string
+}
+
+Device "1" --> "1" CatalogueActuator : <<uses>>
+
+Device "1" ---> "1" BlindRollerActuator : <<has>>
+Device "1" ---> "1" SetDecimalActuator : <<has>>
+Device "1" ---> "1" SetIntegerActuator : <<has>>
+Device "1" ---> "1" SwitchActuator : <<has>>
+
+CatalogueActuator "1" ---> "1" ActuatorFactory: <<creates>>
+CatalogueActuator "1" ----> "1" ActuatorTypeFactory: <<creates>>
+
+ActuatorTypeFactory "1" --> "1" ActuatorType: <<creates>>
+
+ActuatorFactory "1" --> "1" BlindRollerActuator : <<creates>>
+ActuatorFactory "1" --> "1" SetDecimalActuator : <<creates>>
+ActuatorFactory "1" --> "1" SetIntegerActuator : <<creates>>
+ActuatorFactory "1" --> "1" SwitchActuator : <<creates>>
+
+BlindRollerActuator "1" --> "1" ActuatorType : <<has>>
+SetDecimalActuator "1" --> "1" ActuatorType : <<has>>
+SetIntegerActuator "1" --> "1" ActuatorType : <<has>>
+SwitchActuator "1" --> "1" ActuatorType : <<has>>
+
+BlindRollerActuator "1" ---> "1" BlindRollerValue : <<uses>>
+SetDecimalActuator "1" ---> "1" SetDecimalValue : <<uses>>
+SetIntegerActuator "1" ---> "1" SetIntegerValue : <<uses>>
+SwitchActuator "1" ---> "1" SwitchActuatorValue : <<uses>>
+
+BlindRollerActuator "1" .....|> "1" Actuator: <<implements>>
+SetDecimalActuator "1" .....|> "1" Actuator: <<implements>>
+SetIntegerActuator "1" .....|> "1" Actuator: <<implements>>
+SwitchActuator "1" .....|> "1" Actuator: <<implements>>
+
+
+@enduml

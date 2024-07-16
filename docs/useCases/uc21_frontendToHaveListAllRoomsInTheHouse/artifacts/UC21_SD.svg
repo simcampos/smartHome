@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="234px" preserveAspectRatio="none" style="width:498px;height:234px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 498 234" width="498px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <rect fill="#DDDDDD" height="222.5293" style="stroke:#181818;stroke-width:0.5;" width="199" x="293.5" y="6"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="78" x="354" y="18.5684">SmartHome
+        </text>
+        <rect fill="#FFFFFF" height="87.9316" style="stroke:#181818;stroke-width:1.0;" width="10" x="331" y="88.1094"/>
+        <rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="448" y="117.4199"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="14" x2="14" y1="56.7988"
+              y2="194.041"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="335.5" x2="335.5" y1="56.7988"
+              y2="194.041"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="452.5" x2="452.5" y1="56.7988"
+              y2="194.041"/>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="18"
+              x="5" y="25.3105"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="12"
+              y="45.8457">&#160;
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="18"
+              x="5" y="193.041"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="12"
+              y="213.5762">&#160;
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="77"
+              x="297.5" y="25.3105"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="304.5"
+              y="45.8457">Frontend
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="77"
+              x="297.5" y="193.041"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="304.5"
+              y="213.5762">Frontend
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="71"
+              x="417.5" y="25.3105"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="424.5"
+              y="45.8457">Backend
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="71"
+              x="417.5" y="193.041"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="424.5"
+              y="213.5762">Backend
+        </text>
+        <rect fill="#FFFFFF" height="87.9316" style="stroke:#181818;stroke-width:1.0;" width="10" x="331" y="88.1094"/>
+        <rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="448" y="117.4199"/>
+        <ellipse cx="13.5" cy="87.3594" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.5;"/>
+        <polygon fill="#181818" points="319,84.1094,329,88.1094,319,92.1094,323,88.1094"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="18" x2="325" y1="88.1094" y2="88.1094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="21" y="83.3672">1
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="285" x="34"
+              y="83.3672">I want to have a list of all rooms in the house
+        </text>
+        <polygon fill="#181818" points="436,113.4199,446,117.4199,436,121.4199,440,117.4199"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="341" x2="442" y1="117.4199" y2="117.4199"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="348" y="112.6777">2
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="361"
+              y="112.6777">GET /rooms
+        </text>
+        <polygon fill="#181818" points="352,142.7305,342,146.7305,352,150.7305,348,146.7305"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="346" x2="452" y1="146.7305"
+              y2="146.7305"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="358" y="141.9883">3
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="371"
+              y="141.9883">Json, 200
+        </text>
+        <ellipse cx="13.5" cy="175.291" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.5;"/>
+        <polygon fill="#181818" points="30.5,172.041,20.5,176.041,30.5,180.041,26.5,176.041"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="28.5" x2="335" y1="176.041"
+              y2="176.041"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="31" y="171.2988">4
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="44"
+              y="171.2988">Json, 200
+        </text><!--SRC=[TOyzJmCn38Pt_mfp2ml7LOmTEY2rVAm7tTqxquj8uYDn2lnxd9CgL26I9TBx-7cTwqbrpkkkcpr5BS7V3XAwp1-5uy3jwEYOAC3LdEWO23rzIr7CWPKY0L1HYIKSE07CbDGDRZOFDdOfuskk0Hpa2vi-MFueWHj0EnVqBabKZkCojDl-1UvfU3_d_HxiYIO5g0KexSQ6S8rF-5bf5Ppen6ZhkgmeRqZUOn896Lr4dHWdAPc11dKdKgwLO0Rpz7lpF6nVi5luNyHQmSBstFMS9TxWtMe58rz0rTDkPFdxVrpj-m40]-->
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+SensorType Description,Unit Description
+Temperature,Celsius
+Humidity,Percent
+Switch,Status
+AveragePowerConsumption,KilowattHour
+DewPoint,Celsius
+Wind,KilometerPerHour
+PercentagePosition,Percent
+SunriseTime,Time
+InstantPowerConsumption,Watt
+SolarIrradiance,WattBySquareMeter
+ElectricConsumptionWh,WattHour
+SunsetTime,Time

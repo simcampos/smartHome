@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "Web Client" as User
+
+participant "SmartHome" as SH
+
+User -> SH : I want to add a sensor to this Device
+activate User
+activate SH
+
+SH --> User : Added!
+deactivate User
+deactivate SH
+
+User -> SH : I want to add an actuator to this Device
+activate User
+activate SH
+
+SH --> User : Added!
+deactivate User
+deactivate SH
+
+User -> SH : I want to deactivate this device!
+activate User
+activate SH
+
+SH --> User : Deactivated!
+deactivate User
+deactivate SH
+
+
+
+
+
+@endumll

@@ -1,0 +1,66 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+autonumber
+
+box "Server"
+    participant "Controller" as Controller<<component>>
+    participant Service as "Service"<<component>>
+    participant Domain as "Domain"<<component>>
+    participant Repository as "Repository"<<component>>
+end box
+
+
+[o-> Controller: POST /actuators set blind roller
+activate Controller
+
+Controller -> Service: getActuatorByID (actuatorID)
+activate Service
+
+Service -> Repository: getActuatorByID (actuatorID)
+activate Repository
+
+Repository ->o]: findByID()
+
+Repository -->o] : actuatorBlindRoller
+
+Repository --> Service: actuatorBlindRoller
+deactivate Repository
+
+Service --> Controller: actuatorBlindRoller
+deactivate Service
+
+Controller -> Service: getDeviceReadings (deviceID, sensorTypeID)
+activate Service
+
+Service -> Repository: getDeviceReadings (deviceID, sensorTypeID)
+activate Repository
+
+Repository ->o] : findAll()
+
+Repository -->o] : deviceReadingsList
+
+Repository --> Service: deviceReadingsList
+deactivate Repository
+
+Service --> Controller: deviceReadingsList
+deactivate Service
+
+Controller -> Service: setValue (actuatorBlindRoller, blindRollerValue)
+activate Service
+
+Service -> Domain: setValue(blindRollerValue)
+activate Domain
+
+Domain --> Service: blindRollerValue
+deactivate Domain
+
+Service --> Controller: blindRollerValue
+deactivate Service
+
+
+[o<-- Controller: actuatorDTO
+deactivate Controller
+
+
+@enduml

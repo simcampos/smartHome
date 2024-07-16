@@ -1,0 +1,50 @@
+
+//Add rooms to the house
+POST http://localhost:8080/rooms
+Content-Type: application/json
+
+{
+  "name": "Bedroom",
+  "floor": 1,
+  "width": 2,
+  "length": 4,
+  "height": 5
+}
+
+> {%
+    client.global.set("roomId", response.body.roomId);
+%}
+
+###
+POST http://localhost:8080/rooms
+Content-Type: application/json
+
+{
+  "name": "Garden",
+  "floor": "1",
+  "width": 3,
+  "length": 5,
+  "height": 5
+}
+
+> {%
+    client.global.set("roomGardenId", response.body.roomId);
+%}
+
+###
+POST http://localhost:8080/rooms
+Content-Type: application/json
+
+{
+  "name": "Living Room",
+  "floor": "1",
+  "width": 3,
+  "length": 5,
+  "height": 5
+}
+
+
+
+###
+//Get room by id
+GET http://localhost:8080/rooms/{{roomId}}

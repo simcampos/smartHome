@@ -1,0 +1,2 @@
+//Put power meter as i havent added a Temperature device yet
+GET http://localhost:8080/devices?room_id={{roomId}}&device_type_id=Temperature

@@ -1,0 +1,32 @@
+@startuml
+!pragma layout smetana
+
+package room {
+  class Room<<Entity>><<Root>>{
+  }
+    class RoomID<<ValueObject>>{
+      -_id: String
+        }
+    class RoomFloor<<ValueObject>>{
+      -_floor: int
+        }
+    class Dimension<<ValueObject>>{
+    -_width: int
+    -_length: int
+    -_height: int
+    }
+    class RoomName<<ValueObject>>{
+      -_name: String
+        }
+    class HouseID<<ValueObject>>{
+      -_id: String
+        }
+  }
+
+Room  -- "1" Dimension: has
+Room  -- "1" RoomFloor: has
+Room  -- "1" RoomID: has
+Room  -- "1" RoomName: has
+Room  -- "1" HouseID: has
+
+@enduml

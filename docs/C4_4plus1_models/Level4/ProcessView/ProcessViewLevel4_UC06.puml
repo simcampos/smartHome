@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+
+participant " " as HTTP
+
+box "Server"
+    participant "Controller" as CTRL<<component>>
+    participant "Service" as SV<<component>>
+    participant "Repository" as REPO<<component>>
+    participant "Domain" as DOM<<component>>
+
+end box
+participant " " as BD
+
+
+HTTP o-> CTRL : GET /devices/{roomId}
+activate CTRL
+
+CTRL -> DOM : roomID(roomId)
+activate DOM
+
+DOM --> CTRL : roomID
+deactivate DOM
+
+CTRL -> SV : getDevicesByRoomId(roomID)
+activate SV
+
+SV -> REPO : findByRoomID(roomId)
+activate REPO
+
+REPO ->o BD : find
+
+BD o--> REPO : deviceDataModelList
+
+REPO --> SV : deviceList
+deactivate REPO
+
+SV --> CTRL : deviceList
+deactivate SV
+
+CTRL -->o HTTP : deviceListDTO
+deactivate CTRL
+
+
+
+@enduml

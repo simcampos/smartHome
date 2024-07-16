@@ -1,0 +1,132 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+participant " " as User
+participant ":GetListOfDevicesFromRoom_Controller" as GetListOfDevicesFromRoom_Controller
+
+participant "serviceRoom:ServiceRoom" as ServiceRoom
+participant "serviceDevice:ServiceDevice" as ServiceDevice
+
+participant "roomRepo:RoomRepo" as RoomRepo
+participant ":RoomAssembler" as RoomAssembler
+
+participant "roomDTO:RoomDTO" as RoomDTO
+
+participant "roomID : RoomID" as RoomID
+
+participant "deviceRepo:DeviceRepo" as DeviceRepo
+participant ":DeviceAssembler" as DeviceAssembler
+participant "deviceDTO:DeviceDTO" as DeviceDTO
+
+autonumber
+
+User o-> GetListOfDevicesFromRoom_Controller: getRooms()
+
+activate GetListOfDevicesFromRoom_Controller
+
+GetListOfDevicesFromRoom_Controller -> ServiceRoom: getRooms()
+
+activate ServiceRoom
+
+ServiceRoom -> RoomRepo: findAll()
+
+activate RoomRepo
+
+RoomRepo --> ServiceRoom: listOfRooms
+
+deactivate RoomRepo
+
+ServiceRoom --> GetListOfDevicesFromRoom_Controller: listOfRooms
+
+deactivate ServiceRoom
+
+GetListOfDevicesFromRoom_Controller -> RoomAssembler : domainToDTO(listOfRooms)
+
+activate RoomAssembler
+
+loop for each room
+
+    create RoomDTO
+
+    RoomAssembler -> RoomDTO: createRoomDTO (room)
+
+     activate RoomDTO
+
+     RoomDTO --> RoomAssembler: roomDTO
+
+      deactivate RoomDTO
+
+     RoomAssembler -> RoomAssembler: addRoomDTOToList(roomDTO)
+
+end
+RoomAssembler --> GetListOfDevicesFromRoom_Controller: roomDTOList
+
+deactivate RoomAssembler
+
+GetListOfDevicesFromRoom_Controller --> User : roomDTOList
+
+deactivate GetListOfDevicesFromRoom_Controller
+
+User o-> GetListOfDevicesFromRoom_Controller: getDevicesFromRoom(roomDTO)
+
+activate GetListOfDevicesFromRoom_Controller
+
+create RoomID
+GetListOfDevicesFromRoom_Controller -> RoomID : dtoToDomain(roomDTO)
+
+activate RoomID
+
+RoomID --> GetListOfDevicesFromRoom_Controller: roomId
+
+deactivate RoomID
+
+GetListOfDevicesFromRoom_Controller -> ServiceDevice: getDevicesByRoomID(roomID)
+
+activate ServiceDevice
+
+ServiceDevice -> DeviceRepo: getDevicesByRoomID (roomId)
+
+activate DeviceRepo
+
+DeviceRepo --> ServiceDevice: listDevices
+
+deactivate DeviceRepo
+
+ServiceDevice --> GetListOfDevicesFromRoom_Controller: listDevices
+
+deactivate ServiceDevice
+
+GetListOfDevicesFromRoom_Controller  -> DeviceAssembler: deviceToDTO (deviceList)
+
+activate DeviceAssembler
+
+loop for each device in list
+    create DeviceDTO
+
+    DeviceAssembler -> DeviceDTO: createDeviceToDTO (device)
+
+    activate DeviceDTO
+
+    DeviceDTO --> DeviceAssembler: deviceDTO
+
+    deactivate DeviceDTO
+
+    DeviceAssembler -> DeviceAssembler: addDeviceDTOToList(deviceDTO)
+
+end
+DeviceAssembler --> GetListOfDevicesFromRoom_Controller: listDeviceDTO
+
+deactivate DeviceAssembler
+
+deactivate ServiceDevice
+
+GetListOfDevicesFromRoom_Controller --> User : listDeviceDTO
+
+deactivate GetListOfDevicesFromRoom_Controller
+
+
+
+
+
+
+@enduml
+

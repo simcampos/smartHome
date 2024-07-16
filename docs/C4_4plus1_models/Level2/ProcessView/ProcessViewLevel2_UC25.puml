@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "Client" as User
+
+
+box "SmartHome <<System (C4)>>"
+    participant "Frontend" as FE<<container (C4)>>
+    participant "Backend" as SV<<container (C4)>>
+end box
+
+User -> FE : I want to set the Blinder Role position
+activate FE
+activate User
+
+FE -> SV : POST /set-blindRoller
+activate SV
+
+SV --> FE : JSON Status 201
+deactivate SV
+
+FE --> User : position set
+deactivate FE
+deactivate User
+
+
+@enduml

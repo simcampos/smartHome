@@ -1,0 +1,1 @@
+GET http://localhost:8080/logs/peak-power-consumption?initialTime=2024-02-12T00:00:00&finalTime=2024-02-12T23:59:59

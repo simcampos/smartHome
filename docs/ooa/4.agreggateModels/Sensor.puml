@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+package sensor {
+    class Sensor <<Entity>> <<Root>> {
+    }
+    class DeviceID <<ValueObject>> <<ID>> {
+        - _id : String
+    }
+
+    class SensorTypeDescription <<ValueObject>> <<ID>> {
+        - _id : String
+    }
+    class ModelPath <<ValueObject>> {
+        - _path : String
+    }
+
+    class SensorName <<ValueObject>> {
+        - _name : String
+    }
+
+    class ValueImpl <<ValueObject>>{
+    }
+
+    class SensorID <<ValueObject>> <<ID>> {
+        - _id : String
+    }
+}
+
+Sensor  -- "1" SensorTypeDescription : has
+Sensor  -- "1" ModelPath : has
+Sensor  -- "1" ValueImpl : has
+Sensor  -- "1" DeviceID : has
+Sensor  -- "1" SensorName : has
+Sensor  -- "1" SensorID : has
+
+@enduml

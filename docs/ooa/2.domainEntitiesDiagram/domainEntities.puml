@@ -1,0 +1,43 @@
+@startuml
+!pragma layout smetana
+
+
+class House<<Entity>><<Root>>{}
+class Room<<Entity>><<Root>>{}
+class Device<<Entity>><<Root>>{}
+class DeviceType<<Entity>><<Root>>{}
+class Sensor<<Entity>><<Root>>{}
+class Actuator<<Entity>><<Root>>{}
+class ActuatorType<<Entity>><<Root>>{}
+class ActuatorModel<<Entity>><<Root>>{}
+class SensorType<<Entity>><<Root>>{}
+class SensorModel<<Entity>><<root>>{}
+class Unit<<Entity>><<Root>>{}
+class Log<<Entity>><<Root>>{}
+
+note "Each aggregate is only known to the outside via their ID's." as note
+
+
+
+
+House "1" <-- "1..*" Room : belongs to
+Room "1" <-- Device : belongs to
+Device "1" <-- Sensor : knows
+Device "1" <-- Actuator : knows
+Device "1" --> DeviceType : knows
+Sensor --> "1" SensorType : knows
+
+Actuator --> "1" ActuatorType : knows
+SensorType "1" <-- SensorModel: knows
+SensorType --> "1" Unit: knows
+ActuatorType "1" <-- ActuatorModel: knows
+ActuatorType --> "1" Unit: knows
+Sensor --> "1" SensorModel : knows
+Actuator --> "1" ActuatorModel : knows
+
+Log -up-> "1" Device : knows
+Log -left-> "1" Sensor : knows
+Log --> "1" SensorType : knows
+Log --> "1" Unit : knows
+
+@enduml

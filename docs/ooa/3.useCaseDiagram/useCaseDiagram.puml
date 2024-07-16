@@ -1,0 +1,62 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+skinparam actorStyle awesome
+skinparam ActorBackgroundColor black
+
+:Administrator: as Admin
+:Power User: as Power_User
+:Room Owner: as Room_Owner
+
+(UC01: To configure house location) as (Use1)
+(UC02: To add new room to the house) as (Use2)
+(UC03: To get list existing rooms) as (Use3)
+(UC04: To define sensor type) as (Use4)
+(UC05: To add new device to a room) as (Use5)
+(UC06: To get list of devices in a room) as (Use6)
+(UC7: To add a new sensor to a device) as (Use7)
+(UC8: To deactivate a device) as (Use8)
+(UC9: To group all devices by functionality) as (Use9)
+(UC10: To add a new actuator to a device) as (Use10)
+(UC11: To get list of units from a device in a room, in a given period) as (Use11)
+(UC12: To get devices in a room with temperature reading functionality) as (Use12)
+(UC13: To get maximum temperature difference between a device in a room and the outside, in a given period) as (Use13)
+
+Admin --> (Use1)
+Admin --> (Use2)
+Admin --> (Use3)
+Admin --> (Use4)
+Admin --> (Use5)
+Admin --> (Use6)
+Admin --> (Use7)
+Admin --> (Use8)
+Admin --> (Use9)
+Admin --> (Use10)
+Admin --> (Use11)
+Admin --> (Use13)
+
+Power_User -up-> (Use5)
+Power_User -up-> (Use6)
+Power_User -up-> (Use7)
+Power_User -up-> (Use8)
+Power_User -up-> (Use9)
+Power_User -up-> (Use10)
+Power_User -up-> (Use11)
+Power_User -up-> (Use13)
+
+Room_Owner -up-> (Use6)
+Room_Owner -up-> (Use11)
+Room_Owner -up-> (Use13)
+
+(Use6) ..> (Use3): <<includes>>
+(Use5) ..> (Use3): <<includes>>
+(Use7) ..> (Use6): <<includes>>
+(Use8) ..> (Use6): <<includes>>
+(Use10) ..> (Use6): <<includes>>
+(Use12)..> (Use3): <<includes>>
+(Use12)..> (Use9): <<includes>>
+(Use13)..> (Use12): <<includes>>
+
+
+
+@enduml

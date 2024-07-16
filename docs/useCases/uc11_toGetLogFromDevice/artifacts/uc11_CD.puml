@@ -1,0 +1,58 @@
+@startuml
+!pragma layout smetana
+
+class GetLogFromDeviceController {
+
+ - logService: ILogService
+ - deviceService: IDeviceService
+ - logAssembler: IAssembler <Log, LogDTO>
+
+ '+ GetLogFromDeviceController(logService: ILogService, deviceService: IDeviceService, logAssembler: IAssembler <Log, LogDTO>, roomService: IRoomService, roomAssembler: IAssembler <Room, RoomDTO>, deviceAssembler: IAssembler <Device, DeviceDTO>)
+ + getLogsFromDevice(logEntryDto : logEntryDTO): List<LogDTO>
+}
+
+note right of GetLogFromDeviceController: Ref UC06:  I want to get a list all devices in a room.
+
+class DatePeriod {
+ - startDate: LocalDateTime
+ - endDate: LocalDateTime
+}
+
+class DeviceID {
+ - id: String
+}
+
+class LogServiceImpl {
+- logRepository: ILogRepository
+'+ LogServiceImpl(logRepository: ILogRepository)
++ getDeviceReadingsByTimePeriod(deviceId: DeviceID, datePeriod: DatePeriod): List<Log>
+}
+
+class LogRepository {
+
++ findByDeviceIDAndDatePeriodBetween(deviceId: DeviceID, datePeriod: DatePeriod): List<Log>
+}
+
+class LogAssembler {
++ domainToDto(logList: List<Log>): List<LogDTO>
+}
+
+class LogDTO {
++ logID: String
++ deviceID: String
++ sensorID: String
++ sensorTypeID: String
++ reading: String
++ timestamp: String
++ unitID: String
+}
+
+
+GetLogFromDeviceController "1" -down-> "1" LogServiceImpl : uses
+GetLogFromDeviceController "1" --> "1" DatePeriod : creates
+GetLogFromDeviceController "1" --> "1" DeviceID : creates
+LogServiceImpl "1" -down-> "1" LogRepository : uses
+LogServiceImpl "1" -down-> "1" LogAssembler : uses
+LogAssembler "1" -down-> "*" LogDTO : creates
+
+@enduml

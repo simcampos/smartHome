@@ -1,0 +1,14 @@
+@startuml
+!pragma layout smetana
+actor "RO, PU or Admin" as User
+participant System
+
+activate User
+activate System
+User -> System: I want to get the peak power consumption of the house, in a given period.
+System --> User: what period?
+User -> System: Period!
+
+System --> User: Peak power consumption!
+
+@enduml

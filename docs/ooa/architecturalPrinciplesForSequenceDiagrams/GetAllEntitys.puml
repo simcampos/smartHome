@@ -1,0 +1,35 @@
+@startuml
+participant "  " as User
+participant ":ControlerX" as Controller
+participant ":ServiceX" as Service
+participant ":RepositoryX" as Repository
+participant ":AssemblerX" as Assembler
+participant "entityDTO:XDTO" as DTO
+
+
+User -> Controller: 1: getAllEntity's()
+activate Controller
+Controller -> Service: 1.1: getAllEntity's(): ListEntity
+activate Service
+Service -> Repository: 1.1.1: getAllEntity's()
+activate Repository
+Repository --> Service: listEntity
+Service --> Controller: listEntity
+deactivate Repository
+Controller -> Assembler: 1.2: domainToDTO(listEntity)
+activate Assembler
+create DTO
+loop
+Assembler -> DTO: 1.2.1: domainToDTO(listEntity): ListEntityDTO
+activate DTO
+DTO --> Assembler: entityDTO
+Assembler -> Assembler: addToList(entityDTO)
+deactivate DTO
+end
+Assembler --> Controller: listEntityDTO
+deactivate Assembler
+deactivate Service
+Controller --> User: listEntityDTO
+deactivate Controller
+
+@enduml

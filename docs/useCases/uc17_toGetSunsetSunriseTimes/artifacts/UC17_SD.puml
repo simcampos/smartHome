@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+    box SmartHome
+    participant Frontend as FE
+    end box
+
+
+[o-> FE : I want to have sunrise and sunset times on the main page
+activate FE
+
+FE ->o] : GET / SunriseSunset
+
+FE <--o] : Response, 200 OK
+
+[o<-- FE : sunrise and sunset times
+deactivate FE
+
+
+
+
+@enduml

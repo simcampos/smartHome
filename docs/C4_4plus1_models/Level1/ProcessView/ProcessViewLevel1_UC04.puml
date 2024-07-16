@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!pragma layout smetana
+
+autonumber
+
+actor "User" as User
+participant "SmartHome" as SH<<System (C4)>>
+
+User -> SH : I want to define a sensor type
+activate SH
+activate User
+
+SH --> User : Sensor type defined
+deactivate SH
+deactivate User
+
+@enduml

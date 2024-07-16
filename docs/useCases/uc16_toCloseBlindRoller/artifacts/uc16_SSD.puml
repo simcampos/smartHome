@@ -1,0 +1,12 @@
+@startuml
+!pragma layout smetana
+
+actor "RO, PU or Admin" as User
+participant System
+
+activate User
+activate System
+User -> System: I want to close the blind roller in this room!
+System --> User: Blind roller closed!
+
+@enduml

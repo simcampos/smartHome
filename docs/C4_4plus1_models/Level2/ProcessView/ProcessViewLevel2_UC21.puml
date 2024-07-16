@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "Client" as User
+
+
+box "SmartHome <<System (C4)>>"
+    participant "Frontend" as FE<<container (C4)>>
+    participant "Backend" as SV<<container (C4)>>
+end box
+
+User -> FE : I want to have a list of all rooms in the house
+activate FE
+activate User
+
+FE -> SV : GET /rooms
+activate SV
+
+SV --> FE : JSON 200
+deactivate SV
+
+FE --> User : rooms
+deactivate FE
+deactivate User
+
+
+@enduml

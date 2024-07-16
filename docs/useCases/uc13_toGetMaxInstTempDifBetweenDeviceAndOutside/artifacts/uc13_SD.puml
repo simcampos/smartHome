@@ -1,0 +1,63 @@
+@startuml
+!pragma layout smetana
+
+participant " " as User
+participant Controller as ":GetMaxInstantaneousTempDifBetweenRoomAndOutsideCTRL"
+
+participant "logService : LogService" as LogService
+participant "logRepository : LogRepository" as LogRepository
+
+autonumber
+
+ref over User, Controller: getDevicesByRoomAndTemperatureFunctionality
+
+User o-> Controller: getMaxInstTempDiffBetweenDeviceAndOutside (outsideDeviceDTO, insideDeviceDTO, initialTime, endTime, timeDelta)
+
+activate Controller
+
+Controller -> LogService: getDeviceReadingsBySensorTypeAndTimePeriod (outsideDeviceID, sensorTypeID, datePeriod)
+
+activate LogService
+
+LogService -> LogRepository: findByDeviceIDAndSensorTypeAndDatePeriodBetween (outsideDeviceID, sensorTypeID, datePeriod)
+
+activate LogRepository
+
+LogRepository --> LogService: outsideTemperatureReadings
+
+deactivate LogRepository
+
+LogService --> Controller: outsideTemperatureReadings
+
+deactivate LogService
+
+Controller -> LogService: getDeviceReadingsBySensorTypeAndTimePeriod (insideDeviceID, sensorTypeID, datePeriod)
+
+activate LogService
+
+LogService -> LogRepository: findByDeviceIDAndSensorTypeAndDatePeriodBetween (insideDeviceID, sensorTypeID, datePeriod)
+
+activate LogRepository
+
+LogRepository --> LogService: deviceTemperatureReadings
+
+deactivate LogRepository
+
+LogService --> Controller: deviceTemperatureReadings
+
+deactivate LogService
+
+Controller -> LogService: getMaxDifferenceBetweenReadings (outsideTemperatureReadings, deviceTemperatureReadings, timeDelta)
+
+activate LogService
+
+LogService --> Controller: maxTemperatureDifference
+
+deactivate LogService
+
+Controller -->o User: maxTemperatureDifference
+
+deactivate Controller
+
+
+@enduml

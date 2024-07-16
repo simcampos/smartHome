@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+autonumber
+
+participant " " as HTTP
+
+box "Server"
+participant Controller as ":Controller"<<component>>
+participant Service as ":Service"<<component>>
+participant Repository as ":Repository"<<component>>
+end box
+participant DataBase as " "
+
+HTTP o-> Controller: GET /actuators/{deviceID}
+activate Controller
+
+Controller -> Service : getActuatorsByDeviceID(deviceID)
+activate Service
+
+Service -> Repository: ofDeviceID(deviceID)
+activate Repository
+
+Repository ->o DataBase: findByDeviceID
+
+DataBase o--> Repository: listActuatorsDataModel
+
+Repository --> Service: listActuators
+deactivate Repository
+
+Service --> Controller: listActuators
+deactivate Service
+
+Controller -->o HTTP: actuatorListDTO
+deactivate Controller
+
+
+
+
+@enduml

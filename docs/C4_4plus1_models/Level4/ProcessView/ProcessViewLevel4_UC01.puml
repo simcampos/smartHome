@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Server"
+    participant "Controller" as CTRL<<component>>
+    participant "Service" as SV<<component>>
+    participant "Repository" as REPO<<component>>
+    participant "Domain" as DOM<<component>>
+
+end box
+participant " " as BD
+
+
+HTTP o-> CTRL : POST /houses
+activate CTRL
+
+
+CTRL -> DOM : createAddress(street, doorNumber, postalCode, countryCode, postalCodeFactory)
+activate DOM
+DOM --> CTRL : address
+
+CTRL -> DOM : createGPS(latitude, longitude)
+DOM --> CTRL : gps
+deactivate DOM
+
+CTRL -> SV : addHouse(address, gps)
+activate SV
+
+SV -> REPO : save(house)
+activate REPO
+REPO ->o BD : save
+REPO --> SV : house
+deactivate REPO
+
+SV --> CTRL : house
+deactivate SV
+
+
+CTRL -->o HTTP : houseDTO
+deactivate CTRL
+
+
+deactivate HTTP
+
+
+@enduml

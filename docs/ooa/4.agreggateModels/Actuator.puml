@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+
+package actuator {
+    class Actuator <<Entity>> <<Root>> {
+    }
+    class DeviceID <<ValueObject>> <<ID>> {
+        - _id : String
+    }
+
+    class ActuatorTypeID <<ValueObject>> <<ID>> {
+        - _id : String
+    }
+
+    class ActuatorName <<ValueObject>> {
+        - _name : String
+    }
+
+    class ModelPath <<ValueObject>> {
+        - _path : String
+    }
+
+    class Value <<ValueObject>>{
+    }
+
+    class ActuatorID <<ValueObject>> <<ID>> {
+        - _id : String
+    }
+
+}
+
+Actuator  -- "1" ActuatorTypeID : has
+Actuator  -- "1" Value : has
+Actuator  -- "1" DeviceID : has
+Actuator  -- "1" ActuatorName : has
+Actuator  -- "1" ModelPath : has
+Actuator  -- "1" ActuatorID : has
+
+@enduml

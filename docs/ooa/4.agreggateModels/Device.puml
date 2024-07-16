@@ -1,0 +1,30 @@
+@startuml
+!pragma layout smetana
+
+package device {
+class Device <<entity>><<Root>>{
+    }
+
+    class DeviceID<<value object>>{
+        - _id: String
+    }
+    class DeviceName<<value object>>{
+        - _name: String
+    }
+    class DeviceTypeID<<value object>>{
+        - _id: String
+    }
+    class RoomID<<value object>>{
+        - _id: String
+    }
+    class DeviceStatus<<value object>>{
+        - _status: String
+    }
+}
+
+Device  -- "1" DeviceID : has
+Device  -- "1" DeviceName : has
+Device  -- "1" DeviceTypeID : has
+Device  -- "1" RoomID : has
+Device  -- "1" DeviceStatus : has
+@enduml

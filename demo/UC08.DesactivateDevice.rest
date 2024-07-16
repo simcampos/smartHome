@@ -1,0 +1,14 @@
+PUT http://localhost:8080/devices/deactivate/{{deviceId}}
+
+###
+
+POST http://localhost:8080/sensors
+Content-Type: application/json
+
+{
+  "type": "genericSensor",
+  "deviceID": "{{deviceId}}",
+  "sensorModelPath": "{{temperatureSensor}}",
+  "sensorName": "Temperature Sensor",
+  "sensorTypeID": "Temperature"
+}

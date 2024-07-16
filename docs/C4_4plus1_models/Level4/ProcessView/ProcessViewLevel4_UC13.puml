@@ -1,0 +1,95 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+box "Power Consumption"
+participant Controller as "Controller"<<component>>
+participant Service as "Service"<<component>>
+participant Domain as "Domain"<<component>>
+participant Repository as "Repository"<<component>>
+end box
+
+
+autonumber
+
+[o-> Controller: GET/logs/temperature-difference
+
+activate Controller
+
+Controller -> Domain :DeviceID(outsideDeviceIDStr)
+activate Domain
+
+Domain --> Controller : deviceID
+deactivate Domain
+
+Controller -> Domain: DeviceID(insideDeviceIDStr)
+activate Domain
+
+Domain --> Controller : deviceID
+deactivate Domain
+
+Controller -> Domain: SensorType(strTemperature)
+activate Domain
+
+Domain --> Controller : sensorType
+deactivate Domain
+
+Controller -> Domain: DatePeriod(initialTime, endTime)
+activate Domain
+
+Domain --> Controller : datePeriod
+deactivate Domain
+
+Controller -> Domain: TimeDelta(intTimeDelta)
+activate Domain
+
+Domain --> Controller : timeDelta
+deactivate Domain
+
+Controller -> Service: getMaxInstTempDiffBetweenDeviceAndOutside(insideDeviceID, sensorType, timeDelta)
+activate Service
+
+Service -> Repository: findByDeviceIDAndSensorTypeAndDatePeriodBetween(deviceID, sensorTypeID, period)
+
+activate Repository
+
+Repository ->o] : find
+
+
+Repository <--o] : logList
+
+Repository --> Service: logInsideReadingsList
+deactivate Repository
+
+Service --> Controller: logInsideReadingsList
+deactivate Service
+
+Controller -> Service: getMaxInstTempDiffBetweenDeviceAndOutside(outsideDeviceID, sensorType, timeDelta)
+activate Service
+
+Service -> Repository: findByDeviceIDAndSensorTypeAndDatePeriodBetween(deviceID, sensorTypeID, period)
+
+activate Repository
+
+Repository ->o] : find
+
+Repository <--o] : logList
+
+
+
+Repository --> Service: listLogsOutsideReadings
+deactivate Repository
+
+Service --> Controller: listLogsOutsideReadings
+deactivate Service
+
+Controller -> Service: getMaxInstTempDiffBetweenDeviceAndOutside(insideReadings, outsideReadings, timeDelta)
+activate Service
+
+Service --> Controller: maxInstTempDiff
+deactivate Service
+
+[o<-- Controller : temperatureDiff
+deactivate Controller
+
+@enduml

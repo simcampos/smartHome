@@ -1,0 +1,16 @@
+@startuml
+'As an Administrator, I want to have a list of existing rooms, so that I can choose
+'one to edit it.'
+
+actor Admin
+participant System
+
+activate Admin
+Admin -> System: I want to have a list of existing rooms
+activate System
+System --> Admin: List of Rooms
+deactivate System
+deactivate Admin
+
+
+@enduml

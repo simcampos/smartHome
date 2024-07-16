@@ -1,0 +1,133 @@
+@startuml
+!pragma layout smetana
+
+top to bottom direction
+skinparam linetype ortho
+
+
+class House {
+    -id: HouseID
+    -address: Address
+    -gps: GPS
+}
+class Address{
+    -street: String
+    -doorNumber: String
+    -countryCode: String
+    -postalCode: IPostalCode
+}
+class GPS{
+    -latitude: double
+    -longitude: double
+}
+
+class Room {
+    -houseID: HouseID
+    -floor: RoomFloor
+    -name: RoomName
+    -dimension: Dimension
+    -id: RoomID
+}
+
+class Dimensions {
+    -width: int
+    -length: int
+    -height: int
+}
+
+class Device {
+    -roomID: RoomID
+    -name: DeviceName
+    -deviceTypeID: DeviceTypeID
+    -id: DeviceID
+    -status: DeviceStatus
+}
+
+class DeviceType {
+    -description: TypeDescription
+    -id: DeviceTypeID
+}
+
+class Sensor {
+    -id: SensorID
+    -name: SensorName
+    -path: ModelPath
+    -sensorTypeID: SensorTypeID
+    -deviceID: DeviceID
+}
+
+class SensorType {
+    -name: TypeDescription
+    -unit: UnitID
+    -id: SensorTypeID
+}
+
+class SensorModel {
+    -name: SensorModelName
+    -modelPath: ModelPath
+    -sensorTypeID: SensorTypeID
+}
+
+class Actuator {
+    -id: SensorID
+    -name: ActuatorName
+    -path: ModelPath
+    -actuatorTypeID: ActuatorTypeID
+    -deviceID: DeviceID
+}
+
+class ActuatorType {
+    -name: TypeDescription
+    -unit: UnitID
+    -id: ActuatorTypeID
+}
+
+class ActuatorModel {
+    -name: ActuatorModelName
+    -modelPath: ModelPath
+    -actuatorTypeID: ActuatorTypeID
+}
+
+class Unit {
+    -symbol: UnitSymbol
+    -description: UnitDescription
+    -id: UnitID
+}
+
+class Log {
+    -id: LogID
+    -deviceID: DeviceID
+    -sensorID: SensorID
+    -description: SensorTypeID
+    -unitID: UnitID
+    -reading: ReadingValue
+    -localDateTime: LocalDateTime
+}
+
+House -left-> "1" Address : has
+House -right-> "1" GPS : has
+House "1" <-- "1..*" Room : belongs to
+Room "1" <-- Device : belongs to
+Room "*" -right-> "1" Dimensions : has
+Device "1" <-- Sensor : knows
+Device "1" <-- Actuator : knows
+Device "1" --> DeviceType : knows
+Sensor --> "1" SensorType : knows
+
+Actuator --> "1" ActuatorType : knows
+SensorType "1" <-- SensorModel: knows
+SensorType --> "1" Unit: knows
+ActuatorType "1" <-- ActuatorModel: knows
+ActuatorType --> "1" Unit: knows
+Sensor --> "1" SensorModel : knows
+Actuator --> "1" ActuatorModel : knows
+
+Log -up-> "1" Device : knows
+Log -left-> "1" Sensor : knows
+Log --> "1" SensorType : knows
+Log --> "1" Unit : knows
+
+@enduml
+
+
+

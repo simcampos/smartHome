@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="285px" preserveAspectRatio="none" style="width:519px;height:285px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 519 285" width="519px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <rect fill="#FFFFFF" height="95.0645" style="stroke:#181818;stroke-width:1.0;" width="10" x="131.5"
+              y="91.4883"/>
+        <rect fill="#FFFFFF" height="44.4434" style="stroke:#181818;stroke-width:1.0;" width="10" x="474.5"
+              y="91.4883"/>
+        <rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="474.5"
+              y="157.2422"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="136" x2="136" y1="81.4883"
+              y2="204.5527"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="479.5" x2="479.5" y1="81.4883"
+              y2="204.5527"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="257" x="5"
+              y="78.5352">Room Owner or Power User or Admin
+        </text>
+        <ellipse cx="136.5" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+        <path d="M136.5,21.5 L136.5,48.5 M123.5,29.5 L149.5,29.5 M136.5,48.5 L123.5,63.5 M136.5,48.5 L149.5,63.5 "
+              fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="257" x="5"
+              y="217.0879">Room Owner or Power User or Admin
+        </text>
+        <ellipse cx="136.5" cy="228.541" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+        <path d="M136.5,236.541 L136.5,263.541 M123.5,244.541 L149.5,244.541 M136.5,263.541 L123.5,278.541 M136.5,263.541 L149.5,278.541 "
+              fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="62"
+              x="448.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="455.5"
+              y="70.5352">System
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="62"
+              x="448.5" y="203.5527"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="455.5"
+              y="224.0879">System
+        </text>
+        <rect fill="#FFFFFF" height="95.0645" style="stroke:#181818;stroke-width:1.0;" width="10" x="131.5"
+              y="91.4883"/>
+        <rect fill="#FFFFFF" height="44.4434" style="stroke:#181818;stroke-width:1.0;" width="10" x="474.5"
+              y="91.4883"/>
+        <rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="474.5"
+              y="157.2422"/>
+        <rect fill="none" height="39.4434" style="stroke:#000000;stroke-width:1.5;" width="511.5" x="2" y="91.4883"/>
+        <path d="M2,91.4883 L66,91.4883 L66,98.4883 L56,108.4883 L2,108.4883 L2,91.4883 " fill="#EEEEEE"
+              style="stroke:#000000;stroke-width:2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="19" x="15" y="106.0566">ref
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="149" x="183.25"
+              y="124.0898">uc6 - get devices in room
+        </text>
+        <polygon fill="#181818" points="462.5,153.2422,472.5,157.2422,462.5,161.2422,466.5,157.2422"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="141.5" x2="468.5" y1="157.2422" y2="157.2422"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="148.5" y="152.5">1
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="301" x="161.5"
+              y="152.5">For this Device, I want the list of units
+        </text>
+        <polygon fill="#181818" points="147.5,182.5527,137.5,186.5527,147.5,190.5527,143.5,186.5527"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="141.5" x2="478.5" y1="186.5527"
+              y2="186.5527"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="153.5" y="181.8105">2
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="166.5"
+              y="181.8105">List of units
+        </text><!--SRC=[ZL31IWCn4BtdAvwzzDAzUkX144GH1ANY1uoxqnfeaYKpsQL_RpPPojgYU9jvysRUUtFJHpeumf5E8Id4iP8dOoXfyCbzSinrgo5YjGl1uNNq797Rjp3cuaDgTzyvwrSWAOZfAQfjRKzUyNuIPMVCkd2RkndOuiaE3CVGByRHYYBi4RE6c7MbeCdiQMkBbtc-g_F_dEfui2qBhC-mbNBwZyiFbJw5jGCfro2HzmZ377HpraljBHeSM9SgHU2yFiVk-1AvzFwOtrSCLWSRF6ES_hRCufWaHNRiLQuaVetqO-lQo08fMRy1]-->
+    </g>
+</svg>

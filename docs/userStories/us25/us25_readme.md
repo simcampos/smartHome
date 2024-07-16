@@ -1,0 +1,18 @@
+## US25 
+
+## 0. Description
+As a Product Owner, I want the system to have a type of sensor that gives the average power consumption over a period (W).
+
+## 1. Analysis
+A sensor model (with a corresponding type) that measures the average power consumption over a defined period will be included in the system.
+
+### 1.1. Created/Affected Use Cases
+N/A
+
+### 1.2. Acceptance Criteria
+* AC1: The system must have a sensor that can calculate and report the average power consumption over a specified period.
+
+### 1.3 Customer Specifications and Clarifications
+N/A
+
+

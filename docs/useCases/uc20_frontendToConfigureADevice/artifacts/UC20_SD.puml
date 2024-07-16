@@ -1,0 +1,58 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "Client" as User
+participant Browser as FE
+    box SmartHome
+    participant Backend as BE
+    end box
+
+
+User -> FE :  Quero configurar um device, adicionar um sensor
+activate FE
+activate User
+
+FE -> BE : POST /sensors
+activate BE
+
+BE --> FE : Json, status CREATED
+deactivate BE
+
+FE --> User : adicionado!
+deactivate FE
+deactivate User
+
+User -> FE :  Quero configurar um device, adicionar um atuador
+activate FE
+activate User
+
+FE -> BE : POST /actuators
+activate BE
+
+BE --> FE :  Json, status CREATED
+deactivate BE
+
+FE --> User : adicionado!
+deactivate FE
+deactivate User
+
+User -> FE :  Quero configurar um device, quero desativar!
+activate FE
+activate User
+
+FE -> BE : PUT /deactivate/{deviceID}
+activate BE
+
+BE --> FE :  Json, status OK
+deactivate BE
+
+FE --> User : desativado!
+
+
+
+
+
+@endumll

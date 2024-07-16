@@ -1,0 +1,126 @@
+@startuml
+!pragma layout smetana
+
+package domain.Actuator {
+    interface Actuator {
+        + getActuatorTypeID(): ActuatorTypeID
+                + getID(): ActuatorID
+                + getName() : ActuatorName
+                + getModelPath() : ModelPath
+                + getDeviceID() : DeviceID
+                + setValue(ValueObject value): ValueObject
+    }
+    interface ActuatorFactory {
+        + createActuator(Object... parameters): Actuator
+    }
+    class ImplActuatorFactory {
+        + createActuator(Object... parameters): Actuator
+    }
+}
+package domain.Actuator.SetIntegerActuator {
+    class SetIntegerActuator {
+        - _actuatorID: ActuatorID
+        - _actuatorName: ActuatorName
+        - _actuatorTypeID: ActuatorTypeID
+        - _modelPath: ModelPath
+        - _deviceID: DeviceID
+        - _value: SetIntegerValue
+        - _limits: SetIntegerActuatorLimits
+        + SetIntegerActuator(ActuatorName: actuatorName, actuatorTypeID: ActuatorTypeID, modelPath: ModelPath, deviceID: DeviceID, lowerLimit: int, upperLimit: int)
+        + getActuatorTypeID(): ActuatorTypeID
+        + getID(): ActuatorID
+        + getName() : ActuatorName
+        + getModelPath() : ModelPath
+        + getDeviceID() : DeviceID
+        + setValue(ValueObject value): ValueObject
+    }
+
+    class ActuatorTypeID {
+            - _description: String
+            + ActuatorTypeID(String strDescription)
+            + getType() : String
+    }
+
+    class ModelPath {
+            - _path: String
+            + ModelPath(String path)
+            + getPath() : String
+    }
+
+    class ActuatorName {
+            - _name: String
+            + ActuatorName(String name)
+            + getName() : String
+    }
+
+    class SetIntegerActuatorLimits {
+            - _lowerLimit: int
+            - _upperLimit: int
+            + SetIntegerActuatorLimits(int lowerLimit, int upperLimit)
+            + getLowerLimit() : int
+            + getUpperLimit() : int
+    }
+
+    class ActuatorID {
+            - _id: String
+            + ActuatorID(String id)
+            + getID() : String
+    }
+
+    class DeviceID {
+            - _id: String
+            + DeviceID(String id)
+            + getID() : String
+    }
+
+    class SetIntegerValue {
+            - _value : int
+            + SetIntegerValue(int value)
+            + toString() : String
+    }
+}
+
+package domain.ddd {
+
+  interface DomainEntity {
+  }
+
+  interface DomainID {
+  }
+
+  interface AggregateRoot {
+  }
+
+  interface ValueObject {
+  }
+}
+
+ImplActuatorFactory ..|> ActuatorFactory
+ImplActuatorFactory "1" ..> "1" domain.Actuator.SetIntegerActuator.SetIntegerActuator : creates
+
+domain.Actuator.SetIntegerActuator.SetIntegerActuator ..|> domain.Actuator.Actuator
+domain.Actuator.SetIntegerActuator.SetIntegerActuator "1" --> "1" SetIntegerValue : has
+domain.Actuator.SetIntegerActuator.SetIntegerActuator "1" -->  "1" ActuatorTypeID : has
+domain.Actuator.SetIntegerActuator.SetIntegerActuator "1" -->  "1" ModelPath : has
+domain.Actuator.SetIntegerActuator.SetIntegerActuator "1" -->  "1" ActuatorName : has
+domain.Actuator.SetIntegerActuator.SetIntegerActuator "1" -->  "1" SetIntegerActuatorLimits : has
+domain.Actuator.SetIntegerActuator.SetIntegerActuator "1" -->  "1" ActuatorID : has
+domain.Actuator.SetIntegerActuator.SetIntegerActuator "1" -->  "1" DeviceID : has
+
+DomainEntity --|> DomainID
+AggregateRoot --|> DomainEntity
+DomainID --|> ValueObject
+
+domain.Actuator.Actuator --|> domain.ddd.AggregateRoot
+
+ActuatorTypeID ..|> domain.ddd.DomainID
+ActuatorID ..|> domain.ddd.DomainID
+DeviceID ..|> domain.ddd.DomainID
+ModelPath ..|> domain.ddd.DomainID
+
+SetIntegerValue ..|> domain.ddd.ValueObject
+SetIntegerActuatorLimits ..|> domain.ddd.ValueObject
+ActuatorName ..|> domain.ddd.ValueObject
+
+
+@enduml

@@ -1,0 +1,129 @@
+@startuml
+!pragma layout smetana
+
+package domain.actuator {
+
+    interface Actuator {
+            'Methods'
+            + getID() : ActuatorID
+            + getName() : ActuatorName
+            + getModelPath() : ModelPath
+            + getActuatorTypeID() : ActuatorTypeID
+            + getDeviceID() : DeviceID
+            + toString() : String
+            + setValue(value : ValueObject) : ValueObject
+    }
+
+    interface ActuatorFactory {
+        + createActuator(Object... parameters) : Actuator
+    }
+
+    class ImplActuatorFactory{
+        + createActuator(Object... parameters): Actuator
+    }
+}
+
+package domain.actuator.BlindRollerActuator {
+
+        class domain.actuator.BlindRollerActuator.BlindRollerActuator <<entity>> <<Root>> {
+        'Attributes'
+        - _deviceID : DeviceID
+        - _actuatorName :ActuatorName
+        - _modelPath : ModelPath
+        - _actuatorTypeID : ActuatorTypeID
+        - _actuatorID : ActuatorID
+        - _value : BlindRollerValue
+
+        'Methods'
+        +BlindRollerActuator (deviceID : DeviceID, modelPath : ModelPath, actuatorTypeID : ActuatorTypeID, actuatorName : ActuatorName)
+        +getID () : ActuatorID
+        +getModelPath () : ModelPath
+        +getName () : ActuatorName
+        +getActuatorTypeID () : ActuatorTypeID
+        +getDeviceID () : DeviceID
+        +setValue (value : ValueObject) : ValueObject
+    }
+
+
+    class BlindRollerValue <<ValueObject>> {
+        'Attributes'
+        -_value : int
+
+        'Methods'
+        +BlindRollerValue(value : int)
+        +toString() : String
+    }
+
+    class ActuatorTypeID <<DomainID>> {
+        - _id: String
+        + ActuatorTypeID(String id)
+        + getID() : String
+    }
+
+
+    class ModelPath <<DomainID>> {
+        - _path: String
+        + ModelPath(String path)
+        + getPath() : String
+    }
+
+    class ActuatorName <<ValueObject>> {
+        - _name: String
+        + ActuatorName(String name)
+        + getName() : String
+    }
+
+
+    class ActuatorID <<DomainID>> {
+        - _id: String
+        + ActuatorID(String id)
+        + getID() : String
+    }
+
+    class DeviceID <<DomainID>> {
+        - _id: String
+        + DeviceID(String id)
+        + getID() : String
+    }
+}
+
+package domain.ddd {
+
+  interface DomainEntity {
+  }
+
+  interface DomainID extends ValueObject{
+  }
+
+  interface AggregateRoot {
+  }
+
+  interface ValueObject {
+  }
+}
+
+ImplActuatorFactory ..|> ActuatorFactory
+ImplActuatorFactory "1" ..> "1" domain.actuator.BlindRollerActuator.BlindRollerActuator : creates
+
+domain.actuator.BlindRollerActuator.BlindRollerActuator ..|> domain.actuator.Actuator
+domain.actuator.BlindRollerActuator.BlindRollerActuator "1" --> "1" domain.actuator.BlindRollerActuator.BlindRollerValue : has
+domain.actuator.BlindRollerActuator.BlindRollerActuator "1" -->  "1" ActuatorTypeID : has
+domain.actuator.BlindRollerActuator.BlindRollerActuator "1" -->  "1" ModelPath : has
+domain.actuator.BlindRollerActuator.BlindRollerActuator "1" -->  "1" ActuatorName : has
+domain.actuator.BlindRollerActuator.BlindRollerActuator "1" -->  "1" ActuatorID : has
+domain.actuator.BlindRollerActuator.BlindRollerActuator "1" -->  "1" DeviceID : has
+
+domain.actuator.BlindRollerActuator.BlindRollerValue ..|> domain.ddd.ValueObject
+domain.actuator.BlindRollerActuator.ActuatorName ..|> domain.ddd.ValueObject
+
+DomainEntity --|> DomainID
+AggregateRoot --|> DomainEntity
+
+domain.actuator.Actuator --> domain.ddd.AggregateRoot
+
+ActuatorTypeID ..|> domain.ddd.DomainID
+ActuatorID ..|> domain.ddd.DomainID
+ModelPath ..|> domain.ddd.DomainID
+DeviceID ..|> domain.ddd.DomainID
+
+@enduml

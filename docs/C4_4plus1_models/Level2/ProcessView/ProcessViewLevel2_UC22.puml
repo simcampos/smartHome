@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+actor "Client" as User
+
+
+box "SmartHome <<System (C4)>>"
+participant "Frontend" as FE<<container (C4)>>
+    participant "Backend" as SV<<container (C4)>>
+end box
+
+User -> FE : I want the list of devices!
+activate FE
+activate User
+
+FE -> SV : GET /devices by room ID
+activate SV
+
+SV --> FE : JSON 200
+deactivate SV
+
+FE --> User : devices
+deactivate FE
+deactivate User
+
+
+@enduml

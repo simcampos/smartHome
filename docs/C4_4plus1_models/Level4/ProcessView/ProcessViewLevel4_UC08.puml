@@ -1,0 +1,66 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Server"
+    participant "Controller" as CTRL<<component>>
+        participant "Service" as SV<<component>>
+        participant "Repository" as REPO<<component>>
+        participant "Domain" as DOM<<component>>
+end box
+participant " " as BD
+
+
+
+HTTP o-> CTRL : PUT /devices/deactivate/{id}
+activate CTRL
+
+CTRL -> DOM: DeviceID(strDeviceID)
+activate DOM
+
+DOM --> CTRL : deviceID
+deactivate DOM
+
+CTRL -> SV : getDeviceByID(deviceID)
+activate SV
+
+SV -> REPO : ofIdentity(deviceId)
+activate REPO
+REPO ->o BD : findDeviceByID
+BD o--> REPO : device
+REPO --> SV : device
+deactivate REPO
+
+SV --> CTRL : device
+deactivate SV
+
+
+CTRL -> SV : deactivateDeviceByID(deviceID)
+activate SV
+
+
+SV -> DOM : deactivateDevice(): Status
+activate DOM
+DOM --> SV : status
+deactivate DOM
+
+SV -> REPO : update(device)
+activate REPO
+
+REPO ->o BD : update
+BD o--> REPO : deviceUpdated
+REPO --> SV : deviceUpdated
+deactivate REPO
+
+SV --> CTRL : deviceUpdated
+deactivate SV
+
+CTRL -->o HTTP : deviceDTO
+deactivate CTRL
+
+
+@enduml

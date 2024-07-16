@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+actor "Client" as User
+box "SmartHome <<System (C4)>>"
+    participant "Frontend" as FE<<container (C4)>>
+end box
+    participant " " as API
+
+
+User -> FE : I want to have today’s sunrise and sunset hours on the front/main page
+activate FE
+activate User
+
+FE ->o API : GET/ suntime
+note right
+Frontend sends a request
+to an external API
+end note
+
+
+API o--> FE : JSON 200
+
+
+FE --> User : show sunrise and sunset hours
+deactivate FE
+deactivate User
+
+
+@enduml

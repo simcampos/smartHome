@@ -1,0 +1,38 @@
+@startuml
+!pragma layout smetana
+
+top to bottom direction
+skinparam linetype ortho
+
+class ConfigureHouseLocation<<Controller>>{
+    -_houseService: HouseService
+    -_houseAssembler: HouseAssembler
+    +configureHouseLocation(HouseDataDTO):HouseDTO
+}
+class HouseService <<Service>>{
+    -_houseFactory: HouseFactory
+    -_houseRepository: HouseRepository
+    +addHouse(address, gps):House
+}
+class HouseFactory<<Factory>>{
+    +createHouse(address, gps):House
+}
+class HouseRepository<<Repository>>{
+    +saveHouse():House
+    +findAll():List <House>
+}
+class HouseAssembler<<Assembler>>{
+    +domain2DTO():HouseDTO
+    +dto2Domain():List <HouseDTO>
+}
+class HouseDTO<<DTO>>{
+    - address: String
+    - gps: String
+    +tostring(): String
+}
+ConfigureHouseLocation "1" -down..> "1" HouseService: uses
+HouseService "1" ..> "1" HouseFactory : has >
+ConfigureHouseLocation "1" -[#595959,plain]..> "1" HouseAssembler : creates
+HouseAssembler "1" .[#595959,plain].> "1" HouseDTO : has >
+HouseService "1" ..> "1" HouseRepository : has >
+@enduml

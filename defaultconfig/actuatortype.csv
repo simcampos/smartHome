@@ -1,0 +1,5 @@
+Description, UnitDescription
+BlindRoller,Percent
+SetInteger,Integer
+SetDecimal,Decimal
+Switch,Status

@@ -1,0 +1,70 @@
+
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+participant " " as User
+
+box "Controller" #LightBlue
+participant ":GetListOfRoomsController" as GetListOfRoomsController
+end box
+
+box "Service" #LightGreen
+participant ":RoomService" as Service
+end box
+
+box "Repository" #LightYellow
+participant ":RoomRepository" as RepositoryRoom
+end box
+
+box "Assembler" #LightCyan
+
+participant ":RoomAssembler" as RoomAssembler
+
+participant "roomDTO:RoomDTO" as RoomDTO
+
+end box
+autonumber
+
+User o-> GetListOfRoomsController: getRooms()
+
+activate GetListOfRoomsController
+
+GetListOfRoomsController -> Service: getRooms()
+
+activate Service
+
+Service -> RepositoryRoom: findAll()
+
+activate RepositoryRoom
+
+RepositoryRoom --> Service: listOfRooms
+
+deactivate RepositoryRoom
+
+Service --> GetListOfRoomsController : listOfRooms
+
+deactivate Service
+
+GetListOfRoomsController -> RoomAssembler: domainToDTO(listOfRooms)
+
+loop  for each room in Rooms
+create RoomDTO
+activate RoomAssembler
+RoomAssembler -> RoomDTO: RoomDTO(room)
+activate RoomDTO
+RoomDTO --> RoomAssembler: roomDTO
+deactivate RoomDTO
+RoomAssembler -> RoomAssembler : addRoomDTOToList (roomDTO)
+end
+
+RoomAssembler --> GetListOfRoomsController: copyOf(listOfRoomsDTO)
+
+deactivate RoomAssembler
+
+<-- GetListOfRoomsController : copyOf(listOfRoomsDTO)
+
+deactivate GetListOfRoomsController
+
+
+@enduml

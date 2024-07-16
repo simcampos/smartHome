@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="709px" preserveAspectRatio="none" style="width:687px;height:709px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 687 709" width="687px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--class House-->
+        <g id="elem_House">
+            <rect codeLine="4" fill="#F1F1F1" height="70.7539" id="House" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="75" x="200" y="12"/>
+            <ellipse cx="215" cy="39.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M217.9731,45.02 Q217.3921,45.3188 216.7529,45.4683 Q216.1138,45.6177 215.4082,45.6177 Q212.9014,45.6177 211.5815,43.9658 Q210.2617,42.314 210.2617,39.1929 Q210.2617,36.0635 211.5815,34.4116 Q212.9014,32.7598 215.4082,32.7598 Q216.1138,32.7598 216.7612,32.9092 Q217.4087,33.0586 217.9731,33.3574 L217.9731,36.0801 Q217.3423,35.499 216.7488,35.2292 Q216.1553,34.9595 215.5244,34.9595 Q214.1797,34.9595 213.4949,36.0261 Q212.8101,37.0928 212.8101,39.1929 Q212.8101,41.2847 213.4949,42.3513 Q214.1797,43.418 215.5244,43.418 Q216.1553,43.418 216.7488,43.1482 Q217.3423,42.8784 217.9731,42.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="229" y="28.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="231.5" y="42.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="229"
+                  y="58.8008">House
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="201" x2="274" y1="66.7539" y2="66.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="201" x2="274" y1="74.7539" y2="74.7539"/>
+        </g><!--class Room-->
+        <g id="elem_Room">
+            <rect codeLine="5" fill="#F1F1F1" height="70.7539" id="Room" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="72" x="201.5" y="136"/>
+            <ellipse cx="216.5" cy="163.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M219.4731,169.02 Q218.8921,169.3188 218.2529,169.4683 Q217.6138,169.6177 216.9082,169.6177 Q214.4014,169.6177 213.0815,167.9658 Q211.7617,166.314 211.7617,163.1929 Q211.7617,160.0635 213.0815,158.4116 Q214.4014,156.7598 216.9082,156.7598 Q217.6138,156.7598 218.2612,156.9092 Q218.9087,157.0586 219.4731,157.3574 L219.4731,160.0801 Q218.8423,159.499 218.2488,159.2292 Q217.6553,158.9595 217.0244,158.9595 Q215.6797,158.9595 214.9949,160.0261 Q214.3101,161.0928 214.3101,163.1929 Q214.3101,165.2847 214.9949,166.3513 Q215.6797,167.418 217.0244,167.418 Q217.6553,167.418 218.2488,167.1482 Q218.8423,166.8784 219.4731,166.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="229" y="152.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="231.5" y="166.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40"
+                  x="230.5" y="182.8008">Room
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="202.5" x2="272.5" y1="190.7539" y2="190.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="202.5" x2="272.5" y1="198.7539" y2="198.7539"/>
+        </g><!--class Device-->
+        <g id="elem_Device">
+            <rect codeLine="6" fill="#F1F1F1" height="70.7539" id="Device" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="76" x="199.5" y="260"/>
+            <ellipse cx="214.5" cy="287.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M217.4731,293.02 Q216.8921,293.3188 216.2529,293.4683 Q215.6138,293.6177 214.9082,293.6177 Q212.4014,293.6177 211.0815,291.9658 Q209.7617,290.314 209.7617,287.1929 Q209.7617,284.0635 211.0815,282.4116 Q212.4014,280.7598 214.9082,280.7598 Q215.6138,280.7598 216.2612,280.9092 Q216.9087,281.0586 217.4731,281.3574 L217.4731,284.0801 Q216.8423,283.499 216.2488,283.2292 Q215.6553,282.9595 215.0244,282.9595 Q213.6797,282.9595 212.9949,284.0261 Q212.3101,285.0928 212.3101,287.1929 Q212.3101,289.2847 212.9949,290.3513 Q213.6797,291.418 215.0244,291.418 Q215.6553,291.418 216.2488,291.1482 Q216.8423,290.8784 217.4731,290.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="229" y="276.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="231.5" y="290.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44"
+                  x="228.5" y="306.8008">Device
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="200.5" x2="274.5" y1="314.7539" y2="314.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="200.5" x2="274.5" y1="322.7539" y2="322.7539"/>
+        </g><!--class DeviceType-->
+        <g id="elem_DeviceType">
+            <rect codeLine="7" fill="#F1F1F1" height="70.7539" id="DeviceType" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="109" x="6" y="384"/>
+            <ellipse cx="21" cy="411.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M23.9731,417.02 Q23.3921,417.3188 22.7529,417.4683 Q22.1138,417.6177 21.4082,417.6177 Q18.9014,417.6177 17.5815,415.9658 Q16.2617,414.314 16.2617,411.1929 Q16.2617,408.0635 17.5815,406.4116 Q18.9014,404.7598 21.4082,404.7598 Q22.1138,404.7598 22.7612,404.9092 Q23.4087,405.0586 23.9731,405.3574 L23.9731,408.0801 Q23.3423,407.499 22.7488,407.2292 Q22.1553,406.9595 21.5244,406.9595 Q20.1797,406.9595 19.4949,408.0261 Q18.8101,409.0928 18.8101,411.1929 Q18.8101,413.2847 19.4949,414.3513 Q20.1797,415.418 21.5244,415.418 Q22.1553,415.418 22.7488,415.1482 Q23.3423,414.8784 23.9731,414.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="52" y="400.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="54.5" y="414.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="35"
+                  y="430.8008">DeviceType
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="7" x2="114" y1="438.7539" y2="438.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="7" x2="114" y1="446.7539" y2="446.7539"/>
+        </g><!--class Sensor-->
+        <g id="elem_Sensor">
+            <rect codeLine="8" fill="#F1F1F1" height="70.7539" id="Sensor" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="79" x="133" y="384"/>
+            <ellipse cx="148" cy="411.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M150.9731,417.02 Q150.3921,417.3188 149.7529,417.4683 Q149.1138,417.6177 148.4082,417.6177 Q145.9014,417.6177 144.5815,415.9658 Q143.2617,414.314 143.2617,411.1929 Q143.2617,408.0635 144.5815,406.4116 Q145.9014,404.7598 148.4082,404.7598 Q149.1138,404.7598 149.7612,404.9092 Q150.4087,405.0586 150.9731,405.3574 L150.9731,408.0801 Q150.3423,407.499 149.7488,407.2292 Q149.1553,406.9595 148.5244,406.9595 Q147.1797,406.9595 146.4949,408.0261 Q145.8101,409.0928 145.8101,411.1929 Q145.8101,413.2847 146.4949,414.3513 Q147.1797,415.418 148.5244,415.418 Q149.1553,415.418 149.7488,415.1482 Q150.3423,414.8784 150.9731,414.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="164" y="400.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="166.5" y="414.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="162"
+                  y="430.8008">Sensor
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="134" x2="211" y1="438.7539" y2="438.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="134" x2="211" y1="446.7539" y2="446.7539"/>
+        </g><!--class Actuator-->
+        <g id="elem_Actuator">
+            <rect codeLine="9" fill="#F1F1F1" height="70.7539" id="Actuator" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="91" x="386" y="384"/>
+            <ellipse cx="401" cy="411.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M403.9731,417.02 Q403.3921,417.3188 402.7529,417.4683 Q402.1138,417.6177 401.4082,417.6177 Q398.9014,417.6177 397.5815,415.9658 Q396.2617,414.314 396.2617,411.1929 Q396.2617,408.0635 397.5815,406.4116 Q398.9014,404.7598 401.4082,404.7598 Q402.1138,404.7598 402.7612,404.9092 Q403.4087,405.0586 403.9731,405.3574 L403.9731,408.0801 Q403.3423,407.499 402.7488,407.2292 Q402.1553,406.9595 401.5244,406.9595 Q400.1797,406.9595 399.4949,408.0261 Q398.8101,409.0928 398.8101,411.1929 Q398.8101,413.2847 399.4949,414.3513 Q400.1797,415.418 401.5244,415.418 Q402.1553,415.418 402.7488,415.1482 Q403.3423,414.8784 403.9731,414.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="423" y="400.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="425.5" y="414.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="415"
+                  y="430.8008">Actuator
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="387" x2="476" y1="438.7539" y2="438.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="387" x2="476" y1="446.7539" y2="446.7539"/>
+        </g><!--class ActuatorType-->
+        <g id="elem_ActuatorType">
+            <rect codeLine="10" fill="#F1F1F1" height="70.7539" id="ActuatorType" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="124" x="369.5" y="508"/>
+            <ellipse cx="384.5" cy="535.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M387.4731,541.02 Q386.8921,541.3188 386.2529,541.4683 Q385.6138,541.6177 384.9082,541.6177 Q382.4014,541.6177 381.0815,539.9658 Q379.7617,538.314 379.7617,535.1929 Q379.7617,532.0635 381.0815,530.4116 Q382.4014,528.7598 384.9082,528.7598 Q385.6138,528.7598 386.2612,528.9092 Q386.9087,529.0586 387.4731,529.3574 L387.4731,532.0801 Q386.8423,531.499 386.2488,531.2292 Q385.6553,530.9595 385.0244,530.9595 Q383.6797,530.9595 382.9949,532.0261 Q382.3101,533.0928 382.3101,535.1929 Q382.3101,537.2847 382.9949,538.3513 Q383.6797,539.418 385.0244,539.418 Q385.6553,539.418 386.2488,539.1482 Q386.8423,538.8784 387.4731,538.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="423" y="524.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="425.5" y="538.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92"
+                  x="398.5" y="554.8008">ActuatorType
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="370.5" x2="492.5" y1="562.7539" y2="562.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="370.5" x2="492.5" y1="570.7539" y2="570.7539"/>
+        </g><!--class ActuatorModel-->
+        <g id="elem_ActuatorModel">
+            <rect codeLine="11" fill="#F1F1F1" height="70.7539" id="ActuatorModel" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="133" x="424" y="632"/>
+            <ellipse cx="439" cy="659.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M441.9731,665.02 Q441.3921,665.3188 440.7529,665.4683 Q440.1138,665.6177 439.4082,665.6177 Q436.9014,665.6177 435.5815,663.9658 Q434.2617,662.314 434.2617,659.1929 Q434.2617,656.0635 435.5815,654.4116 Q436.9014,652.7598 439.4082,652.7598 Q440.1138,652.7598 440.7612,652.9092 Q441.4087,653.0586 441.9731,653.3574 L441.9731,656.0801 Q441.3423,655.499 440.7488,655.2292 Q440.1553,654.9595 439.5244,654.9595 Q438.1797,654.9595 437.4949,656.0261 Q436.8101,657.0928 436.8101,659.1929 Q436.8101,661.2847 437.4949,662.3513 Q438.1797,663.418 439.5244,663.418 Q440.1553,663.418 440.7488,663.1482 Q441.3423,662.8784 441.9731,662.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="482" y="648.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="484.5" y="662.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="453"
+                  y="678.8008">ActuatorModel
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="425" x2="556" y1="686.7539" y2="686.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="425" x2="556" y1="694.7539" y2="694.7539"/>
+        </g><!--class SensorType-->
+        <g id="elem_SensorType">
+            <rect codeLine="12" fill="#F1F1F1" height="70.7539" id="SensorType" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="112" x="160.5" y="508"/>
+            <ellipse cx="175.5" cy="535.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M178.4731,541.02 Q177.8921,541.3188 177.2529,541.4683 Q176.6138,541.6177 175.9082,541.6177 Q173.4014,541.6177 172.0815,539.9658 Q170.7617,538.314 170.7617,535.1929 Q170.7617,532.0635 172.0815,530.4116 Q173.4014,528.7598 175.9082,528.7598 Q176.6138,528.7598 177.2612,528.9092 Q177.9087,529.0586 178.4731,529.3574 L178.4731,532.0801 Q177.8423,531.499 177.2488,531.2292 Q176.6553,530.9595 176.0244,530.9595 Q174.6797,530.9595 173.9949,532.0261 Q173.3101,533.0928 173.3101,535.1929 Q173.3101,537.2847 173.9949,538.3513 Q174.6797,539.418 176.0244,539.418 Q176.6553,539.418 177.2488,539.1482 Q177.8423,538.8784 178.4731,538.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="208" y="524.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="210.5" y="538.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80"
+                  x="189.5" y="554.8008">SensorType
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="161.5" x2="271.5" y1="562.7539" y2="562.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="161.5" x2="271.5" y1="570.7539" y2="570.7539"/>
+        </g><!--class SensorModel-->
+        <g id="elem_SensorModel">
+            <rect codeLine="13" fill="#F1F1F1" height="70.7539" id="SensorModel" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="121" x="62" y="632"/>
+            <ellipse cx="77" cy="659.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M79.9731,665.02 Q79.3921,665.3188 78.7529,665.4683 Q78.1138,665.6177 77.4082,665.6177 Q74.9014,665.6177 73.5815,663.9658 Q72.2617,662.314 72.2617,659.1929 Q72.2617,656.0635 73.5815,654.4116 Q74.9014,652.7598 77.4082,652.7598 Q78.1138,652.7598 78.7612,652.9092 Q79.4087,653.0586 79.9731,653.3574 L79.9731,656.0801 Q79.3423,655.499 78.7488,655.2292 Q78.1553,654.9595 77.5244,654.9595 Q76.1797,654.9595 75.4949,656.0261 Q74.8101,657.0928 74.8101,659.1929 Q74.8101,661.2847 75.4949,662.3513 Q76.1797,663.418 77.5244,663.418 Q78.1553,663.418 78.7488,663.1482 Q79.3423,662.8784 79.9731,662.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="114" y="648.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="35" x="118" y="662.7344">&#171;root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="91"
+                  y="678.8008">SensorModel
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="63" x2="182" y1="686.7539" y2="686.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="63" x2="182" y1="694.7539" y2="694.7539"/>
+        </g><!--class Unit-->
+        <g id="elem_Unit">
+            <rect codeLine="14" fill="#F1F1F1" height="70.7539" id="Unit" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="71" x="273" y="632"/>
+            <ellipse cx="288" cy="659.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M290.9731,665.02 Q290.3921,665.3188 289.7529,665.4683 Q289.1138,665.6177 288.4082,665.6177 Q285.9014,665.6177 284.5815,663.9658 Q283.2617,662.314 283.2617,659.1929 Q283.2617,656.0635 284.5815,654.4116 Q285.9014,652.7598 288.4082,652.7598 Q289.1138,652.7598 289.7612,652.9092 Q290.4087,653.0586 290.9731,653.3574 L290.9731,656.0801 Q290.3423,655.499 289.7488,655.2292 Q289.1553,654.9595 288.5244,654.9595 Q287.1797,654.9595 286.4949,656.0261 Q285.8101,657.0928 285.8101,659.1929 Q285.8101,661.2847 286.4949,662.3513 Q287.1797,663.418 288.5244,663.418 Q289.1553,663.418 289.7488,663.1482 Q290.3423,662.8784 290.9731,662.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="300" y="648.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="302.5" y="662.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28"
+                  x="307.5" y="678.8008">Unit
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="274" x2="343" y1="686.7539" y2="686.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="274" x2="343" y1="694.7539" y2="694.7539"/>
+        </g><!--class Log-->
+        <g id="elem_Log">
+            <rect codeLine="15" fill="#F1F1F1" height="70.7539" id="Log" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="71" x="273" y="384"/>
+            <ellipse cx="288" cy="411.377" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M290.9731,417.02 Q290.3921,417.3188 289.7529,417.4683 Q289.1138,417.6177 288.4082,417.6177 Q285.9014,417.6177 284.5815,415.9658 Q283.2617,414.314 283.2617,411.1929 Q283.2617,408.0635 284.5815,406.4116 Q285.9014,404.7598 288.4082,404.7598 Q289.1138,404.7598 289.7612,404.9092 Q290.4087,405.0586 290.9731,405.3574 L290.9731,408.0801 Q290.3423,407.499 289.7488,407.2292 Q289.1553,406.9595 288.5244,406.9595 Q287.1797,406.9595 286.4949,408.0261 Q285.8101,409.0928 285.8101,411.1929 Q285.8101,413.2847 286.4949,414.3513 Q287.1797,415.418 288.5244,415.418 Q289.1553,415.418 289.7488,415.1482 Q290.3423,414.8784 290.9731,414.2974 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="43" x="300" y="400.6016">&#171;Entity&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+                  textLength="38" x="302.5" y="414.7344">&#171;Root&#187;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="309"
+                  y="430.8008">Log
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="274" x2="343" y1="438.7539" y2="438.7539"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="274" x2="343" y1="446.7539" y2="446.7539"/>
+        </g>
+        <g id="elem_note">
+            <path d="M293,35 L293,60.3105 L680,60.3105 L680,45 L670,35 L293,35 " fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M670,35 L670,45 L680,45 L670,35 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="366" x="299"
+                  y="52.5684">Each aggregate is only known to the outside via their ID's.
+            </text>
+        </g>
+        <polygon fill="#181818" points="237.5,83.134,233.5,92.134,237.5,88.134,241.5,92.134,237.5,83.134"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M237.5,89.134 C237.5,105.6184 237.5,119.2839 237.5,135.7794 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="238.5"
+              y="114.5684">belongs to
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="214.5"
+              y="132.3478">1..*
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="228.5"
+              y="96.7023">1
+        </text>
+        <polygon fill="#181818" points="237.5,207.134,233.5,216.134,237.5,212.134,241.5,216.134,237.5,207.134"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M237.5,213.134 C237.5,229.6184 237.5,243.2839 237.5,259.7794 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="238.5"
+              y="238.5684">belongs to
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="228.5"
+              y="220.7023">1
+        </text>
+        <polygon fill="#181818"
+                 points="219.0475,331.134,211.2853,337.1961,216.6964,335.5467,218.3458,340.9578,219.0475,331.134"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M216.2262,336.4293 C207.4435,352.9137 199.7873,367.2839 190.9987,383.7794 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="210.5"
+              y="362.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="210.0475"
+              y="344.7023">1
+        </text>
+        <polygon fill="#181818"
+                 points="275.7811,319.2284,281.4401,327.2892,280.0684,321.8012,285.5565,320.4295,275.7811,319.2284"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M280.9259,322.3157 C296.1565,331.4553 308.6516,339.0749 324.5,349 C344.7754,361.6975 366.9871,376.051 385.8928,388.4033 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="352.5"
+              y="362.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="276.7811"
+              y="315.7968">1
+        </text>
+        <polygon fill="#181818"
+                 points="105.9175,383.8886,115.5261,381.7264,109.9293,380.9044,110.7513,375.3076,105.9175,383.8886"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M199.1088,319.9721 C184.9419,328.8453 168.8505,339.1754 154.5,349 C138.4229,360.0066 125.9991,368.9507 110.7316,380.3076 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="155.5"
+              y="362.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="190.1088"
+              y="316.5405">1
+        </text>
+        <polygon fill="#181818"
+                 points="191.0822,507.7375,190.0291,497.9451,188.5746,503.4118,183.1079,501.9572,191.0822,507.7375"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M174.5202,455.1691 C175.957,466.5298 178.3906,479.0426 182.5,490 C184.7498,495.9988 184.7594,496.8303 188.0731,502.5466 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="183.5"
+              y="486.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="182.0822"
+              y="504.3059">1
+        </text>
+        <polygon fill="#181818" points="431.5,507.7794,435.5,498.7794,431.5,502.7794,427.5,498.7794,431.5,507.7794"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M431.5,455.134 C431.5,471.6184 431.5,485.2839 431.5,501.7794 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="432.5"
+              y="486.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="422.5"
+              y="504.3478">1
+        </text>
+        <polygon fill="#181818"
+                 points="189.8148,579.134,181.1532,583.8219,186.7631,583.0947,187.4903,588.7046,189.8148,579.134"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M186.1528,583.8868 C173.4516,600.3713 161.9616,615.2839 149.2519,631.7794 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="176.5"
+              y="610.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="180.8148"
+              y="592.7023">1
+        </text>
+        <polygon fill="#181818"
+                 points="272.7235,637.2386,268.9365,628.147,269.0921,633.8017,263.4374,633.9573,272.7235,637.2386"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M230.9258,579.1667 C236.5263,590.7706 243.5247,603.4323 251.5,614 C257.6594,622.1615 260.8276,625.9798 268.3658,633.1143 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="252.5"
+              y="610.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="263.7235"
+              y="633.807">1
+        </text>
+        <polygon fill="#181818"
+                 points="448.2492,579.134,448.5665,588.9777,450.4261,583.6352,455.7685,585.4948,448.2492,579.134"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M450.8614,584.5355 C458.8334,601.0199 465.7315,615.2839 473.7089,631.7794 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="465.5"
+              y="610.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="439.2492"
+              y="592.7023">1
+        </text>
+        <polygon fill="#181818"
+                 points="343.5052,631.7794,352.7119,628.2814,347.0551,628.2584,347.0782,622.6015,343.5052,631.7794"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M396.5821,579.134 C379.9626,595.6184 364.3959,611.0586 347.7651,627.5541 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="377.5"
+              y="610.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="334.5052"
+              y="628.3478">1
+        </text>
+        <polygon fill="#181818"
+                 points="111.715,631.905,113.3466,622.1923,110.4693,627.0627,105.5988,624.1854,111.715,631.905"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M139.39,455.047 C127.1889,470.0863 114.8121,488.6784 108.5,508 C95.0749,549.095 101.8013,593.3691 110.2202,626.0942 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="109.5"
+              y="548.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="102.715"
+              y="628.4734">1
+        </text>
+        <polygon fill="#181818"
+                 points="506.5201,631.7572,513.2971,624.6108,508.1906,627.0445,505.7568,621.938,506.5201,631.7572"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M468.72,455.3618 C481.9734,470.1786 495.3714,488.5272 502.5,508 C518.7536,552.3991 520.4411,567.5725 511.5,614 C510.3676,619.8801 510.5871,620.2836 508.5247,626.102 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="517.5"
+              y="548.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="497.5201"
+              y="628.3256">1
+        </text>
+        <polygon fill="#181818"
+                 points="257.6558,331.134,258.7256,340.9246,260.1708,335.4554,265.6399,336.9006,257.6558,331.134"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M260.6738,336.3197 C270.2672,352.8042 278.6939,367.2839 288.2938,383.7794 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="278.5"
+              y="362.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="248.6558"
+              y="344.7023">1
+        </text>
+        <polygon fill="#181818" points="212.2024,419.5,221.2024,423.5,217.2024,419.5,221.2024,415.5,212.2024,419.5"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M218.2024,419.5 C237.3327,419.5 254.0998,419.5 272.6926,419.5 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="222"
+              y="413.0684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="213.2024"
+              y="433.0684">1
+        </text>
+        <polygon fill="#181818"
+                 points="230.9258,507.8333,238.4401,501.4666,233.0991,503.3303,231.2354,497.9893,230.9258,507.8333"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M272.7235,449.7614 C265.1853,456.8959 257.6594,464.8385 251.5,473 C243.5247,483.5677 239.1343,490.8259 233.5338,502.4297 "
+              fill="none" style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="252.5"
+              y="486.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="221.9258"
+              y="504.4016">1
+        </text>
+        <polygon fill="#181818" points="308.5,631.9526,312.5,622.9526,308.5,626.9526,304.5,622.9526,308.5,631.9526"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M308.5,455.224 C308.5,502.1083 308.5,579.1594 308.5,625.9526 " fill="none"
+              style="stroke:#181818;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="309.5"
+              y="548.5684">knows
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="299.5"
+              y="628.521">1
+        </text><!--SRC=[ZPBTQeGm48NlynHJRme5XTuM4Ggxq49xqvy7IDrfDcnCnCGjKlhkJQAn6zVgUYEPyt4oCoTNTKDPHK7GJhK6T8M6Iae8AGNL6XvKgp7Fjz9mqnL5dhyePOhY-sVGxR5Qa3Tuv2Mk0czTlGIzejIgMG3kIzDISn6oSbN0djKEnMfB5_LzPjN4rBlaPi7aIR5PbKXb498jBVT06MkGKNlc6fGK7Hoa-f9W59WzWWrMynt2aLDtvWqyRgvrbW3Lu5o8-tpIaDmcaAUf_MVPJUBZXJluGA4aqzQF-4gW-lHYOAW5fD-1HLn7Ugg6TS_fQLgSF8-H60oTwgY_84Q2ZAu1EWr_OkHBSRC-i1agkBd0WXmvJwUAZ29opcfsC6y1Ku-pmMACs3S3QLiFq9XIhtfHuAU9Behb_vTxAhlkH-4N]-->
+    </g>
+</svg>

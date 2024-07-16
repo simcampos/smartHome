@@ -1,0 +1,130 @@
+@startuml
+!pragma layout smetana
+
+package domain.actuator {
+
+    interface Actuator {
+            'Methods'
+            + getID() : ActuatorID
+            + getName() : ActuatorName
+            + getModelPath() : ModelPath
+            + getActuatorTypeID() : ActuatorTypeID
+            + getDeviceID() : DeviceID
+            + toString() : String
+            + setValue(value : ValueObject) : ValueObject
+    }
+
+    interface ActuatorFactory {
+        + createActuator(Object... parameters) : Actuator
+    }
+
+    class ImplActuatorFactory{
+        + createActuator(Object... parameters): Actuator
+    }
+}
+
+package domain.actuator.SwitchActuator {
+
+        class domain.actuator.SwitchActuator.SwitchActuator <<entity>> <<Root>> {
+        'Attributes'
+        - _deviceID : DeviceID
+        - _actuatorName :ActuatorName
+        - _modelPath : ModelPath
+        - _actuatorTypeID : ActuatorTypeID
+        - _actuatorID : ActuatorID
+        - _value : SwitchActuatorValue
+
+        'Methods'
+        +domain.actuator.SwitchActuator (deviceID : DeviceID, modelPath : ModelPath, actuatorTypeID : ActuatorTypeID, actuatorName : ActuatorName)
+        +getID () : ActuatorID
+        +getModelPath () : ModelPath
+        +getName () : ActuatorName
+        +getActuatorTypeID () : ActuatorTypeID
+        +getDeviceID () : DeviceID
+        +setValue (value : ValueObject) : ValueObject
+    }
+
+
+    class SwitchActuatorValue <<ValueObject>> {
+        'Attributes'
+        -_value : boolean
+
+        'Methods'
+        +SwitchActuatorValue(value : boolean)
+        +performAction() : boolean
+        +toString() : String
+    }
+
+    class ActuatorTypeID <<DomainID>> {
+        - _id: String
+        + ActuatorTypeID(String id)
+        + getID() : String
+    }
+
+
+    class ModelPath <<DomainID>> {
+        - _path: String
+        + ModelPath(String path)
+        + getPath() : String
+    }
+
+    class ActuatorName <<ValueObject>> {
+        - _name: String
+        + ActuatorName(String name)
+        + getName() : String
+    }
+
+
+    class ActuatorID <<DomainID>> {
+        - _id: String
+        + ActuatorID(String id)
+        + getID() : String
+    }
+
+    class DeviceID <<DomainID>> {
+        - _id: String
+        + DeviceID(String id)
+        + getID() : String
+    }
+}
+
+package domain.ddd {
+
+  interface DomainEntity {
+  }
+
+  interface DomainID extends ValueObject{
+  }
+
+  interface AggregateRoot {
+  }
+
+  interface ValueObject {
+  }
+}
+
+ImplActuatorFactory ..|> ActuatorFactory
+ImplActuatorFactory "1" ..> "1" domain.actuator.SwitchActuator.SwitchActuator : creates
+
+domain.actuator.SwitchActuator.SwitchActuator ..|> domain.actuator.Actuator
+domain.actuator.SwitchActuator.SwitchActuator "1" --> "1" domain.actuator.SwitchActuator.SwitchActuatorValue : has
+domain.actuator.SwitchActuator.SwitchActuator "1" -->  "1" ActuatorTypeID : has
+domain.actuator.SwitchActuator.SwitchActuator "1" -->  "1" ModelPath : has
+domain.actuator.SwitchActuator.SwitchActuator "1" -->  "1" ActuatorName : has
+domain.actuator.SwitchActuator.SwitchActuator "1" -->  "1" ActuatorID : has
+domain.actuator.SwitchActuator.SwitchActuator "1" -->  "1" DeviceID : has
+
+domain.actuator.SwitchActuator.SwitchActuatorValue ..|> domain.ddd.ValueObject
+domain.actuator.SwitchActuator.ActuatorName ..|> domain.ddd.ValueObject
+
+DomainEntity --|> DomainID
+AggregateRoot --|> DomainEntity
+
+domain.actuator.Actuator ..|> domain.ddd.AggregateRoot
+
+ActuatorTypeID ..|> domain.ddd.DomainID
+ActuatorID ..|> domain.ddd.DomainID
+ModelPath ..|> domain.ddd.DomainID
+DeviceID ..|> domain.ddd.DomainID
+
+@enduml

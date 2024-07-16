@@ -1,0 +1,87 @@
+@startuml
+!pragma layout smetana
+
+class SensorType<<entity>> <<root>> {
+  - _id: sensorID
+  - _description: Description
+  - _unitID: UnitID
+  + SensorType(id, description, unitID)
+  + getId(): string
+  + getDescription(): Description
+  + getUnit(): Unit
+  }
+
+class SensorTypeFactory<<Factory>> {
+  + createNewSensorType(description: Description, unitID: UnitID): SensorType
+  }
+
+class SensorTypeRepository<<Repository>> {
+  - _map<ID, SensorType> sensorTypes
+  + save(sensorType: SensorType): SensorType
+  }
+class SensorTypeService<<Service>> {
+    - _sensorTypeRepository: SensorTypeRepository
+    - _sensorTypeFactory: SensorTypeFactory
+    - _unitRepository: UnitRepository
+  + SensorTypeService(sensorTypeRepository, sensorTypeFactory, unitRepository)
+  + createSensorType(description: Description, unitID: UnitID): SensorType
+  + getAllSupportedUnits(): List<Unit>
+  + saveSensorType(sensorType: SensorType): SensorType
+  }
+  class UnitRepository<<Repository>> {
+    - _map<ID, Unit> units
+    + findAll: Unit
+    }
+class Unit<<entity>> {
+  - _id: UnitID
+  - _description: Description
+  - _unit: Unit
+  + Unit(id, description, unit)
+  }
+class AddSensorTypeController<<Controller>> {
+  - _sensorTypeService: SensorTypeService
+  - _sensorTypeAssembler: SensorTypeAssembler
+  - _unitAssembler: UnitAssembler
+  - _unitService: UnitService
+  + AddSensorTypeController(sensorTypeService, sensorTypeAssembler, unitAssembler, unitService)
+  + getSupportedUnits(): List<UnitDTO>
+  + addAndSave(SensorTypeDTO data): SensorTypeDTO
+  }
+class SensorTypeDTO<<DTO>> {
++ id: string
++ description: string
++ unit: string
++ SensorTypeDTO(String id, String description, String unit)
+}
+class SensorTypeAssembler<<Assembler>> {
+  + domainToDTO(sensorType: SensorType): SensorTypeDTO
+  }
+class UnitAssembler<<Assembler>> {
+  + domainToDTO(unit: Unit): UnitDTO
+  }
+class UnitDTO<<DTO>> {
+  + id: string
+  + description: string
+  + symbol: string
+  + UnitDTO(String id, String description, String unit)
+  }
+
+
+
+
+SensorTypeRepository"1" -down-> "*"SensorType: has
+SensorTypeService"1" .down.> "1"SensorTypeFactory: uses
+SensorTypeService"1" .down.> "1"SensorTypeRepository: uses
+SensorTypeService"1" .down-> "1"UnitRepository: uses
+UnitRepository"1" -down-> "1"Unit: has
+SensorTypeFactory"1" .down.> "1..*"SensorType: creates
+AddSensorTypeController"1" .down.> "1"SensorTypeService: uses
+AddSensorTypeController"1" .down.> "1"SensorTypeAssembler: uses
+SensorTypeAssembler"1" .up.> "1"SensorTypeDTO: creates
+AddSensorTypeController"1" .down.> "1"UnitAssembler: uses
+UnitAssembler"1" .up.> "1"UnitDTO: creates
+
+
+
+
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+participant " " as started
+participant ":ConfigurationService" as config
+participant ":UnitRepository" as unitRepo
+participant "Config.Properties" as configProps
+participant ":UnitDescription" as unitDesc
+participant ":UnitSymbol" as unitSymbol
+participant ":UnitFabric" as unitFabric
+participant ":Unit" as unit
+
+create config
+started o-> config : create (UnitRepository, UnitFabric, ModelRepository, ModelService)
+activate config
+config -> unitRepo : 1.1: getListunitTypes()
+activate unitRepo
+unitRepo -> configProps : 1.1.1: config.getStringArray("unit")
+activate configProps
+configProps -> unitRepo : listStringunitTypes
+deactivate configProps
+unitRepo -> config : listStringunitTypes
+deactivate unitRepo
+create unitDesc
+loop for each strunitType in listStringunitTypes
+config -> unitDesc : 1.2: createUnitDescription(strDescription)
+activate unitDesc
+unitDesc --> config : unitDesc
+deactivate unitDesc
+create unitSymbol
+config -> unitSymbol : 1.3: createUnitSymbol(strSymbol)
+activate unitSymbol
+unitSymbol --> config : unitSymbol
+deactivate unitSymbol
+config -> unitFabric : 1.4: createUnit(unitDesc, unitSymbol)
+activate unitFabric
+create unit
+unitFabric -> unit : 1.4.1: createUnit(unitDesc, unitSymbol)
+activate unit
+unit --> unitFabric : unit
+deactivate unit
+unitFabric --> config : unit
+deactivate unitFabric
+config -> unitRepo : 1.5: addUnit(unit)
+activate unitRepo
+unitRepo -> unitRepo : 1.5.1: addUnit(unit)
+unitRepo -> config : "success"
+end
+deactivate unitRepo
+deactivate config
+@enduml

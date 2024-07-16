@@ -1,0 +1,331 @@
+@startuml
+!pragma layout smetana
+autonumber
+
+participant " " as User
+participant ":AddActuatorToDevice_Controller" as AddActuatorToDevice_Controller
+participant "deviceID:DeviceID" as DeviceID
+participant "modelPath:ModelPath" as modelPath
+participant "ActuatorTypeID:ActuatorTypeID" as ActuatorTypeID
+participant "ActuatorName:ActuatorName" as ActuatorName
+participant ":ActuatorService" as ActuatorService
+participant ":ActuatorAssembler" as ActuatorAssembler
+participant "ActuatorDTO:ActuatorDTO" as ActuatorDTO
+
+'----------------------------------------------------'
+ref over User, AddActuatorToDevice_Controller
+get Rooms
+end ref
+
+ref over User, AddActuatorToDevice_Controller
+get Devices
+end ref
+
+ref over User, AddActuatorToDevice_Controller
+get Actuator Types
+end ref
+
+ref over User, AddActuatorToDevice_Controller
+get Actuator Models
+end ref
+
+'----------------------------------------------------'
+
+User o-> AddActuatorToDevice_Controller: addActuatorToDevice(ActuatorDataDTO)
+activate AddActuatorToDevice_Controller
+create DeviceID
+
+AddActuatorToDevice_Controller -> DeviceID: createDeviceID(DataDTO)
+activate DeviceID
+
+DeviceID --> AddActuatorToDevice_Controller: deviceID
+deactivate DeviceID
+create modelPath
+
+AddActuatorToDevice_Controller -> modelPath: createModelPath(DataDTO)
+activate modelPath
+
+modelPath --> AddActuatorToDevice_Controller: modelPath
+deactivate modelPath
+create ActuatorTypeID
+
+AddActuatorToDevice_Controller -> ActuatorTypeID: createActuatorTypeID(DataDTO)
+activate ActuatorTypeID
+
+ActuatorTypeID --> AddActuatorToDevice_Controller: ActuatorTypeID
+deactivate ActuatorTypeID
+create ActuatorName
+
+AddActuatorToDevice_Controller -> ActuatorName: createActuatorName(DataDTO)
+activate ActuatorName
+
+ActuatorName --> AddActuatorToDevice_Controller: ActuatorName
+deactivate ActuatorName
+
+AddActuatorToDevice_Controller -> ActuatorService: addActuatorToDevice(ActuatorModelID, deviceID, ActuatorTypeID, ActuatorName)
+activate ActuatorService
+'----------------------------------------------------'
+ref over ActuatorService, ActuatorService
+add Actuator to Device
+end ref
+'----------------------------------------------------'
+ActuatorService --> AddActuatorToDevice_Controller: Actuator
+deactivate ActuatorService
+
+AddActuatorToDevice_Controller -> ActuatorAssembler: domainToDTO(Actuator)
+activate ActuatorAssembler
+
+loop for each Actuator
+create ActuatorDTO
+ActuatorAssembler -> ActuatorDTO: createActuatorDTO(Actuator)
+activate ActuatorDTO
+ActuatorDTO --> ActuatorAssembler: ActuatorDTO
+deactivate ActuatorDTO
+end
+
+ActuatorAssembler --> AddActuatorToDevice_Controller : ActuatorDTO
+deactivate ActuatorAssembler
+
+AddActuatorToDevice_Controller --> User: ActuatorDTO
+deactivate AddActuatorToDevice_Controller
+
+@enduml
+
+@startuml
+!pragma layout smetana
+title get Rooms
+autonumber
+
+participant " " as User
+participant ":AddActuatorToDevice_Controller" as AddActuatorToDevice_Controller
+participant ":RoomService" as roomService
+participant ":RoomRepository" as RoomRepository
+participant ":RoomAssembler" as RoomAssembler
+participant "roomDTO:RoomDTO" as RoomDTO
+
+User o-> AddActuatorToDevice_Controller: getRooms()
+activate AddActuatorToDevice_Controller
+
+AddActuatorToDevice_Controller -> roomService: getRooms()
+activate roomService
+
+roomService -> RoomRepository: findAll()
+activate RoomRepository
+
+RoomRepository --> roomService: lisOfRooms
+deactivate RoomRepository
+
+roomService --> AddActuatorToDevice_Controller: lisOfRooms
+deactivate roomService
+
+AddActuatorToDevice_Controller -> RoomAssembler: domainToDTO(Rooms)
+activate RoomAssembler
+
+loop for each room
+    create RoomDTO
+    RoomAssembler -> RoomDTO: createRoomDTO (room)
+    activate RoomDTO
+    RoomDTO --> RoomAssembler: roomDTO
+    deactivate RoomDTO
+    RoomAssembler -> RoomAssembler: addRoomDTOToList(roomDTO)
+end
+
+RoomAssembler --> AddActuatorToDevice_Controller: listRoomsDTO
+deactivate RoomAssembler
+
+AddActuatorToDevice_Controller --> User: listRoomsDTO
+deactivate AddActuatorToDevice_Controller
+
+@enduml
+
+@startuml
+title get Devices
+autonumber
+!pragma layout smetana
+
+participant " " as User
+participant ":AddActuatorToDevice_Controller" as AddActuatorToDevice_Controller
+participant ":DeviceAssembler" as DeviceAssembler
+participant "roomID:RoomID" as RoomID
+participant ":DeviceService" as DeviceService
+participant ":DeviceRepository" as DeviceRepository
+participant "deviceDTO:DeviceDTO" as DeviceDTO
+
+
+User o-> AddActuatorToDevice_Controller: getDevices(roomDTO)
+activate AddActuatorToDevice_Controller
+
+
+AddActuatorToDevice_Controller -> DeviceAssembler : dtoToDomain(roomDTO)
+activate DeviceAssembler
+create RoomID
+
+DeviceAssembler -> RoomID: createRoomID(strRoomIdDTO)
+activate RoomID
+
+RoomID --> DeviceAssembler: roomId
+deactivate RoomID
+
+DeviceAssembler --> AddActuatorToDevice_Controller: roomId
+deactivate DeviceAssembler
+
+AddActuatorToDevice_Controller -> DeviceService: getDevices(roomId)
+activate DeviceService
+
+DeviceService -> DeviceRepository: getDevicesByRoomId (roomId)
+activate DeviceRepository
+
+DeviceRepository --> DeviceService: listDevices
+deactivate DeviceRepository
+
+DeviceService --> AddActuatorToDevice_Controller: listDevices
+deactivate DeviceService
+
+AddActuatorToDevice_Controller  -> DeviceAssembler: deviceToDTO (deviceList)
+activate DeviceAssembler
+
+loop for each device in list
+    create DeviceDTO
+    DeviceAssembler -> DeviceDTO: createDeviceToDTO (device)
+    activate DeviceDTO
+    DeviceDTO --> DeviceAssembler: deviceDTO
+    deactivate DeviceDTO
+    DeviceAssembler -> DeviceAssembler: addDeviceDTOToList(deviceDTO)
+end
+DeviceAssembler --> AddActuatorToDevice_Controller: listDeviceDTO
+
+deactivate DeviceAssembler
+deactivate DeviceService
+
+AddActuatorToDevice_Controller --> User : listDeviceDTO
+deactivate AddActuatorToDevice_Controller
+
+@enduml
+
+@startuml
+title get Actuator ActuatorTypes
+autonumber
+!pragma layout smetana
+
+participant " " as User
+participant ":AddActuatorToDevice_Controller" as AddActuatorToDevice_Controller
+participant ":ActuatorTypeService" as ActuatorTypeService
+participant ":ActuatorTypeRepository" as ActuatorTypeRepository
+participant ":ActuatorTypeAssembler" as ActuatorTypeAssembler
+participant "actuatorTypeDTO:ActuatorTypeDTO" as ActuatorTypeDTO
+
+User o-> AddActuatorToDevice_Controller: getActuatorTypes()
+activate AddActuatorToDevice_Controller
+
+AddActuatorToDevice_Controller -> ActuatorTypeService: getActuatorTypes()
+activate ActuatorTypeService
+
+ActuatorTypeService -> ActuatorTypeRepository: findAll()
+activate ActuatorTypeRepository
+
+ActuatorTypeRepository --> ActuatorTypeService: listActuatorTypes
+deactivate ActuatorTypeRepository
+
+ActuatorTypeService --> AddActuatorToDevice_Controller: listActuatorTypes
+deactivate ActuatorTypeService
+
+AddActuatorToDevice_Controller -> ActuatorTypeAssembler: domainToDTO(listOfActuatorModels)
+activate ActuatorTypeAssembler
+
+loop for each ActuatorModel in copyOfActuatorModels
+create ActuatorTypeDTO
+ActuatorTypeAssembler -> ActuatorTypeDTO: createActuatorTypeDTO(ActuatorModel)
+activate ActuatorTypeDTO
+ActuatorTypeDTO --> ActuatorTypeAssembler: ActuatorTypeDTO
+deactivate ActuatorTypeDTO
+ActuatorTypeAssembler -> ActuatorTypeAssembler: addToList(ActuatorModelDTO)
+end
+
+ActuatorTypeAssembler --> AddActuatorToDevice_Controller: listActuatorModelsDTO
+deactivate ActuatorTypeAssembler
+
+AddActuatorToDevice_Controller -> User: listActuatorModelsDTO
+deactivate AddActuatorToDevice_Controller
+
+@enduml
+
+@startuml
+title get Actuator Models
+autonumber
+!pragma layout smetana
+
+participant " " as User
+participant ":AddActuatorToDevice_Controller" as AddActuatorToDevice_Controller
+participant "actuatorTypeID:ActuatorTypeID" as ActuatorTypeID
+
+User o-> AddActuatorToDevice_Controller: getActuatorModels(ActuatorTypeDTO)
+activate AddActuatorToDevice_Controller
+create ActuatorTypeID
+
+AddActuatorToDevice_Controller -> ActuatorTypeID: createActuatorTypeID(DataDTO)
+activate ActuatorTypeID
+
+ActuatorTypeID --> AddActuatorToDevice_Controller: ActuatorTypeID
+deactivate ActuatorTypeID
+
+AddActuatorToDevice_Controller -> ActuatorModelService: getActuatorModelsByActuatorTypeId(ActuatorTypeID)
+activate ActuatorModelService
+
+ActuatorModelService -> ActuatorModelRepository: findByActuatorTypeId()
+activate ActuatorModelRepository
+
+ActuatorModelRepository --> ActuatorModelService: listActuatorModels
+deactivate ActuatorModelRepository
+
+ActuatorModelService --> AddActuatorToDevice_Controller: listActuatorModels
+deactivate ActuatorModelService
+
+AddActuatorToDevice_Controller -> ActuatorModelAssembler: domainToDTO(listOfActuatorModels)
+activate ActuatorModelAssembler
+
+loop for each ActuatorModel in copyOfActuatorModels
+create ActuatorModelDTO
+ActuatorModelAssembler -> ActuatorModelDTO: createActuatorModelDTO(ActuatorModel)
+activate ActuatorModelDTO
+ActuatorModelDTO --> ActuatorModelAssembler: ActuatorModelDTO
+deactivate ActuatorModelDTO
+ActuatorModelAssembler -> ActuatorModelAssembler: addToList(ActuatorModelDTO)
+end
+
+ActuatorModelAssembler --> AddActuatorToDevice_Controller: listActuatorTypesDTO
+deactivate ActuatorModelAssembler
+
+AddActuatorToDevice_Controller -> User: listActuatorTypesDTO
+deactivate AddActuatorToDevice_Controller
+
+@enduml
+
+@startuml
+title add Actuator to Device
+!pragma layout smetana
+autonumber
+
+-> ActuatorService: addActuatorToDevice(ActuatorModelID, deviceID, ActuatorTypeID, ActuatorName)
+activate ActuatorService
+ActuatorService -> ActuatorFactory: addActuator(ActuatorModelID, deviceID, ActuatorTypeID, ActuatorName)
+activate ActuatorFactory
+create Actuator
+
+ActuatorFactory --> Actuator: create(ActuatorModelID, deviceID, ActuatorTypeID, ActuatorName)
+activate Actuator
+
+Actuator --> ActuatorFactory: Actuator
+deactivate Actuator
+
+ActuatorFactory --> ActuatorService: Actuator
+deactivate ActuatorFactory
+
+ActuatorService --> ActuatorRepository: saveActuator(Actuator)
+activate ActuatorRepository
+
+ActuatorRepository --> ActuatorService: Actuator
+deactivate ActuatorRepository
+
+<-- ActuatorService :Actuator
+
+@enduml

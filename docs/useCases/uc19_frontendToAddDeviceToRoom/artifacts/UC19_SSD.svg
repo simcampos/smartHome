@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="234px" preserveAspectRatio="none" style="width:337px;height:234px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 337 234" width="337px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <rect fill="#DDDDDD" height="222.5293" style="stroke:#181818;stroke-width:0.5;" width="233" x="98.5" y="6"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="78" x="176" y="18.5684">SmartHome
+        </text>
+        <rect fill="#FFFFFF" height="87.9316" style="stroke:#181818;stroke-width:1.0;" width="10" x="136" y="88.1094"/>
+        <rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="287" y="117.4199"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="14" x2="14" y1="56.7988"
+              y2="194.041"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="140.5" x2="140.5" y1="56.7988"
+              y2="194.041"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="291.5" x2="291.5" y1="56.7988"
+              y2="194.041"/>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="18"
+              x="5" y="25.3105"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="12"
+              y="45.8457">&#160;
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="18"
+              x="5" y="193.041"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="12"
+              y="213.5762">&#160;
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="77"
+              x="102.5" y="25.3105"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="109.5"
+              y="45.8457">Frontend
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="77"
+              x="102.5" y="193.041"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="109.5"
+              y="213.5762">Frontend
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="71"
+              x="256.5" y="25.3105"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="263.5"
+              y="45.8457">Backend
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="71"
+              x="256.5" y="193.041"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="263.5"
+              y="213.5762">Backend
+        </text>
+        <rect fill="#FFFFFF" height="87.9316" style="stroke:#181818;stroke-width:1.0;" width="10" x="136" y="88.1094"/>
+        <rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="287" y="117.4199"/>
+        <ellipse cx="13.5" cy="87.3594" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.5;"/>
+        <polygon fill="#181818" points="124,84.1094,134,88.1094,124,92.1094,128,88.1094"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="18" x2="130" y1="88.1094" y2="88.1094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="21" y="83.3672">1
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="34"
+              y="83.3672">POST /devices
+        </text>
+        <polygon fill="#181818" points="275,113.4199,285,117.4199,275,121.4199,279,117.4199"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="146" x2="281" y1="117.4199" y2="117.4199"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="153" y="112.6777">2
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="166"
+              y="112.6777">POST /devices
+        </text>
+        <polygon fill="#181818" points="157,142.7305,147,146.7305,157,150.7305,153,146.7305"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="151" x2="291" y1="146.7305"
+              y2="146.7305"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="163" y="141.9883">3
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="176"
+              y="141.9883">HTTP status 200
+        </text>
+        <ellipse cx="13.5" cy="175.291" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.5;"/>
+        <polygon fill="#181818" points="30.5,172.041,20.5,176.041,30.5,180.041,26.5,176.041"
+                 style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="28.5" x2="140" y1="176.041"
+              y2="176.041"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="9" x="31" y="171.2988">4
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="16" x="44"
+              y="171.2988">ok
+        </text><!--SRC=[VOzDQm8n443lyokcU_6qNV7eeOS55syAhZzWp0uskFbeCf7wxvs81KkXoINalNaXYq-HcDTT5sVoKjpyReBhCdyLzeRRoT8vaOEtcEZi26UwXIAO7Gjv0g0YmHTtuWIHabXZesQmqKqPZrdluHI-iJaunTlWk07KzIeFANXXFzM9OVC7zsGkJzfle9uq200rZg7zq1bSutvt6B6R-6eDPo0Zzah2jGVArUh_iRGBojkVs7OSzvY5f6HSBPSmyIzrUAZXyJsrm-LLg2_27G00]-->
+    </g>
+</svg>

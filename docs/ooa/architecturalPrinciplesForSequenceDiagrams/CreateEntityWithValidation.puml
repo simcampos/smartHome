@@ -1,0 +1,51 @@
+@startuml
+participant "  " as User
+participant ":ControlerX" as Controller
+participant ":AssemblerX" as Assembler
+participant "valueObject:ValueObjectX" as ValueObject
+participant ":ServiceX" as Service
+participant ":FactoryX" as Factory
+participant "entity:EntityX" as Entity
+participant "entityDTO:XDTO" as XDTO
+participant ":RepositoryX" as Repository
+
+
+User o-> Controller: 1: addEntity(EntityDTO data)
+activate Controller
+Controller -> Assembler: 1.1: toValueObject(data.attribute)
+activate Assembler
+create ValueObject
+Assembler -> ValueObject: 1.1.1: ValueObject(data.attribute)
+deactivate Assembler
+Controller -> Service: 1.2: createEntity(valueObject, ...)
+activate Service
+Service -> Factory: 1.2.1: createEntity(valueObject, ...)
+activate Factory
+create Entity
+Factory -> Entity: 1.2.2Entity(valueObject, ...)
+deactivate Factory
+Service -> Controller: entity
+deactivate Service
+Controller -> Assembler: 1.3: toDTO(entity)
+activate Assembler
+create XDTO
+Assembler -> XDTO: 1.3.1: toDTO(entity)
+deactivate Assembler
+
+Controller -> Controller: 1.4: map <entity, entityDTO>
+Controller -> User: entityDTO
+deactivate Controller
+User -> Controller: 2: confirm(entityDTO)
+activate Controller
+Controller -> Service: 2.1: save(entity)
+activate Service
+Service -> Repository: 2.1.1save(entity)
+activate Repository
+Repository -> Service: entity
+deactivate Repository
+Service -> Controller: success
+deactivate Service
+Controller -> User: success
+deactivate Controller
+
+@enduml

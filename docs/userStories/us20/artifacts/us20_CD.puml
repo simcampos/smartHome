@@ -1,0 +1,120 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+package domain.Sensor {
+    interface Sensor {
+        + getID(): SensorID
+        + getName: SensorName
+        + getModelPath(): ModelPath
+        + getSensorTypeID(): SensorTypeID
+        + toString(): String
+        + getValue(): ValueObject
+        + getDeviceID(): DeviceID
+    }
+
+    class SunriseTimeSensor {
+            - _modelPath : ModelPath
+            - _sensorName : SensorName
+            - _sensorID : SensorID
+            - _sensorTypeID : SensorTypeID
+            - _SunriseTimeSensorValue : SunriseTimeSensorValue
+            - _deviceID : DeviceID
+            - _gps : GPS
+
+            + SunriseTimeSensor(deviceID : DeviceID, modelPath : ModelPath, sensorTypeID : SensorTypeID, sensorName : SensorName, gps: GPS)
+            + getID() : SensorID
+            + getName() : SensorName
+            + getModelPath() : ModelPath
+            + getSensorTypeID() : SensorTypeID
+            + getDeviceID() : DeviceID
+            + getValue() : ValueObject
+            + getValue(LocalDate date) : ValueObject
+        }
+}
+
+package valueObject {
+    class SunriseTimeSensorValue {
+    - _value : LocalTime
+    + SunriseTimeSensorValue(value : LocalTime)
+    + toString() : String
+    }
+    class SensorTypeID {
+        - _id: String
+        + SensorTypeID(strDescription: String)
+        + getId() : String
+        + hashCode() : int
+        + equals(obj: Object) : boolean
+        + toString() : String
+    }
+
+    class SensorModelID {
+        - _sensorModelID: String
+        + SensorModelID(strDescription : String)
+        + getId() : String
+        + hashCode() : int
+        + equals(obj: Object) : boolean
+        + toString() : String
+    }
+
+    class SensorID {
+        - _id: String
+        + SensorID(id: String)
+        + getID() : String
+        + hashCode() : int
+        + equals(obj: Object) : boolean
+        + toString() : String
+    }
+
+    class DeviceID {
+        - _id: String
+        + DeviceID(String id)
+        + getID() : String
+        + hashCode() : int
+        + equals(obj: Object) : boolean
+        + toString() : String
+    }
+
+    class ModelPath {
+        - _path: String
+        + ModelPath(path: String)
+        + toString() : String
+    }
+}
+
+package ddd {
+
+  interface DomainEntity {
+  }
+
+  interface DomainID {
+  }
+
+  interface AggregateRoot {
+  }
+
+    interface ValueObject{
+    }
+}
+
+SunriseTimeSensor ..|> domain.Sensor.Sensor
+
+SunriseTimeSensor"1" --> "1" SunriseTimeSensorValue : has
+SunriseTimeSensor"1" -->  "1" SensorTypeID : has
+SunriseTimeSensor"1" -->  "1" SensorModelID : has
+SunriseTimeSensor"1" -->  "1" SensorID : has
+SunriseTimeSensor"1" -->  "1" DeviceID : has
+SunriseTimeSensor"1" -->  "1" ModelPath : has
+
+DomainEntity --|> DomainID
+AggregateRoot --|> DomainEntity
+AggregateRoot --|> DomainID
+SunriseTimeSensorValue ..|> ValueObject
+
+SensorTypeID ..|> ddd.DomainID
+SensorModelID ..|> ddd.DomainID
+SensorID ..|> ddd.DomainID
+DeviceID ..|> ddd.DomainID
+DomainID ..|> ValueObject
+
+@enduml

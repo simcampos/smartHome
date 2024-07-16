@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as User
+
+box "Server"
+    participant "Controller" as CTRL<<component>>
+    participant "Service" as SV<<component>>
+    participant "Repository" as REPO<<component>>
+    participant "Domain" as DOM<<component>>
+end box
+
+participant " " as BD
+
+User o-> CTRL : GET /logs by deviceID and time period
+activate CTRL
+CTRL -> DOM : DatePeriod (start, end)
+activate DOM
+DOM --> CTRL : datePeriod
+deactivate DOM
+
+CTRL -> DOM : DeviceID(strDeviceID)
+activate DOM
+DOM --> CTRL : deviceID
+deactivate DOM
+
+CTRL -> SV : getDeviceReadingsByTimePeriod (deviceID, period)
+activate SV
+
+SV -> REPO : findByDeviceIdAndDatePeriodBetween(deviceID, period)
+activate REPO
+
+REPO ->o BD : find
+BD o--> REPO : readings
+
+REPO --> SV : logList
+deactivate REPO
+
+SV --> CTRL : logList
+deactivate SV
+CTRL -->o User : logListDTO
+deactivate CTRL
+
+
+@enduml

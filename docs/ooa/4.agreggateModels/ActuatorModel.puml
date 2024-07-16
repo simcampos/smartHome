@@ -1,0 +1,27 @@
+@startuml
+!pragma layout smetana
+
+package actuator_model{
+
+    class ActuatorModel <<Entity>> <<Root>>{
+
+    }
+
+     class ActuatorTypeId <<ValueObject>>{
+        - _actuatorTypeId : String
+     }
+
+     class ModelPath <<ValueObject>>{
+        - _modelPath : String
+     }
+     class ActuatorModelName <<ValueObject>>{
+        - _actuatorModelName : String
+     }
+}
+
+ActuatorModel  -- "1" ActuatorTypeId : has
+ActuatorModel  -- "1" ModelPath : has
+ActuatorModel  -- "1" ActuatorModelName : has
+
+
+@enduml

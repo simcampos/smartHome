@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+!pragma layout smetana
+
+autonumber
+
+participant " " as HTTP
+
+box "Backend <<Container (C4)>>"
+    participant "Server" as SE<<container (C4)>>
+    participant "Database" as DB<<container (C4)>>
+end box
+
+
+HTTP o-> SE : GET/logs/temperature-difference
+activate SE
+
+SE -> DB : find inside device readings by Sensor Type and date period
+activate DB
+
+DB --> SE : insideLogsDataModel
+deactivate DB
+
+SE -> DB : find outside device readings by Sensor Type and date period
+activate DB
+
+DB --> SE : outsideLogsDataModel
+deactivate DB
+
+
+
+SE -->o HTTP : JSON 200
+deactivate SE
+
+deactivate HTTP
+
+
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+
+class ActuatorController{
+    -actuatorService: IActuatorService
+    -logService: ILogService
+    -actuatorAssembler: ActuatorAssembler
+    +closeBlindRoller(ActuatorValueDTO): ActuatorDTO
+}
+
+class ActuatorService{
+    -actuatorRepo: IActuatorRepo
+    -actuatorFactory: IActuatorFactory
+    -deviceRepository: IDeviceRepository
+    -actuatorTypeRepository: IActuatorTypeRepository
+    +setValue(IActuator, IActuatorValue, ReadingValue): IActuatorValue
+}
+
+class LogService{
+    -logRepo: ILogRepository
+    -VALUE_IF_NO_CONSUMPTION: int
+    +getDeviceReadingsByDeviceIDAndSensorTypeID(DeviceID, SensorTypeID): List<Log>
+}
+
+class ActuatorRepo{
+    -actuatorRepository: IActuatorSpringDataRepository
+    -actuatorDataModelAssembler: IDataModelAssembler<ActuatorDataModel, Actuator>
+    +ofDeviceID(ActuatorID): Actuator
+}
+
+class LogRepo {
+    - logRepository: ILogSpringDataRepository
+    - logDataModelAssembler: IDataModelAssembler<LogDataModel, Log>
+    + findByDeviceIDAndSensorTypeID(DeviceID, SensorTypeID): List<Log>
+}
+
+class ActuatorAssembler {
+    +toDTO(Actuator): ActuatorDTO
+    +toDTO(List<Actuator>): List<ActuatorDTO>
+}
+
+ActuatorController ..> ActuatorService : uses
+ActuatorController ..> ActuatorAssembler : uses
+ActuatorController ..> LogService : uses
+
+ActuatorService ..> ActuatorRepo : uses
+
+LogService ..> LogRepo : uses
+
+@enduml
